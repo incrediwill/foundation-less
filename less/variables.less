@@ -114,7 +114,7 @@
 
 @font-size-base:          				16px;
 @font-size-large:         				ceil((@font-size-base * 1.25)); // ~18px
-@font-size-small:         				14px;
+@font-size-small:         				ceil((@font-size-base * 0.65)); // ~12px
 
 @font-size-h1:           				floor((@font-size-base * 2.0)); // ~36px
 @font-size-h2:           				floor((@font-size-base * 1.7)); // ~30px
@@ -126,9 +126,13 @@
 @font-weight-bold:					600;
 @font-weight-normal:					300;
 
-@heading-font-spacing:					-1px;
+@heading-font-spacing:					0;
 @heading-text-transform:				none;
 
+@header-block-margin:					0 0 20px 0;
+@header-block-line-margin:				15px;
+
+@title-border-length:					50%;
 
 /* ----------------------------------------------------------------
 	Links
@@ -231,7 +235,7 @@
 @header-border-bottom:					1px solid #D5D5D5;
 
 @heading-logo-margin:					0;
-@heading-logo-position:					left;
+@heading-logo-position:					left;// left / right
 @heading-logo-img-margin:				0 30px 0 0;
 @heading-logo-font-size:				28px;
 
@@ -275,14 +279,16 @@
 @primary-menu-font-spacing:     			0px;
 
 @primary-menu-padding:					0 12px;
-@primary-menu-position:					right;
+@primary-menu-position:					right; // left / right / none
+@primary-menu-width:					100%;
+@primary-menu-margin:					0;
 
 // Small Desktop Menu
 @primary-menu-small-desktop-padding:			0 7px;
 
 @primary-menu-height:					60px;
 @primary-menu-bg:					#ffffff;
-@primary-menu-divider:					block; //block or none
+@primary-menu-divider:					block; // block / none
 @pirmary-menu-divider-color:				#E7E7E7;
 @primary-menu-divider-width:				1px;
 
@@ -339,7 +345,11 @@
 
 @top-search-form-input:					#000000;
 @top-search-form-font:					@body-font;
-@top-search-icon-pos:					right;
+@top-search-icon-pos:					right; // left / right
+
+@top-search-dropdown-bg:				#ffffff;
+@top-search-dropdown-font-color:			@top-search-form-input;
+@top-search-dropdown-border-color:  			@divider-color;
 
 /* ----------------------------------------------------------------
 	Menu Triggers
@@ -366,6 +376,7 @@
 @primary-menu-trigger-gradient-origin:			top;
 @primary-menu-trigger-background-color-start:		#1F72E4;
 @primary-menu-trigger-background-color-end:		#1C62C5;
+@primary-menu-trigger-border:				1px solid #000000;
 
 
 /* ----------------------------------------------------------------
@@ -392,10 +403,9 @@
 	Page Title
 -----------------------------------------------------------------*/
 
-@page-title-padding:					50px;
+@page-title-padding:					30px 0px;
 @page-title-parallax-padding:				100px;
 @page-title-mini-padding:				20px;
-
 
 @page-title-bg:						@background1-color;
 @page-title-bg-dark:					#333;
@@ -411,6 +421,7 @@
 
 @page-title-mini-size:					18px;
 
+@page-title-breadcrumb-top:				-25px;
 
 /* ----------------------------------------------------------------
 	Form Elements
@@ -448,19 +459,26 @@
 @go-to-top-border-radius:				0px;
 @go-to-top-pos-right:					6px;
 
+
 /* ----------------------------------------------------------------
 	Buttons
 -----------------------------------------------------------------*/
 
 @border-radius:						0px;
+@button-border:						1px solid @body-color;
+@button-border-hover:					1px solid @theme-color;
 
 @button-height:						36px;
 @button-transform:					capitalize;
 
+@button-padding:					0 40px;
+
+@button-font:						'MINISansSerif-Bold', arial, sans-serif;
 @button-font-size:					13px;
 @button-font-color:					#ffffff;
 @button-font-hover-color:				#ffffff;
 @button-font-weight:					bold;
+@button-text-transform:					capitalize;
 
 @button-gradient-origin:				bottom;
 
@@ -476,6 +494,15 @@
 
 @button-alt-font-color:					#ffffff;
 @button-alt-font-hover-color:				#ffffff;
+
+@uggo-gradient-origin:					top;
+@uggo-bg-start-color:					darken(@theme-color, 13%);
+@uggo-bg-center-color:					@theme-color;
+@uggo-bg-end-color:					darken(@theme-color, 13%);
+@uggo-bg-start-hover-color:				darken(@theme-color, 24%);
+@uggo-bg-center-hover-color:				darken(@theme-color, 8%);
+@uggo-bg-end-hover-color:				darken(@theme-color, 24%);
+@uggo-border-color:					@theme-color;
 
 
 /* ----------------------------------------------------------------
@@ -511,7 +538,9 @@
 @homepage-slideshow-max-width:				1900px;
 
 @homepage-slideshow-btn-bg:				transparent;
+@homepage-slideshow-btn-border:				1px solid #000000;
 @homepage-slideshow-btn-bg-hover:			transparent;
+@homepage-slideshow-btn-border-hover: 			1px solid #000000;
 @homepage-slideshow-btn-arrow-size:			30px;
 @homepage-slideshow-arrow-color:			#ffffff;
 @homepage-slideshow-arrow-color-hover:			#ffffff;
@@ -531,7 +560,7 @@
 @homepage-slideshow-btn-next-radius-br:			0px;
 
 
-@pager-gradient-origin:					bottom;
+@pager-gradient-origin:					top;
 @pager-bg-color-start:					#B5B5B5;
 @pager-bg-color-end:					#B5B5B5;
 
@@ -540,6 +569,9 @@
 
 @pager-bg-color-start-active:				#1c62c5;
 @pager-bg-color-end-active:				#1f72e4;
+
+@pager-dot-border:					0;
+@pager-dot-padding:					0px;
 
 @pager-dot-height:					11px;
 @pager-dot-width:					11px;
@@ -551,9 +583,10 @@
 -----------------------------------------------------------------*/
 
 @quick-browse-bg:					#ffffff;
-@featured-vehicles-bg:					#f2f2f2;
+@featured-vehicles-bg:					@background1-color;
 @get-directions-bg:					#f2f2f2;
 
+@max-width:						1550px;
 
 /* ----------------------------------------------------------------
 	Social Media Icons
@@ -561,7 +594,7 @@
 
 @si-theme-color:					#3E4146;
 @si-theme-color-font-color:				#ffffff;
-
+@si-theme-color-font-hover-color:			#ffffff;
 
 /* ----------------------------------------------------------------
 	VDP Slideshow Arrows
@@ -596,7 +629,7 @@
 @srp-filter-label-bg:					#666766;
 @srp-filter-lable-border-radius:			0px;
 @srp-filter-label-color:				#ffffff;
-@srp-filter-label-width:				40px;
+@srp-filter-label-width:				40px;// px / auto
 @srp-filter-label-text-align:				center;
 
 @popover-border-radius:					0px;
