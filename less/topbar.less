@@ -1,0 +1,251 @@
+/*-----------------------------------------------------------------------------------
+
+	topbar.less
+
+-----------------------------------------------------------------------------------*/
+
+
+/* ----------------------------------------------------------------
+	Top Bar
+-----------------------------------------------------------------*/
+
+
+#top-bar {
+	.gradient (@origin: @topbar-gradient-origin, @start: @topbar-background-color-start, @stop: @topbar-background-color-end);
+	position: relative;
+	height: @topbar-height;
+	line-height: @topbar-line-height;
+	font-size: @topbar-font-size;
+}
+
+#bottom-bar {
+	.gradient (@origin: @bottombar-gradient-origin, @start: @bottombar-background-color-start, @stop: @bottombar-background-color-end);
+	position: relative;
+	height: @bottombar-height;
+	line-height: @bottombar-line-height;
+	font-size: @bottombar-font-size;
+}
+
+
+/* ----------------------------------------------------------------
+	Contact
+-----------------------------------------------------------------*/
+
+.address {
+	position: relative;
+	color: @header-address-font-color;
+
+	a.map-link, a.map-link:visited {
+		color: @header-map-link;
+		font-weight: @header-map-font-weight;
+	}
+	
+	a:hover {
+		color: @header-map-link;
+	}
+	
+}
+
+
+/* ----------------------------------------------------------------
+	Top Nav Links
+-----------------------------------------------------------------*/
+
+.top-nav-links {
+	position: relative;
+
+	ul {
+		margin: 0;
+		list-style: none;
+
+		li {
+			position: relative;
+			float: left;
+			height: @topbar-line-height;
+			margin-right: 20px;
+		}
+
+		li:last-child {
+			margin-right: 0;
+		}
+
+	}
+
+	li {		 		
+		> a, a:visited {
+			color: @topbar-nav-link-color;
+			font-size: @topbar-font-size;
+			font-weight: @font-weight-normal;
+		}
+		
+		> a:hover {
+			color: @topbar-nav-link-color-hover;
+			text-decoration: underline;
+		}
+
+	}
+
+}
+
+
+
+/* ----------------------------------------------------------------
+	Bottom Bar
+-----------------------------------------------------------------*/
+
+
+.phone {
+	position: relative;
+
+	ul {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+
+		li {
+			color: @header-phone-font-color;
+			font-size: @header-phone-font-size;
+			display: inline-block;
+			position: relative;
+			height: @header-phone-line-height;
+			margin: 0 12px;
+
+			&:last-child {
+				margin-right: 0;
+			}
+			
+			&:last-child::after {
+				display: none;
+			}
+			
+			&::after {
+				background: @header-phone-divider-color;
+				content: '';
+				display: block;
+				height: (@header-phone-line-height/2);
+				width: 1px;
+				position: absolute;
+				right: -13px;
+				top: (@header-phone-line-height/4);
+			}
+
+			a, a:hover {
+				color: @header-phone-font-color;
+			}	
+				 		
+			.phone-label {
+				font-size: @header-phone-label-font-size;
+				font-weight: @header-phone-label-font-weight;
+			}
+			
+			i {
+				font-size: 16px;
+			}
+
+		}		
+
+	}
+
+}
+
+.phone.bmw {
+	ul {
+		li {
+			&:nth-child(n+3):after {
+				display: none;
+			}
+			&:nth-child(n+3) {
+				margin-left: 8px;
+				margin-right: 0px;
+			}				
+		}
+	}
+}
+
+.phone.fright{
+	ul li {
+	}
+}
+
+#bottom-mobile-header,
+#top-mobile-header {
+	background: @mobile-bar-bg;
+	position: relative;
+	height: @mobile-bar-height;
+	line-height: @mobile-bar-line-height;
+	
+	ul {
+		display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+		display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+		display: -ms-flexbox;      /* TWEENER - IE 10 */
+		display: -webkit-flex;     /* NEW - Chrome */
+		display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+ */		
+		margin: 0;
+		padding: 0;
+		
+		li {
+			-webkit-box-flex: 1;      /* OLD - iOS 6-, Safari 3.1-6 */
+			-moz-box-flex: 1;         /* OLD - Firefox 19- */
+			width: 20%;               /* For old syntax, otherwise collapses. */
+			-webkit-flex: 1;          /* Chrome */
+			-ms-flex: 1;              /* IE 10 */
+			flex: 1;                  /* NEW, Spec - Opera 12.1, Firefox 20+ */
+			list-style: none;
+			text-align: center;
+			font-weight: @font-weight-normal;
+			font-size: @mobile-bar-font-size;
+			color: @mobile-bar-font-color;
+			cursor: pointer;
+
+			a,
+			a:visited {
+				color: @mobile-bar-font-color;
+			}
+			
+			i {
+				margin-right: 4px;
+			}
+		}
+	}
+	
+	&.bmw {
+		ul {
+			margin-left: 132px;
+			li {
+				text-align: left;
+			}
+		}
+	}
+	
+}
+
+
+/* ----------------------------------------------------------------
+	Small Desktop
+-----------------------------------------------------------------*/
+
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+
+	.phone {
+	
+		ul {
+	
+			li {
+				//font-size: (@header-phone-font-size - 2);
+			}
+		}
+	}
+
+	.phone.fright{
+		ul li {
+			//margin: 0 0 0 10px;
+		}
+	}
+	
+	.phone.fleft{
+		ul li {
+			//margin: 0 10px 0 0;
+		}
+	}			
+
+}	

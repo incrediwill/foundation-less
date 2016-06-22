@@ -1,0 +1,128 @@
+/*-----------------------------------------------------------------------------------
+
+	extras.less
+
+-----------------------------------------------------------------------------------*/
+
+
+/* ----------------------------------------------------------------
+	Bootstrap Specific
+-----------------------------------------------------------------*/
+
+.table {
+	.success {
+		color: #3c763d;
+	}
+	.info {
+		color: #31708f;
+	}
+	.warning {
+		color: #8a6d3b;
+	}
+	.danger {
+		color: #a94442;
+	}
+}
+
+.btn-link {
+	color: @theme-color;
+	&:hover,
+	&:focus {
+		color: #222;
+	}
+}
+
+.boot-tabs {
+	margin-bottom: 20px !important;
+}
+
+.carousel-control {
+	.icon-chevron-left,
+	.icon-chevron-right {
+		position: absolute;
+		top: 47.5%;
+		z-index: 5;
+		display: inline-block;
+	}
+	.icon-chevron-left {
+		left: 50%;
+	}
+	.icon-chevron-right {
+		right: 50%;
+	}
+}
+
+.responsive-utilities {
+	th {
+		small {
+			display: block;
+			font-weight: 400;
+			color: #999;
+		}
+	}
+}
+
+.show-grid {
+	[class^=col-] {
+		padding-top: 10px;
+		padding-bottom: 10px;
+		background-color: #EEE;
+		border: 1px solid #DDD;
+	}
+}
+
+.img-circle {
+	.border-radius(50%) !important;
+}
+
+.pagination {
+	> .active {
+		> a,
+		> span,
+		> a:hover,
+		> span:hover,
+		> a:focus,
+		> span:focus {
+			color: #FFF !important;
+			background-color: @theme-color !important;
+			border-color: @theme-color !important;
+		}
+	}
+}
+
+.input-group-lg > .input-group-addon { line-height: 1; }
+
+
+/* ----------------------------------------------------------------
+	Cookie Notification
+-----------------------------------------------------------------*/
+
+#cookie-notification {
+	position: fixed;
+	top: auto;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 60px;
+	line-height: 60px;
+	background-color: #EEE;
+	color: #444;
+	z-index: 99;
+	-webkit-box-shadow: 0px -1px 4px 0px rgba(0,0,0,0.15);
+	-moz-box-shadow: 0px -1px 4px 0px rgba(0,0,0,0.15);
+	box-shadow: 0px -1px 4px 0px rgba(0,0,0,0.15);
+}
+
+.cookie-noti-btn { margin-top: 15px; }
+
+/* ----------------------------------------------------------------
+	Stretched Layout
+-----------------------------------------------------------------*/
+
+.stretched {
+	#wrapper {
+		width: 100%;
+		margin: 0;
+		box-shadow: none;
+	}
+}

@@ -1,0 +1,200 @@
+/*-----------------------------------------------------------------------------------
+
+	specials.less
+
+-----------------------------------------------------------------------------------*/
+
+
+/* -----------------------------------
+ 	Specials Menu
+--------------------------------------------------------------------------------------------- */
+
+#specials-menu-title {
+	border-bottom: 1px solid @divider-color;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+
+/* -----------------------------------
+ 	Specials Section
+--------------------------------------------------------------------------------------------- */
+
+.specials-section {
+
+	.specials-section-title {
+		margin-bottom: 20px;
+	}
+
+	.specials-item-section-title {
+		padding: 0 15px;
+		h4 {
+			margin-bottom: 10px;
+		}
+	}
+
+	.specials-item-section {	
+		border-bottom: 1px solid @divider-color;
+		padding: 0 15px 20px 15px;
+		margin-bottom: 30px;
+		.content {
+			.specials-item-info {
+				margin-bottom: 20px;
+			}
+		}
+		.specials-item-exp {
+			font-weight: @font-weight-bold;
+		}
+
+	}
+	
+}
+
+
+.specials-dealer {
+	&:last-child {
+		border-bottom: 0;
+		padding-bottom: 0;
+	}
+}	
+
+.specials-dealer,
+.specials-dealer-top {
+	border-bottom: 1px solid @divider-color;
+	padding-bottom: 10px;
+	margin-bottom: 20px;
+}
+
+.specials-detail-item-section {
+	border-bottom: 1px solid @divider-color;
+	padding-bottom: 20px;
+	margin-bottom: 20px;	
+}
+
+.specials-dealer-text-top {
+	.wrapper {
+		padding: 20 0px;
+		border-bottom: 1px solid @divider-color;
+	}
+}
+
+.specials-vehicles-found {
+	padding-top: 10px;
+	border-bottom: 1px solid @divider-color;
+	.pagination-control {
+		padding-top: 20px;
+		float: right;	
+	}
+}
+
+.specials-inventory {
+	margin-top: 30px;
+	.specials-inventory-row {
+		border-bottom: 1px solid @divider-color;	
+		margin-bottom: 10px;
+		padding-bottom: 10px;
+		&:last-child {
+			margin-bottom: 0;
+		}
+		.specials-inventory-price {
+			text-align: right;
+		}
+	}
+}
+
+.specials-dealer-image {
+	.wrapper {
+		padding: 20px 0;
+	}
+}
+
+.specials-footer {
+	border-bottom: 1px solid @divider-color;
+	.pagination-control {
+		float: right;
+		padding: 20px 0;
+	}
+}
+
+/* ----------------------------------------------------------------
+	Small Desktop
+-----------------------------------------------------------------*/
+
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+
+		
+}	
+
+
+/* ----------------------------------------------------------------
+	Tablet
+-----------------------------------------------------------------*/
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+
+
+
+}
+
+
+/* ----------------------------------------------------------------
+	Mobile
+-----------------------------------------------------------------*/
+
+@media only screen and (max-width: 767px) {
+
+	.specials-section-title,
+	.specials-item-section-title,
+	.specials-item-text,
+	.specials-details-item-section-title,
+	.specials-details-item-text,
+	.specials-dealer-top {
+		text-align: center;
+		
+	}
+
+	.specials-item-text,
+	.specials-details-item-text {
+		margin-top: 10px;
+	}
+
+	.specials-vehicles-found {
+		text-align: center;
+		.pagination-control {
+			padding-top: 20px;
+			float: none;
+			margin: 0 auto;
+		}
+	}
+	
+	.specials-inventory {
+		.specials-inventory-row {
+			.specials-inventory-image {
+				margin: 20px 0;
+			}
+		}
+		&:first-child .specials-inventory-image {
+			margin-top: 0;
+		}
+	}	
+	
+	.specials-footer {		
+		text-align: center;
+		.pagination-control {
+			float: none;
+			margin: 0 auto;
+			padding: 20px 0;
+		}
+	}	
+
+}
+
+
+/* ----------------------------------------------------------------
+	Mobile to Tablet
+-----------------------------------------------------------------*/
+
+@media only screen and (min-width: 320px) and (max-width: 992px) {
+
+
+}

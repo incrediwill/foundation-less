@@ -1,0 +1,47 @@
+/*-----------------------------------------------------------------------------------
+
+	content.less
+
+-----------------------------------------------------------------------------------*/
+
+
+/* ----------------------------------------------------------------
+	Content
+-----------------------------------------------------------------*/
+
+
+#content {
+	position: relative;
+	overflow: hidden;
+	background-color: @content-bg;
+
+	p {
+		line-height: @line-height-content;
+	}
+
+	.content-wrap {
+		position: relative;
+		padding: 80px 0;
+	}
+
+	.container {
+		position: relative;
+	}
+}
+
+
+.modal-content {
+	border: @modal-border;
+	border-radius: @modal-border-radius;
+	.box-shadow(@modal-box-shadow);
+}
+
+.modal-header {
+	border-bottom: none;
+	padding: @modal-header-padding;
+	.gradient (@origin: @modal-header-bg-origin, @start: @modal-header-bg-start, @stop: @modal-header-bg-end);
+	
+	.modal-title {
+		color: @modal-header-title-color !important;
+	}
+}

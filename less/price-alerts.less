@@ -1,0 +1,732 @@
+/*-----------------------------------------------------------------------------------
+
+	price-alerts.less
+
+-----------------------------------------------------------------------------------*/
+
+body.dashboard-is-open {
+    overflow-y: hidden;
+}
+
+
+/* -----------------------------------
+	Toolbar
+--------------------------------------------------------------------------------------------- */
+
+#notifyMePriceAlert-toolbar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: @notifyme-toolbar-height;
+    z-index: 999;
+
+	.notifyMePriceAlert-wrapper {
+	    background: @notifyme-toolbar-bg;
+	    color: @notifyme-toolbar-font-color;
+	    margin: 0;
+	    padding: 0;
+	    width: 100%;
+	    height: @notifyme-toolbar-height;
+	    
+		ul {
+		    margin: 0;
+		    padding: 0;
+		    
+			.amount {
+			    color: @notifyme-toolbar-amount-color;
+			    font-size: @notifyme-toolbar-amount-size;
+			    line-height: @notifyme-toolbar-font-size;
+			    position: relative;
+			    top: @notifyme-toolbar-font-top;
+			    -webkit-transition: .3s ease;
+			    -o-transition: .3s ease;
+			    transition: .3s ease;
+			}		    
+		    
+			li {
+			    cursor: pointer;
+			    display: table-cell;
+			    list-style: none;
+			    line-height: @notifyme-toolbar-height;
+			    -webkit-transition: .3s ease;
+			    -o-transition: .3s ease;
+			    transition: .3s ease;
+			    
+			    &:hover {
+				    background: @notifyme-toolbar-hover;
+				    color: #ffffff;
+				}
+
+				&:hover .amount {
+				    color: @notifyme-toolbar-amount-hover-color;
+				}
+				
+				&#btn-login {
+					line-height: normal;
+
+					.notifyMePriceAlert-loggedIn {
+						
+						.title {
+							line-height: @notifyme-toolbar-loggedIn-line-height;
+							position: relative;
+							top: @notifyme-toolbar-loggedIn-line-top;
+						}
+					
+						.userEmail {
+							font-size: @notifyme-toolbar-userEmail-font-size;
+							line-height: @notifyme-toolbar-userEmail-line-height;
+							position: relative;
+							top: @notifyme-toolbar-userEmail-top;
+						}
+						
+						i {
+							position: relative;
+							top: @notifyme-toolbar-userEmail-icon-top;
+						}
+																
+
+					}
+
+				}				
+
+			}
+
+		}
+		
+		.notifyMePriceAlert-navLeft li {
+		    border-right: 1px solid @notifyme-toolbar-divider;
+		    padding: @notifyme-toolbar-navLeft-padding;
+
+		    &:last-child {
+			    border-right: 0;
+		    }
+
+		}
+
+		.notifyMePriceAlert-navRight li {
+		    border-left: 1px solid @notifyme-toolbar-divider;
+		    padding: @notifyme-toolbar-navLeft-padding;
+
+		    &:first-child {
+			    border-left: 0;
+		    }
+
+		}					    
+
+	}
+	
+}
+
+
+/* -----------------------------------
+	Toggle Button
+--------------------------------------------------------------------------------------------- */
+
+.notifyMePriceAlert-toolbarToggle {
+    background: @notifyme-toolbar-toggle-bg;
+    color: @notifyme-toolbar-toggle-font-color;
+    cursor: pointer;
+    display: block;
+    height: @notifyme-toolbar-height;
+    line-height: @notifyme-toolbar-height;
+    width: @notifyme-toolbar-height;
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    text-align: center;
+    z-index: 9999;
+    
+	i {
+	    font-size: @notifyme-toolbar-toggle-font-size;
+	    -moz-transition: all .4s 0s;
+	    -o-transition: all .4s 0s;    
+	    -webkit-transition: all .4s 0s;
+	    transition: all .4s 0s;
+	}    
+	
+	&.closed i {
+	    -moz-transform: rotate(-180deg);
+	    -o-transform: rotate(-180deg);    
+	    -webkit-transform: rotate(-180deg);
+	    transform: rotate(-180deg);
+	}
+    
+}
+
+
+/* -----------------------------------
+ 	Dashboard
+--------------------------------------------------------------------------------------------- */
+
+.notifyMePriceAlert-dashboard {
+    background-color: @notifyme-dashboard-bg;
+    height: 100%;
+    width: 100%;
+	padding-top: 40px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    visibility: hidden;    
+    z-index: 900;
+
+	.container {
+    	position: relative;
+	}
+	    
+	.notifyMePriceAlert-dashboardWrapper {
+	    height: 100%;
+	    overflow-y: auto;
+	    -webkit-overflow-scrolling: touch;
+	    z-index: 910;
+	}
+
+	.notifyMePriceAlert-dashboardClose {
+	    cursor: pointer;
+	    display: block;
+	    height: 32px;
+	    width: 32px;
+	    position: absolute;
+	    top: 20px;
+	    right: 20px;
+
+		.polygon {
+		    fill: @notifyme-dashboard-close-color;
+		}
+
+    }
+
+	.notifyMePriceAlert-dashboardTitleSection {
+	    margin-top: 50px;
+
+	    &.not-logged-in {
+		    margin-bottom: 30px;
+	    }
+
+	}
+	
+	ul.tab-nav {
+	
+		li {
+	
+			a {
+				font-size: @notifyme-dashboard-tab-font-size;
+			}
+	
+		}
+	}	
+   
+}
+
+
+/* -----------------------------------
+ 	Dashboard - Swiper
+--------------------------------------------------------------------------------------------- */
+
+#notifyMePriceAlert-dashboard {
+	
+	.notifyMePriceAlert-swiper {
+		position: relative;
+		margin: 0 30px;
+	
+		.swiper-container {
+			width: 100%;
+			height: auto;
+		}
+		
+		.swiper-slide {
+			width: 230px;
+			
+			a {
+				color: @notifyme-dashboard-font-color;
+			}
+			
+			.vehicleImage {
+				min-height: 140px;
+			}			
+			
+		}
+		
+		.swiper-button-prev,
+		.swiper-button-next {
+			position: absolute;
+			top: 50%;
+			width: 27px;
+			height: 60px;
+			font-family: "font-icons";
+			font-size: 50px;
+			color: @notifyme-dashboard-arrow-color;
+			line-height: 50px;	
+			margin-top: -25px;
+			z-index: 10;
+			cursor: pointer;
+		    -webkit-transition: .7s ease;
+		    -moz-transition: .7s ease;
+		    -o-transition: .7s ease;
+		    transition: .7s ease;	
+		}
+		
+		.swiper-button-prev {
+			left: -30px;
+			text-align: left;
+		}				
+		
+		.swiper-button-next {
+			right: -30px;
+			text-align: right;
+		}
+		
+		.swiper-button-disabled {
+			cursor: not-allowed;
+			opacity: .3;
+		}
+		
+	}
+	
+}
+
+
+/* -----------------------------------
+ 	Dashboard - Swiper - Vehicle Info
+--------------------------------------------------------------------------------------------- */
+
+.notifyMePriceAlert-dashboard {
+
+	.notifyMePriceAlert-vehicleInfo {
+		margin-bottom: 15px;
+		
+		h4 a,
+		h4 a:hover {
+			color: @notifyme-dashboard-font-color !important;
+		}
+		
+	}
+	
+} 
+
+
+/* -----------------------------------
+	Dashboard - Swiper - Vehicle Price
+--------------------------------------------------------------------------------------------- */
+
+.notifyMePriceAlert-dashboard {
+	
+	.notifyMePriceAlert-vehiclePrice {
+		min-height: 65px;
+		
+		.new-price h6,
+		.new-price h6 {
+			color: @notifyme-dashboard-price-alert-color;
+		}
+		
+		h4 {
+			color: @theme-color;
+			font-size: @notifyme-dashboard-priceValue-font-size;
+		}
+		
+		h5 {
+			font-size: @notifyme-dashboard-priceLabel-font-size;
+		}		
+
+	}
+
+}
+
+
+/* -----------------------------------
+	Dashboard - Vehicle Actions
+--------------------------------------------------------------------------------------------- */
+
+.notifyMePriceAlert-dashboard {
+	
+	.notifyMePriceAlert-vehicleActions {
+		margin-top: 10px;
+		
+		ul {
+			margin: 0;
+			padding: 0;	
+			
+			li {
+				float: left;
+				list-style: none;
+				width: 33%;
+				text-align: center;
+
+				i {
+					font-size: 20px;
+				}
+				
+				span {
+					display: block;
+					font-size: 11px;	
+					text-align: center;
+				}				
+
+			}			
+
+		}
+
+	}
+
+}
+
+
+/* -----------------------------------
+	Dashboard - Social Media
+--------------------------------------------------------------------------------------------- */
+
+#notifyMePriceAlert-dashboard {
+	
+	#notifyMePriceAlert-socialMediaAccordion {
+		margin: 0 auto;
+		width: 70%;
+
+		.notifyMePriceAlert-socialMediaEmbedWrapper {
+			text-align: center;
+		}		
+
+	}
+	
+	#notifyMePriceAlert-socialMediaLinks {
+
+		ul {
+			margin: 0;
+			padding: 0;
+	
+			li {
+				list-style: none;
+	
+				a {
+					color: #ffffff;
+					display: block;
+					padding: 15px 0;
+					text-align: center;
+
+					span {
+						display: block;
+						font-size: 14px;
+					}
+
+					i {
+						font-size: 20px;	
+					}									
+
+				}
+				
+			.facebook { background: #39579A; }
+			.twitter  { background: #00ABF1; }
+			.youtube  { background: #C62E24; }		
+				
+			}
+			
+		}	
+
+	}
+
+}
+
+/* -----------------------------------
+ 	Dashboard Section - Contact Us
+--------------------------------------------------------------------------------------------- */
+
+#notifyMePriceAlert-dashboard {
+	
+	.table {
+		margin-bottom: 0;
+
+		tr td {
+			border-top: 0;
+		}	
+
+	}
+	
+	#notifyMePriceAlert-map {
+		height: 500px;
+	}
+	
+	.notifyMePriceAlert-address {
+		margin-bottom: 15px;
+		text-align: left;
+	}
+	
+	.notifyMePriceAlert-phone {
+		margin-bottom: 30px;
+		text-align: right;
+	}	
+
+}
+
+
+/* -----------------------------------
+ 	Dashboard - Forms
+--------------------------------------------------------------------------------------------- */
+
+#notifyMePriceAlert-dashboard .submit-button button {
+	margin-top: 29px !important;
+}
+
+
+/* -----------------------------------
+ 	Dashboard - Footer
+--------------------------------------------------------------------------------------------- */
+
+.notifyMePriceAlert-dashboard {
+		
+	.notifyMePriceAlert-footer {
+		margin: 30px 30px 0px 30px;
+		
+		.notifyMePriceAlert-footerLeft {
+			text-align: left;
+		}
+
+		.notifyMePriceAlert-footerRight {
+			text-align: right;
+
+			.button {
+				margin-bottom: 10px !important;
+			}			
+
+		}			
+		
+	}
+	
+	.notifyMe-terms-container {
+		display: none;
+		height: 200px;
+		overflow-y: scroll;
+		padding: 10px;
+	}
+	
+}
+
+
+/* -----------------------------------
+	SRP & VDP Alert Layout
+--------------------------------------------------------------------------------------------- */
+
+#notifyMePriceAlert-alertBox {
+	display: none;
+
+	.notifyMePriceAlert {
+		margin: 5px 0;
+	}
+	
+	.notifyMePriceAlert {
+		border: 1px solid @notifyme-alertBox-border;
+		border-radius: @notifyme-alertBox-border-radius;
+		background: fade(@notifyme-alertBox-bg, 10%);
+		color: @notifyme-alertBox-font;
+		
+		a:not(.close) {
+			text-decoration: underline !important;
+		}
+		
+		.close {
+			color: @notifyme-alertBox-close;
+			font-size: 18px;
+			opacity: .5;
+		}
+		
+		.content {
+			display: inline-block;
+		}
+		
+		span {
+			float: left;
+			margin-top: 6px;
+			margin-right: 20px;
+
+			i {
+				font-size: 26px;
+			}			
+			
+		}							
+
+	}	
+
+}
+
+
+/* -----------------------------------
+	Transitions
+--------------------------------------------------------------------------------------------- */
+
+.notifyMePriceAlert-dashboard {
+    -webkit-transform: translateY(-100%);
+    -moz-transform: translateY(-100%);
+    -ms-transform: translateY(-100%);
+    -o-transform: translateY(-100%);
+    transform: translateY(-100%);    
+    -webkit-transition: .7s .2s;
+    -moz-transition: .7s .2s;
+    -o-transition: .7s .2s;
+    transition: .7s .2s;
+}
+
+.notifyMePriceAlert-dashboard .notifyMePriceAlert-dashboardWrapper {
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;	
+ }
+
+.dashboard-is-open .notifyMePriceAlert-dashboard {
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    visibility: visible;
+    -webkit-transform: translateY(0);
+    -moz-transform: translateY(0);
+    -ms-transform: translateY(0);
+    -o-transform: translateY(0);
+    transform: translateY(0);
+    -webkit-transition: .7s .2s;
+    -moz-transition: .7s .2s;
+    -o-transition: .7s .2s;
+    transition: .7s .2s;
+}
+
+
+/* ----------------------------------------------------------------
+	Small Desktop
+-----------------------------------------------------------------*/
+
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+
+	.notifyMePriceAlert-dashboard {
+		
+		.notifyMePriceAlert-swiper {
+			
+			.swiper-slide .vehicleImage {
+				max-height: 160px;
+			}
+		
+		}
+	}
+
+	
+    /* ------------------
+		Left Nav
+	------------------------------------------------------------ */
+    
+    #notifyMePriceAlert-toolbar .notifyMePriceAlert-wrapper {
+	    
+	    .notifyMePriceAlert-navLeft li {
+	        padding: 0 10px;
+
+	        &:last-child {
+		        border-right: 0;
+		    }
+
+		}
+
+    }
+  
+    
+    /* ------------------
+		Right Nav
+	------------------------------------------------------------ */
+
+    #notifyMePriceAlert-toolbar .notifyMePriceAlert-wrapper {
+	    
+	    .notifyMePriceAlert-navRight li {
+	        padding: 0 10px;
+
+	        &:first-child {
+		        border-left: 0;
+		    }
+
+		}
+
+    }
+    
+    
+    /* ------------------
+		Toggle Button
+	------------------------------------------------------------ */
+    
+    #notifyMePriceAlert-toolbarToggle {
+        width: 30px;
+        height: 50px;
+    }
+    
+    #notifyMePriceAlert-toolbar #notifyMePriceAlert-wrapper ul .amount {
+        font-size: 20px;
+        line-height: 20px;
+        position: relative;
+        top: 1px;
+    }
+		
+}	
+
+
+/* ----------------------------------------------------------------
+	Mobile to Tablet
+-----------------------------------------------------------------*/
+
+@media only screen and (min-width: 320px) and (max-width: 992px) {
+
+    #notifyMePriceAlert-toolbar,
+    #notifyMePriceAlert-toolbarToggle,
+    #notifyMePriceAlert-toolbar[style],
+    #notifyMePriceAlert-toolbarToggle[style] {
+	    display: none !important;
+    }
+
+	.notifyMePriceAlert-dashboard .swiper-button-prev,
+	.notifyMePriceAlert-dashboard .swiper-button-next {
+	}
+
+    .notifyMePriceAlert-dashboard {
+	    
+	    .notifyMePriceAlert-dashboardClose {
+	        height: 22px;
+	        width: 22px;
+	        right: 15px;
+        }
+        
+		.swiper-container {
+			margin: 0;
+		}
+		
+		.notifyMePriceAlert-swiper .swiper-slide .vehicleImage {
+			max-height: none;
+			min-height: none;
+			height: auto;
+		}
+		
+		.notifyMePriceAlert-footer .notifyMePriceAlert-footerLeft,
+		.notifyMePriceAlert-footer .notifyMePriceAlert-footerRight {
+			text-align: center;
+		}
+		
+		.notifyMePriceAlert-footerRight .button {
+			margin: 20px 0 10px 0 !important;
+		}
+		
+		ul.tab-nav {
+		
+			li {
+		
+				a {
+					font-size: (@notifyme-dashboard-tab-font-size)-1;
+				}
+		
+			}
+		}						
+									            
+    }
+
+
+	#notifyMePriceAlert-dashboard #notifyMePriceAlert-map {
+		height: 250px;
+		margin-bottom: 30px;
+	}
+	
+	#notifyMePriceAlert-dashboard .notifyMePriceAlert-address,
+	#notifyMePriceAlert-dashboard .notifyMePriceAlert-phone {
+		text-align: center;
+	}	
+
+	#notifyMePriceAlert-dashboard .notifyMePriceAlert-phone {
+		margin-bottom: 30px;
+	}
+
+}
