@@ -282,9 +282,9 @@ body.stretched #header.full-header .container {
 #primary-menu.flexbox > div > ul > li {
 	flex: 1;                  /* NEW, Spec - Opera 12.1, Firefox 20+ */
 	text-align: center;
-    flex-grow: 1;
-    flex-shrink: 1;
-    flex-basis: auto;	
+	flex-grow: 1;
+	flex-shrink: 1;
+	flex-basis: auto;	
 }
 
 #primary-menu.flexbox > div > ul > li > ul > li {
@@ -413,8 +413,8 @@ body.stretched #header.full-header .container {
 
 			a {
 				display: block;
-				height: @header-height;
-				line-height: @header-height;
+				height: @primary-menu-height;
+				line-height: @primary-menu-height;
 				padding: @primary-menu-padding;
 				color: @primary-menu-font-color;
 				font-weight: @primary-menu-font-weight;
@@ -451,8 +451,8 @@ body.stretched #header.full-header .container {
 			
 			ul {
 				li {
-				border-bottom-left-radius: @primary-menu-submenu-border-radius;
-				border-bottom-right-radius: @primary-menu-submenu-border-radius;		
+					border-bottom-left-radius: @primary-menu-submenu-border-radius;
+					border-bottom-right-radius: @primary-menu-submenu-border-radius;		
 				}
 			}
 			
@@ -845,7 +845,7 @@ body:not(.device-sm):not(.device-xs):not(.device-xxs) #primary-menu.style-2.cent
 
 #primary-menu.sub-title > ul > li,
 #primary-menu.sub-title.style-2 > div > ul > li {
-	background: url("images/icons/menu-divider.png") no-repeat right center;
+	//background: url("images/icons/menu-divider.png") no-repeat right center;
 	margin-left: 1px;
 }
 
@@ -907,7 +907,6 @@ body:not(.device-sm):not(.device-xs):not(.device-xxs) #primary-menu.style-2.cent
 #primary-menu.sub-title.style-2 ul li .mega-menu-content ul { top: 0; }
 
 #primary-menu.sub-title.style-2 > div #top-search,
-#primary-menu.sub-title.style-2 > div #top-cart,
 #primary-menu.sub-title.style-2 > div #side-panel-trigger {
 	float: right;
 	margin-top: 30px;
@@ -1154,7 +1153,7 @@ body.top-search-open #top-search form {
 			font-weight: 700;
 			margin-top: 0 !important;
 			font-family: @heading-font;
-			letter-spacing: 2px;
+			letter-spacing: @top-search-form-letter-spacing;
 		}
 	}
 }
@@ -1280,8 +1279,7 @@ body:not(.device-sm):not(.device-xs):not(.device-xxs) #header.transparent-header
 	}
 }
 
-#top-search,
-#top-cart {
+#top-search {
 	-webkit-transition: margin .4s ease, opacity .3s ease;
 	-o-transition: margin .4s ease, opacity .3s ease;
 	transition: margin .4s ease, opacity .3s ease;
@@ -1302,7 +1300,6 @@ body.top-search-open {
 	#header-wrap #logo,
 	#primary-menu > ul,
 	#primary-menu > .container > ul,
-	#top-cart,
 	#side-panel-trigger {
 		opacity: 0;
 	}
