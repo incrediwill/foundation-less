@@ -24,7 +24,7 @@
 		padding: 0;
 		margin: 0;
 		line-height: 1;
-		font-weight: 400;
+		font-weight: @page-title-weight;
 		letter-spacing: @page-title-letter-spacing;
 		color: @page-title-color;
 		font-size: @page-title-size;
@@ -33,8 +33,8 @@
 	span {
 		display: block;
 		margin-top: 10px;
-		font-weight: 300;
-		color: #777;
+		font-weight: @page-title-subtitle-weight;
+		color: @page-title-subtitle-color;
 		font-size: @page-title-subtitle-size;
 	}
 }
@@ -42,7 +42,7 @@
 .breadcrumb {
 	position: absolute !important;
 	width: auto !important;
-	top: -40px !important;
+	top: @page-title-breadcrumb-top !important;
 	left: 15px !important;
 	margin: 0 0 0 0 !important;
 	background-color: transparent !important;
@@ -175,13 +175,13 @@ body.stretched .container-fullwidth .breadcrumb { right: 60px !important; }
 		background-repeat: no-repeat;
 
 		h1 {
-			font-size: @page-title-parallax-size;
-			font-weight: 600;
-			letter-spacing: 2px;
+			font-size: @page-title-size;
+			font-weight: @page-title-weight;
+			letter-spacing: @page-title-letter-spacing;
 		}
 
 		span {
-			font-size: @page-title-parallax-subtitle-size;
+			font-size: @page-title-subtitle-size;
 		}
 
 		.breadcrumb {
