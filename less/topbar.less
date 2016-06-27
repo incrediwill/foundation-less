@@ -18,22 +18,25 @@
 	font-size: @topbar-font-size;
 	
 	.button {
-		line-height: (@topbar-height - 14);
-		height: (@topbar-height - 14);
-		font-size: (@topbar-font-size - 2);
+		line-height: @topbar-button-height;
+		height: @topbar-button-height;
+		font-size: @topbar-button-font-size;
 	}
 	
 	.input input,
 	.select select {
-		font-size: (@topbar-font-size - 2);
-		height: (@topbar-height - 14);
-		padding: 0px 10px;
-		margin-top: (@topbar-height / 5);
+		background: @topbar-input-background;
+		border-color: @topbar-input-border-color;
+		color: @topbar-input-font-color;		
+		font-size: @topbar-input-font-size;
+		height: @topbar-input-height;
+		padding: @topbar-input-padding;
+		margin: @topbar-input-margin;
 	}
 	
 	.select i {
-		height: (@topbar-height - 14);
-		top: -( (@topbar-height - 14) / 3.5 );
+		font-size: @topbar-input-icon-size;
+		top: @topbar-input-icon-pos;
 	}
 	
 }
