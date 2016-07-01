@@ -33,7 +33,40 @@
 				display: block;
 				visibility: visible;
 			}
-		}		
+
+			.slide-disclaimer-btn {
+				background: rgba(0, 0, 0, 0.7);
+				right: 10px;
+				padding: 5px;
+				position: absolute;
+				top: 10px;
+				z-index: 900;
+			}
+			
+			.slide-disclaimer-btn .slide-disclaimer-link {
+				color: #fff;
+				font-size: 11px;
+				font-weight: bold;
+			}
+			
+			.slide-disclaimer {
+				background: rgba(0, 0, 0, 0.7);
+				bottom: 0;
+				color: #fff;
+				font-size: 12px;
+				height: 100%;
+				left: 0;		
+				padding: 40px 10px 10px 10px;
+				position: absolute;
+				width: 100%;
+				z-index: 800;
+					-moz-transition: all .2s ease-in-out;
+					-webkit-transition: all .2s ease-in-out;
+					-o-transition: all .2s ease-in-out;
+					transition: all .2s ease-in-out;	
+			}
+		
+		}
 
 		.cycle-pager { 
 		    text-align: center;
