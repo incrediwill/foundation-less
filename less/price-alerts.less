@@ -22,6 +22,7 @@ body.dashboard-is-open {
     z-index: 999;
 
 	.notifyMePriceAlert-wrapper {
+		border: @notifyme-toolbar-border;
 	    background: @notifyme-toolbar-bg;
 	    color: @notifyme-toolbar-font-color;
 	    margin: 0;
@@ -42,7 +43,12 @@ body.dashboard-is-open {
 			    -webkit-transition: .3s ease;
 			    -o-transition: .3s ease;
 			    transition: .3s ease;
-			}		    
+			}
+			
+			.title {
+				font-size: @notifyme-toolbar-font-size;
+				font-weight: @notifyme-toolbar-font-weight;
+			}			
 		    
 			li {
 			    cursor: pointer;
