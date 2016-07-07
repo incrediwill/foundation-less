@@ -20,7 +20,12 @@
 	letter-spacing: 0px;
 	border: none;
 	.border-radius(@border-radius);
-	.gradient (@origin: @button-gradient-origin, @start: @button-bg-start-color, @stop: @button-bg-end-color);
+	& when (@button-gradient = true) {
+		.gradient (@origin: @button-gradient-origin, @start: @button-bg-start-color, @stop: @button-bg-end-color);	
+	}
+	& when (@button-gradient = false) {
+		background: @button-bg-color;
+	}
 }
 
 body:not(.device-touch) .button {
@@ -38,8 +43,14 @@ body:not(.device-touch) .button {
 }
 
 .button:hover {
-	.gradient (@origin: @button-gradient-origin, @start: @button-bg-start-hover-color, @stop: @button-bg-end-hover-color);
 	color: @button-font-hover-color;
+	
+	& when (@button-gradient = true) {
+		.gradient (@origin: @button-gradient-origin, @start: @button-bg-start-color, @stop: @button-bg-end-color);	
+	}
+	& when (@button-gradient = false) {
+		background: @button-bg-hover-color;
+	}
 }
 
 .button.button-dark:hover { background-color: @theme-color; }
