@@ -244,13 +244,26 @@ body.stretched #header.full-header .container {
 	Primary Menu - Link Styles
 --------------------------------------*/
 
-#primary-menu.link-style-2 > div > ul > li.current:after {
+#primary-menu.link-style-2 > div > ul > li.current > a:after {
 	background: @primary-menu-active-color;	
 	content: '';
 	display: block;
 	height: 3px;
 	position: relative;
 	bottom: 3px;
+	-webkit-transition: .1s ease;
+	-o-transition: .1s ease;
+	transition: .1s ease;	
+}
+
+#primary-menu.link-style-3 ul li.current div:after {
+	background: @primary-menu-active-color;	
+	content: '';
+	display: block;
+	height: 1px;
+	width: 100%;
+	position: relative;
+	bottom: 24px;
 	-webkit-transition: .1s ease;
 	-o-transition: .1s ease;
 	transition: .1s ease;	
