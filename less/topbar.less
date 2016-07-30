@@ -11,27 +11,42 @@
 
 
 #top-bar {
-	.gradient (@origin: @topbar-gradient-origin, @start: @topbar-background-color-start, @stop: @topbar-background-color-end);
 	position: relative;
 	height: @topbar-height;
 	line-height: @topbar-line-height;
 	font-size: @topbar-font-size;
+	& when (@topbar-gradient = true) {
+		.gradient (@origin: @topbar-gradient-origin, @start: @topbar-background-color-start, @stop: @topbar-background-color-end);
+	}
+	& when (@topbar-gradient = false) {
+		background: @topbar-bg-color;
+	}
 	
 	.button {
+		background: @topbar-button-bg;
+		color: @topbar-button-color;
+		font-size: @topbar-button-font-size;		
 		line-height: @topbar-button-height;
 		height: @topbar-button-height;
-		font-size: @topbar-button-font-size;
+		width: @topbar-button-width;
+		top: @topbar-button-pos;
+		.border-radius(@topbar-button-radius);
+		
+		i {
+			margin: @topbar-button-icon-margin;
+		}
 	}
 	
 	.input input,
 	.select select {
 		background: @topbar-input-background;
-		border-color: @topbar-input-border-color;
+		border: @topbar-input-border;
 		color: @topbar-input-font-color;		
 		font-size: @topbar-input-font-size;
 		height: @topbar-input-height;
 		padding: @topbar-input-padding;
 		margin: @topbar-input-margin;
+		box-shadow: none;
 	}
 	
 	.select i {
@@ -42,11 +57,17 @@
 }
 
 #bottom-bar {
-	.gradient (@origin: @bottombar-gradient-origin, @start: @bottombar-background-color-start, @stop: @bottombar-background-color-end);
+	
 	position: relative;
 	height: @bottombar-height;
 	line-height: @bottombar-line-height;
 	font-size: @bottombar-font-size;
+	& when (@bottombar-gradient = true) {
+		.gradient (@origin: @bottombar-gradient-origin, @start: @bottombar-background-color-start, @stop: @bottombar-background-color-end);
+	}
+	& when (@bottombar-gradient = false) {
+		background: @bottombar-background-color;
+	}	
 }
 
 
@@ -64,7 +85,7 @@
 	}
 	
 	a:hover {
-		color: @header-map-link;
+		color: @header-map-link-hover;
 	}
 	
 }
