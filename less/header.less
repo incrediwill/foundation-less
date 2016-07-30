@@ -254,7 +254,7 @@ body.stretched #header.full-header .container {
 	Primary Menu - Link Styles
 --------------------------------------*/
 
-#primary-menu.link-style-2 > div > ul > li.current > a:after {
+.link-style-2 > div > ul > li.current:after {
 	background: @primary-menu-active-color;	
 	content: '';
 	display: block;
@@ -266,7 +266,7 @@ body.stretched #header.full-header .container {
 	transition: .1s ease;	
 }
 
-#primary-menu.link-style-3 ul li.current div:after {
+.link-style-3 > ul > li.current > a > div:after  {
 	background: @primary-menu-active-color;	
 	content: '';
 	display: block;
@@ -277,6 +277,10 @@ body.stretched #header.full-header .container {
 	-webkit-transition: .1s ease;
 	-o-transition: .1s ease;
 	transition: .1s ease;	
+}
+
+.link-style-3 > ul > li.current > ul > li > a > div:after {
+	display: none;
 }
 
 /* ----------------------
@@ -449,9 +453,12 @@ body.stretched #header.full-header .container {
 				text-transform: @primary-menu-font-tt;
 				font-family: @primary-menu-font;
 				white-space: nowrap;
-				-webkit-transition: height .4s ease, line-height .4s ease, margin .4s ease, padding .4s ease;
-				-o-transition: height .4s ease, line-height .4s ease, margin .4s ease, padding .4s ease;
-				transition: height .4s ease, line-height .4s ease, margin .4s ease, padding .4s ease;
+				
+				& when (@header-animations = true) {
+					-o-transition: height .4s ease, line-height .4s ease, margin .4s ease, padding .4s ease;							-webkit-transition: height .4s ease, line-height .4s ease, margin .4s ease, padding .4s ease;
+					transition: height .4s ease, line-height .4s ease, margin .4s ease, padding .4s ease;							-o-transition: height .4s ease, line-height .4s ease, margin .4s ease, padding .4s ease;
+					transition: height .4s ease, line-height .4s ease, margin .4s ease, padding .4s ease;
+				}				
 			}
 			
 			&:last-child a {
@@ -1286,9 +1293,11 @@ body:not(.device-sm):not(.device-xs):not(.device-xxs) #header.transparent-header
 #primary-menu:not(.style-2),
 #primary-menu:not(.style-2) > ul {
 	height: @header-height;
-	-webkit-transition: height .4s ease, opacity .3s ease;
+	
+	& when (@header-animations = true) {
 	-o-transition: height .4s ease, opacity .3s ease;
-	transition: height .4s ease, opacity .3s ease;
+	-webkit-transition: height .2s ease, opacity .3s ease;
+	}
 }
 
 #header.sticky-style-2 { height: ( (@header-height + @sticky-header-height) + 1 ); }
