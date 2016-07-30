@@ -232,8 +232,8 @@ body.stretched #header.full-header .container {
 				font-weight: @header-extras-span-weight;
 				color: @header-extras-span-color;
 			}
-			a
-			{
+			
+			a:not(.button){
 				font-weight: @header-extras-link-weight;
 				color: @header-extras-link-color;
 				
@@ -254,7 +254,7 @@ body.stretched #header.full-header .container {
 	Primary Menu - Link Styles
 --------------------------------------*/
 
-.link-style-2 > div > ul > li.current:after {
+#primary-menu.link-style-2 > div > ul > li.current:after {
 	background: @primary-menu-active-color;	
 	content: '';
 	display: block;
@@ -266,7 +266,7 @@ body.stretched #header.full-header .container {
 	transition: .1s ease;	
 }
 
-.link-style-3 > ul > li.current > a > div:after  {
+#primary-menu.link-style-3 > ul > li.current > a > div:after  {
 	background: @primary-menu-active-color;	
 	content: '';
 	display: block;
