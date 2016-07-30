@@ -33,12 +33,25 @@
 	height: auto !important;
 }
 
-.fontlarge {
-	font-size: @font-size-large !important;
+.responsive-bg {
+	background-position: center center;	
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-color: @theme-color;
 }
 
-.fontsmall {
-	font-size: @font-size-small !important;
+.fontlarge { font-size: @font-size-large !important; }
+.fontsmall { font-size: @font-size-small !important; }
+.fontbold { font-weight: @font-weight-bold !important; }
+.fontnormal { font-weight: @font-weight-normal !important; }
+
+.flip-horizontal,
+.flip-horizontal:before,
+.flip-horizontal:after {
+	transform: scaleX(-1);
+	-moz-transform: scaleX(-1);
+	-webkit-transform: scaleX(-1);
+	-ms-transform: scaleX(-1);
 }
 
 .line,
@@ -186,6 +199,9 @@ span.middot {
 .bgcolor,
 .bgcolor #header-wrap { background-color: @theme-color !important; }
 
+.bgcolor-1 { background-color: @background1-color; }
+.bgcolor-2 { background-color: @background2-color; }
+
 .color { color: @theme-color !important; }
 
 .alt-color { color: @alt-color !important; }
@@ -225,7 +241,8 @@ span.middot {
 
 .magnific-max-width .mfp-content { max-width: 800px; }
 
+.control-padding-xs { padding: 10px 0; }
 .control-padding-sm { padding: 20px 0; }
-.control-padding-lg { padding: 30px 0; }
-.control-padding-xl { padding: 50px 0; }
-.control-padding-xxl { padding: 100px 0; }
+.control-padding-md { padding: 30px 0; }
+.control-padding-lg { padding: 50px 0; }
+.control-padding-xl { padding: 100px 0; }
