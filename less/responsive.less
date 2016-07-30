@@ -327,7 +327,7 @@
 		display: block;
 		height: @mobile-header-height;
 		float: @mobile-header-logo-position;
-		margin: 0 auto 0 50px!important;
+		margin: @mobile-header-logo-margin;
 		max-width: none;
 		text-align: left;
 		border: 0 !important;
@@ -446,7 +446,7 @@
 								&.mega-menu-title {
 									margin: 0;
 									& > a {
-										font-size: 13px;
+										font-size: @primary-menu-submenu-font-size;
 										font-weight: 600;
 										text-transform: none !important;
 										margin: 0;
@@ -1383,6 +1383,7 @@
 @media only screen and (max-width: 767px) {
 
 	body {
+		font-size: 16px;
 		padding: 0 !important;
 	}
 
@@ -1403,6 +1404,15 @@
 
 	h4 { font-size: 16px; }
 
+	form, .input-wrapper {
+		.input input,
+		.select select,
+		.textarea textarea {
+			font-size: 16px;
+			line-height: 16px;
+		}		
+	}
+	
 	#gotoTop,
 	.one-page-arrow {
 		display: none !important;
@@ -1410,10 +1420,6 @@
 
 	#top-bar {
 		height: auto;
-		.col_half {
-			width: 100%;
-			margin-bottom: 0 !important;
-		}
 	}
 
 	.top-links,
@@ -1421,46 +1427,6 @@
 		float: none !important;
 	}
 
-	.top-links {
-		& > ul {
-			text-align: center;
-			& > li {
-				display: inline-block;
-				margin-right: -4px;
-			}
-		}
-		ul {
-			div {
-				&.top-link-section {
-					left: auto;
-					right: 0;
-					padding: 20px 15px;
-				}
-			}
-		}
-	}
-
-	.top-links ul ul,
-	.top-links ul div.top-link-section {
-		text-align: left;
-	}
-		
-
-	#gotoTop,
-	.one-page-arrow {
-		display: none !important;
-	}
-	#top-bar {
-		height: auto;
-		.col_half {
-			width: 100%;
-			margin-bottom: 0 !important;
-		}
-	}
-	.top-links,
-	.top-links > ul > li {
-		float: none !important;
-	}
 	.top-links {
 		& > ul {
 			text-align: center;
@@ -1509,6 +1475,8 @@
 			opacity: 1 !important;
 		}
 	}
+	
+	.flex-direction-nav { display: none; }		
 
 	.fslider {
 		&:not(.flex-thumb-grid) {
