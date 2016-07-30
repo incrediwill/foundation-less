@@ -147,13 +147,27 @@ body:not(.device-touch) .button {
 -----------------------------------------------------------------*/
 
 .button-alt {
-	.gradient (@origin: @button-gradient-origin, @start: @button-alt-bg-start-color, @stop: @button-alt-bg-end-color);
 	color: @button-alt-font-color;
 	
-	&:hover {
-		.gradient (@origin: @button-gradient-origin, @start: @button-alt-bg-start-hover-color, @stop: @button-alt-bg-start-hover-color);
-		color: @button-alt-font-hover-color
+	& when (@button-alt-gradient = true) {
+		.gradient (@origin: @button-gradient-origin, @start: @button-alt-bg-start-color, @stop: @button-alt-bg-end-color);
 	}
+	& when (@button-alt-gradient = false) {
+		background: @button-alt-bg-color;
+	}
+	
+	&:hover {
+		color: @button-alt-font-hover-color;
+		
+		& when (@button-alt-gradient = true) {
+			.gradient (@origin: @button-gradient-origin, @start: @button-alt-bg-start-hover-color, @stop: @button-alt-bg-start-hover-color);		
+		}
+		& when (@button-alt-gradient = false) {
+			background: @button-alt-bg-hover-color;
+		}
+		
+	}
+
 }
 
 
@@ -460,4 +474,35 @@ body:not(.device-touch) .button.button-full strong {
 	background-color: inherit !important;
 	color: inherit !important;
 	border-color: inherit !important;
+}
+
+
+/* PAG Uggo Button
+-----------------------------------------------------------------*/
+
+.button.uggo-button {
+	background: transparent;
+	border: #000000;
+	border-style: solid;
+	border-width: 3px;
+	border-radius: 8px;
+
+	.uggo-button-inner {
+		border-radius: 4px;
+		margin: 3px;
+		background: -moz-linear-gradient(top,  @uggo-bg-start-color 0%, @uggo-bg-center-color 50%, @uggo-bg-end-color 100%); /* FF3.6-15 */
+		background: -webkit-linear-gradient(top,  @uggo-bg-start-color 0%,@uggo-bg-center-color 50%, @uggo-bg-end-color 100%); /* Chrome10-25,Safari5.1-6 */
+		background: linear-gradient(to bottom,  @uggo-bg-start-color 0%,@uggo-bg-center-color 50%, @uggo-bg-end-color 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='@uggo-bg-start-color', endColorstr='@uggo-bg-end-color',GradientType=0 ); /* IE6-9 */
+	}
+	
+	&:hover {
+		.uggo-button-inner {
+			background: -moz-linear-gradient(top,  @uggo-bg-start-hover-color 0%, @uggo-bg-center-hover-color 50%, @uggo-bg-end-hover-color 100%); /* FF3.6-15 */
+			background: -webkit-linear-gradient(top,  @uggo-bg-start-hover-color 0%,@uggo-bg-center-hover-color 50%, @uggo-bg-end-hover-color 100%); /* Chrome10-25,Safari5.1-6 */
+			background: linear-gradient(to bottom,  @uggo-bg-start-hover-color 0%,@uggo-bg-center-hover-color 50%, @uggo-bg-end-hover-color 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+			filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='@uggo-bg-start-color', endColorstr='@uggo-bg-end-color',GradientType=0 ); /* IE6-9 */
+		}		
+	}
+
 }
