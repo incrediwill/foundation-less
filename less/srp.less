@@ -86,20 +86,27 @@
 			font-size: 12px;
 			padding-top: 12px;
 		}
-		
-		.button-price-change {
-			margin-top: 15px;
-			
-			a {
-				font-size: 15px;
-				line-height: 18px;
-				padding: 8px 14px;
-				height: auto;
-			}
-			
-		}
 
 	}
+	
+	.button-price-change {
+		margin-top: 15px;
+		
+		a {
+			font-size: 15px;
+			line-height: 18px;
+			padding: 8px 14px;
+			height: auto;
+			&.uggo-button {
+				padding: 0;
+				.uggo-button-inner {
+					padding: 8px 14px;		
+				}
+				
+			}
+		}
+		
+	}	
 	
 	#srp-cpo-history {
 
@@ -935,24 +942,23 @@
 						
 		#srp-vehicle-price {
 			text-align: center;
-			margin-top: 10px;
+			margin-top: 10px;							
+		}
+		
+		.button-price-change {
+			margin-top: 20px;
 			
-			.button-price-change {
-				margin-top: 20px;
+			a {
+				font-size: 15px;
+				line-height: 18px;
+				padding: 8px 14px;
+				height: auto;
 				
-				a {
-					font-size: 15px;
-					line-height: 18px;
-					padding: 8px 14px;
-					height: auto;
-					
-					br {
-						display: none;
-					}
+				br {
+					display: none;
 				}
-				
-			}			
-				
+			}
+			
 		}
 		
 		#srp-cpo-history {
