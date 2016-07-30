@@ -54,79 +54,6 @@ ul {
 	}
 }
 
-/* ----------------------------------------------------------------
-	Responsive Tabs
------------------------------------------------------------------*/
-
-.r-tabs .r-tabs-panel {
-    padding: 15px;
-    display: none;
-}
-
-.r-tabs .r-tabs-accordion-title {
-    display: none;
-}
-
-.r-tabs .r-tabs-panel.r-tabs-state-active {
-    display: block;
-
-}
-
-.r-tabs-tab {
-	a {
-		color: @body-color;
-	}
-	&.r-tabs-state-active {
-	    a {
-		    color: @tabs-active-color;
-	    }		
-	}
-}
-
-@media only screen and (max-width: 768px) {
-    .r-tabs .r-tabs-nav {
-        display: none;
-    }
-
-    .r-tabs {
-	    .r-tabs-accordion-title {
-		line-height: 40px;
-        display: block;		
-		padding: 0 0 0 10px;
-		margin: 0;
-		font-size: 16px;
-		font-weight: 600;
-		color: @body-color;
-		border-top: 1px solid @divider-color;
-		position: relative;
-			a {
-				display: block;
-			    &:after {
-			        font-family: "font-icons";
-			        content: '\e7a7';
-			        line-height: 40px;
-			        position: absolute;
-			        right: 10px;
-			        top: 0px;		        
-			        text-align: center;
-					//transition: .3s ease;		        
-			    }
-			}
-			&.r-tabs-state-active {
-				a {
-					color: @tabs-active-color;
-					&:after {
-						transform: rotate(180deg);
-					}
-				}
-			}
-		}
-		&:last-child {
-			border-bottom: 1px solid @divider-color;
-		}
-    }
-}
-
 
 /* Tabs - Alternate Nav
 -----------------------------------------------------------------*/
@@ -282,6 +209,9 @@ ul {
 			border: 0;
 			li {
 				border: 0 !important;
+				a {
+					border: 0 !important;
+				}				
 			}
 		}
 	}
