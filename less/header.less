@@ -1104,6 +1104,23 @@ body:not(.device-sm):not(.device-xs):not(.device-xxs) #primary-menu.style-2.cent
 }
 
 
+/* Primary Menu - Overlay Logo
+-----------------------------------------------------------------*/
+.overlay-logo #primary-menu ul li a,
+.overlay-logo #primary-menu:not(.style-2),
+.overlay-logo #primary-menu:not(.style-2) > ul, {
+	height: @primary-menu-height;
+	line-height: @primary-menu-height;
+	
+}
+.overlay-logo #primary-menu {
+	padding: @overlay-logo-menu-padding;
+}
+.overlay-logo #primary-menu ul ul {
+	top: (@primary-menu-height - 1);
+}
+
+
 /* ----------------------------------------------------------------
 	Mobile Header Search
 -----------------------------------------------------------------*/
@@ -1424,6 +1441,20 @@ body.top-search-open {
 		height: auto !important;
 	}
 }
+
+
+#header.sticky-header .overlay-logo #primary-menu:not(.style-2),
+#header.sticky-header .overlay-logo #primary-menu:not(.style-2) >ul,
+#header.sticky-header .overlay-logo #primary-menu>ul>li>a {
+	height: @primary-menu-height;
+	line-height: @primary-menu-height;	
+}
+#header.sticky-header:not(.static-sticky) #primary-menu > ul > li > ul {
+	top: (@primary-menu-height - 1);
+	line-height: @primary-menu-height;		
+}
+#header.sticky-header:not(.static-sticky):not(.sticky-style-2) .overlay-logo #logo img { height: @overlay-logo-height; }
+
 
 /* Primary Menu - Style 3
 -----------------------------------------------------------------*/
