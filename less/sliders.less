@@ -229,13 +229,6 @@
 }
 
 
-/*-----------------------------------------------------------------------------------
-
-	sliders.less
-
------------------------------------------------------------------------------------*/
-
-
 /* ----------------------------------------------------------------
 	Flex Slider
 -----------------------------------------------------------------*/
@@ -321,6 +314,10 @@ html[xmlns] .slider-wrap {display: block;}
 		}
 	}
 }
+
+.fslider[data-pagi-layout="right"] .flexslider .flex-control-nav { left: auto; right: 0; bottom: 10px; }
+.fslider[data-pagi-layout="left"] .flexslider .flex-control-nav { left: 10px; right: auto; transform: none; bottom: 10px; }
+
 
 
 /* ----------------------------------------------------------------
@@ -747,7 +744,16 @@ body:not(.side-header) .slider-parallax .slider-parallax-inner { left: 0; }
 	color: #FFF;
 	-webkit-transition: top .3s ease;
 	-o-transition: top .3s ease;
-	transition: top .3s ease;	
+	transition: top .3s ease;
+	
+	&.relative {
+		position: relative;
+		padding: 30px;
+		top: auto;
+		left: auto;
+		right: auto;
+		max-width: 100%;
+	}
 	
 	&.slider-content-right {
 		left: auto;
@@ -762,7 +768,19 @@ body:not(.side-header) .slider-parallax .slider-parallax-inner { left: 0; }
 		left: 0;
 		right: 0;
 	}
+	
+	h1, h2, h3, h4, h5, h6 {
+		color: inherit;
+	}
 		
+}
+
+.slider-light {
+	color: #000;
+}
+
+.slider-dark {
+	color: #fff;
 }
 
 .slider-content-bg {
@@ -771,16 +789,16 @@ body:not(.side-header) .slider-parallax .slider-parallax-inner { left: 0; }
 	background-color: rgba(0,0,0,0.6);
 	color: #fff;
 	
-	h1, h2, h3, h4, h5, h6 {
-		color: inherit;
-	}
-
 	&.slider-content-bg-light {
 		background-color: rgba(255,255,255,0.8);
 		color: #000;
 	}
 }
 
+
+.fslider .responsive-media {
+	padding-bottom: 60%;
+}
 
 /* Slider Arrows
 -----------------------------------------------------------------*/
