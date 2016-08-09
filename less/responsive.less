@@ -323,6 +323,29 @@
 		display: none;
 	}
 
+	#header .overlay-logo {
+		.logo-dealership-name {
+			margin: @heading-logo-margin-sm;
+			font-size: @mobile-heading-logo-font-size;
+			line-height: @mobile-header-height;
+		}
+		#logo {
+			position: relative;
+			margin: @mobile-header-logo-margin;
+			a {
+				&.standard-logo {
+					display: block;
+				}
+				&.retina-logo {
+					display: none;
+				}
+				img { 
+					height: @mobile-header-height;
+				}
+			}
+		}
+	}
+
 	#logo {
 		display: block;
 		height: @mobile-header-height;
@@ -2485,6 +2508,7 @@
 		}
 	}	
 	
+	#header .overlay-logo #logo .retina-mobile-logo { display: none; }
 }
 
 /* ----------------------------------------------------------------
@@ -2513,6 +2537,10 @@ only screen and (                min-resolution: 2dppx) {
 			}			
 		}
 	}
+	
+	#header.sticky-header:not(.style-2) .overlay-logo #logo .retina-logo img {
+		height: @overlay-logo-height;
+	}	
 
 	@media
 	(max-width: 767px) {
@@ -2558,7 +2586,9 @@ only screen and (                min-resolution: 2dppx) {
 					display: inline-block;
 				}				
 			}
-		}			
+		}
+		
+		#header .overlay-logo #logo .retina-mobile-logo { display: none; }	
 		
 		#header.mobile-center {
 			
