@@ -106,7 +106,6 @@ body.stretched #header.full-header .container {
 	float: @heading-logo-position;
 	font-family: @heading-font;
 	font-size: @heading-logo-font-size;
-	font-weight: @heading-logo-font-weight;
 	line-height: 100%;
 	margin: @heading-logo-margin;
 	
@@ -194,13 +193,36 @@ body.stretched #header.full-header .container {
 
 }
 
-
+#header .logo-dealership-name {
+	display: inline;
+	font-size: @heading-logo-font-size;
+	font-weight: @heading-logo-font-weight;	
+	text-transform: @heading-logo-text-transform;
+}
 
 #header.full-header #logo {
 	margin: @heading-logo-margin;
 }
 
 #header.transparent-header.full-header #logo { border-right-color: rgba(0,0,0,0.1); }
+
+/* ----------------------------------------------------------------
+	Overlay Logo
+-----------------------------------------------------------------*/
+.overlay-logo {
+	#logo {
+		position: absolute;
+		z-index: 100;
+		img {
+			height: @overlay-logo-height;
+		}
+	}
+}
+.overlay-logo .logo-dealership-name {
+	height: @heading-logo-height;
+	line-height: @heading-logo-height;
+	margin: @heading-logo-margin-lg;
+}
 
 
 /* ----------------------------------------------------------------
@@ -424,6 +446,9 @@ body.stretched #header.full-header .container {
 
 			&:first-child {
 				margin-left: 0;
+				a {
+					padding-left: 0;
+				}
 			}
 
 			&:after {
@@ -455,8 +480,8 @@ body.stretched #header.full-header .container {
 				white-space: nowrap;
 				
 				& when (@header-animations = true) {
-					-o-transition: height .4s ease, line-height .4s ease, margin .4s ease, padding .4s ease;							-webkit-transition: height .4s ease, line-height .4s ease, margin .4s ease, padding .4s ease;
-					transition: height .4s ease, line-height .4s ease, margin .4s ease, padding .4s ease;							-o-transition: height .4s ease, line-height .4s ease, margin .4s ease, padding .4s ease;
+					-o-transition: height .4s ease, line-height .4s ease, margin .4s ease, padding .4s ease;					
+					-webkit-transition: height .4s ease, line-height .4s ease, margin .4s ease, padding .4s ease;
 					transition: height .4s ease, line-height .4s ease, margin .4s ease, padding .4s ease;
 				}				
 			}
@@ -1077,6 +1102,7 @@ body:not(.device-sm):not(.device-xs):not(.device-xxs) #primary-menu.style-2.cent
 }
 
 }
+
 
 /* ----------------------------------------------------------------
 	Mobile Header Search
