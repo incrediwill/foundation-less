@@ -355,7 +355,6 @@
 		max-width: none;
 		text-align: left;
 		border: 0 !important;
-		padding: 0 !important;
 		a {
 			&.standard-logo {
 				display: inline-block;
@@ -2467,26 +2466,46 @@
 
 }
 
-@media only screen (max-width: 767px) {
+@media only screen and (min-width: 320px) and (max-width: 767px) {
 
 	#header.mobile-center {
 		
 		#logo {
 			text-align: center;
-			margin: 0 !important;	 
+			height: auto;
+			float: none;
+			margin: 0 !important;
+			padding: @mobile-header-center-padding; 
 			img {
 				margin: 0 auto;
 				height: auto;
-				width: 40%;
+				width: @mobile-header-center-logo-width;
 			}
 			.logo-dealership-name {
 				display: block;
 				font-size: @mobile-header-center-font-size;		
-				text-align: center;
+				text-align: center;				
 			}
 		}
 	
 	}
+	
+	#header.mobile-left {
+		
+		#logo {
+			text-align: left;
+			
+			img {
+				height: @mobile-header-height;
+			}
+			.logo-dealership-name {
+				display: inline-block;
+				font-size: @mobile-header-center-font-size;		
+				text-align: left;
+			}
+		}
+	
+	}	
 
 }
 
@@ -2549,6 +2568,7 @@ only screen and (                min-resolution: 2dppx) {
 		#header.mobile-center {
 			
 			#logo {
+				height: @mobile-header-height;
 				margin: 0 auto 0 50px !important;
 				text-align: left;
 				margin: inherit;	
@@ -2558,6 +2578,7 @@ only screen and (                min-resolution: 2dppx) {
 							margin: @heading-logo-img-margin;
 							width: auto;
 							max-width: 100% !important;
+							height: @mobile-header-height;
 						}
 						.logo-dealership-name {
 							display: inline-block;
@@ -2595,13 +2616,14 @@ only screen and (                min-resolution: 2dppx) {
 			
 			#logo {
 				text-align: center;
+				height: auto;
 				margin: 0 !important;
 				a {
 					&.retina-logo {
 						img {
 							margin: 0 auto;
 							height: auto;
-							width: 20%;
+							width: @mobile-header-center-logo-width;
 						}
 						.logo-dealership-name {
 							display: block;
@@ -2613,14 +2635,15 @@ only screen and (                min-resolution: 2dppx) {
 					
 					&.retina-mobile-logo {
 						img {
-							margin: @heading-logo-img-margin;
-							width: auto;
+							margin: 0;
+							width: @mobile-header-center-logo-width;
 							max-width: 100% !important;
+							height: auto;
 						}
 						.logo-dealership-name {
-							display: inline-block;
+							display: block;
 							font-size: @mobile-header-left-font-size;
-							text-align: left;
+							text-align: center;
 						}
 						
 					}
