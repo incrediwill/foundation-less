@@ -67,6 +67,7 @@
 @notifyme-toolbar-font-weight:						400;
 @notifyme-toolbar-font-top:							3px;
 @notifyme-toolbar-hover:							#1C69D4;
+@notifyme-toolbar-bg-hover:							@theme-color;
 @notifyme-toolbar-divider:							fade(@notifyme-toolbar-font-color, 15%);
 @notifyme-toolbar-border:							1px solid @divider-color;
 
@@ -143,8 +144,8 @@
 	Links
 -----------------------------------------------------------------*/
 
-@link-color:										#000000;
-@link-color-hover:									#1C69D4;
+@link-color:										@theme-color;
+@link-color-hover:									@body-color;
 
 /* ----------------------------------------------------------------
 	Layouts
@@ -193,12 +194,12 @@
 @header-phone-margin:								0 6px;
 @header-phone-label-font-size:						12px;
 @header-phone-label-font-weight:					400;
-@topbar-bg-color:									#fff;
 
-@topbar-gradient:									true;
+@topbar-gradient:									false;
 @topbar-gradient-origin:							top;
 @topbar-background-color-start:						#000000;
 @topbar-background-color-end:						#353535;
+@topbar-bg-color:									#fff;
 @topbar-height:                 					38px;
 @topbar-line-height:            					@topbar-height;
 
@@ -264,11 +265,13 @@
 @header-border-bottom:								1px solid #f5f5f5;
 
 @heading-logo-margin:								0;
-@heading-logo-position:								right; // left / right
+@heading-logo-position:								left; // left / right
 @heading-logo-img-margin:							0 0 0 0;
 @heading-logo-font-size:							28px;
 @heading-logo-font-weight:							600;
 @heading-logo-text-transform:						uppercase;
+
+// Overlay Logo Header
 @heading-logo-height:								45px;
 @heading-logo-margin-lg:							0 0 0 140px;
 @heading-logo-margin-sm:							0 0 0 0;
@@ -291,10 +294,12 @@
 @side-header-bg:                					#ffffff;
 
 // Mobile Header
-@mobile-heading-logo-font-size:						13px;
+@mobile-heading-logo-font-size:						14px;
 @mobile-header-height:								70px;
-@mobile-header-left-font-size:						20px;
-@mobile-header-center-font-size:					16px;
+@mobile-header-left-font-size:						14px;
+@mobile-header-center-font-size:					14px;
+@mobile-header-center-padding:						0 0 10px 0;
+@mobile-header-center-logo-width:					32%;
 
 // Header Extras
 @header-extras-font-size:							14px;
@@ -310,6 +315,8 @@
 /* ----------------------------------------------------------------
 	Primary Menu
 -----------------------------------------------------------------*/
+
+@primary-menu-background:          					#ffffff;
 
 @primary-menu-font:             					@body-font;
 @primary-menu-font-weight:      					normal;
@@ -339,6 +346,7 @@
 // Primary Menu Sub Menu
 @primary-menu-submenu-width:        		  		auto;
 @primary-menu-submenu-font:             			@body-font;
+@primary-menu-submenu-font-color: 					#000;
 @primary-menu-submenu-font-size:        			12px;
 @primary-menu-submenu-font-weight:      			@primary-menu-font-weight;
 @primary-menu-submenu-padding:						0 15px;
@@ -358,6 +366,7 @@
 /* ----------------------------------------------------------------
 	Side Panel Menu
 -----------------------------------------------------------------*/
+@side-panel-menu-background:						none;
 
 @side-panel-menu-height:							40px;
 @side-panel-menu-font:             					@body-font;
@@ -542,6 +551,9 @@
 @button-bg-start-hover-color:						#434c53;
 @button-bg-end-hover-color:							#434c53;
 
+@button-alt-border:									1px solid @divider-color;
+@button-alt-border-hover:							1px solid @theme-color;
+
 @button-alt-gradient:								false; // true/false
 @button-alt-bg-start-color:							#d5d9d8;
 @button-alt-bg-end-color:							#d5d9d8;
@@ -562,6 +574,8 @@
 @uggo-bg-end-hover-color:							darken(@alt-color, 24%);
 @uggo-border-color:									#cc0033;
 
+@uggo-font-color:									#ffffff;
+@uggo-font-color-hover:								#ffffff;
 
 /* ----------------------------------------------------------------
 	Portfolio
@@ -685,10 +699,12 @@
 -----------------------------------------------------------------*/
 
 @quick-browse-bg:									#ffffff;
-@featured-vehicles-bg:								@background1-color;
 @get-directions-bg:									#f2f2f2;
 
 @max-width:											1550px;
+@featured-vehicles-bg:								@background1-color;
+@featured-vehicles-scrollbar-bg:					@background2-color;
+@featured-vehicles-scrollbar-drag:					@theme-color;
 
 /* ----------------------------------------------------------------
 	Social Media Icons
@@ -709,33 +725,33 @@
 	Modals
 -----------------------------------------------------------------*/
 
-@modal-border:										none; //1px solid #ff0000;
-@modal-border-radius:								0px;
+@modal-border:										1px solid @divider-color;
+@modal-border-radius:								5px;
 @modal-box-shadow:									none; //0 5px 15px rgba(0,0,0,1);
 
 @modal-header-padding:								15px;
-@modal-header-bg-start:								#000;
-@modal-header-bg-end:								#303030;
-@modal-header-border-bottom:						none;
-@modal-header-title-color:							#ffffff;
+@modal-header-bg-start:								#ffffff;
+@modal-header-bg-end:								#ffffff;
+@modal-header-border-bottom:						1px solid @divider-color;
+@modal-header-title-color:							@theme-color;
 @modal-header-bg-origin:							top;
 
 /* ----------------------------------------------------------------
 	SRP
 -----------------------------------------------------------------*/
 
-@current-search-border-radius:						0px;
+@current-search-border-radius:						5px;
 
 @vehicle-row-hover:									@background1-color;
 
 @srp-filter-label-bg:								#666766;
 @srp-filter-lable-border-radius:					0px;
 @srp-filter-label-color:							#ffffff;
-@srp-filter-label-width:							40px;// px / auto
+@srp-filter-label-width:							auto;// px / auto
 @srp-filter-label-text-align:						center;
 
-@popover-border-radius:								0px;
-@popover-title-border-radius:						0px 0px 0px 0px;
+@popover-border-radius:								5px;
+@popover-title-border-radius:						4px 4px 0px 0px;
 
 @cross-promotion-background:						@background1-color;
 @cross-promotion-font-color:						#000;
