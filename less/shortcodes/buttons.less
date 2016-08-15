@@ -18,7 +18,7 @@
 	font-weight: @button-font-weight;
 	text-transform: @button-transform;
 	letter-spacing: 0px;
-	border: none;
+	border: @button-border;
 	.border-radius(@border-radius);
 	& when (@button-gradient = true) {
 		.gradient (@origin: @button-gradient-origin, @start: @button-bg-start-color, @stop: @button-bg-end-color);	
@@ -43,6 +43,7 @@ body:not(.device-touch) .button {
 }
 
 .button:hover {
+	border: @button-border-hover;
 	color: @button-font-hover-color;
 	
 	& when (@button-gradient = true) {
@@ -147,6 +148,7 @@ body:not(.device-touch) .button {
 -----------------------------------------------------------------*/
 
 .button-alt {
+	border: @button-alt-border;
 	color: @button-alt-font-color;
 	
 	& when (@button-alt-gradient = true) {
@@ -157,6 +159,7 @@ body:not(.device-touch) .button {
 	}
 	
 	&:hover {
+		border: @button-alt-border-hover;
 		color: @button-alt-font-hover-color;
 		
 		& when (@button-alt-gradient = true) {
@@ -486,6 +489,7 @@ body:not(.device-touch) .button.button-full strong {
 	border-style: solid;
 	border-width: 3px;
 	border-radius: 8px;
+	color:	@uggo-font-color;
 
 	.uggo-button-inner {
 		border-radius: 4px;
@@ -497,6 +501,7 @@ body:not(.device-touch) .button.button-full strong {
 	}
 	
 	&:hover {
+		color: @uggo-font-color-hover;
 		.uggo-button-inner {
 			background: -moz-linear-gradient(top,  @uggo-bg-start-hover-color 0%, @uggo-bg-center-hover-color 50%, @uggo-bg-end-hover-color 100%); /* FF3.6-15 */
 			background: -webkit-linear-gradient(top,  @uggo-bg-start-hover-color 0%,@uggo-bg-center-hover-color 50%, @uggo-bg-end-hover-color 100%); /* Chrome10-25,Safari5.1-6 */
