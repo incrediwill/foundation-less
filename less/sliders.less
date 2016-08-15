@@ -75,7 +75,13 @@
 					-moz-transition: all .2s ease-in-out;
 					-webkit-transition: all .2s ease-in-out;
 					-o-transition: all .2s ease-in-out;
-					transition: all .2s ease-in-out;	
+					transition: all .2s ease-in-out;
+				
+				p, ul, ol, h1, h2, h3, h4, h5, h6 {
+					color: inherit;
+					margin: 0;
+				}
+				
 			}
 		
 		}
@@ -135,6 +141,7 @@
 		
 		.slideshow-btn {
 			background: @homepage-slideshow-btn-bg;
+			border: @homepage-slideshow-btn-border;
 			color: @homepage-slideshow-arrow-color;
 			cursor: pointer;
 			display: block;
@@ -156,6 +163,7 @@
 			
 			&:hover {
 				background:  @homepage-slideshow-btn-bg-hover;
+				border: @homepage-slideshow-btn-border-hover;
 				color: @homepage-slideshow-arrow-color-hover;
 				opacity: @homepage-slideshow-btn-bg-hover-opacity;
 			}
