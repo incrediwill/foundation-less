@@ -187,6 +187,7 @@ body.stretched #header.full-header .container {
 	}
 	
 	.logo-dealership-name {
+		color: @heading-logo-font-color;
 		font-size: @heading-logo-font-size;
 		display: inline;
 	}
@@ -206,8 +207,9 @@ body.stretched #header.full-header .container {
 
 #header.transparent-header.full-header #logo { border-right-color: rgba(0,0,0,0.1); }
 
+
 /* ----------------------------------------------------------------
-	Overlay Logo
+	Header Style 3 (Logo Overlaying Navigation)
 -----------------------------------------------------------------*/
 .overlay-logo {
 	#logo {
@@ -226,10 +228,27 @@ body.stretched #header.full-header .container {
 
 
 /* ----------------------------------------------------------------
+	Header Style 4 (Center Layout)
+-----------------------------------------------------------------*/
+#header.header-style-4 {
+	#logo {
+		float: none;
+		height: @header-height;
+		text-align: center;
+		img {
+			display: block;
+			height: auto;
+			margin: 0 auto;
+			padding-top: @header-style4-logo-padding-top;
+			padding-bottom: @header-style4-logo-padding-bottom;
+		}
+	}	
+}
+
+
+/* ----------------------------------------------------------------
 	Header Right Area
 -----------------------------------------------------------------*/
-
-
 .header-extras {
 	float: right;
 	margin: ( (@header-height / 3) / 2 ) 0 0;
@@ -245,6 +264,7 @@ body.stretched #header.full-header .container {
 		}
 
 		.he-text {
+			color: @header-extras-font-color;
 			float: left;
 			padding-left: 10px;
 			font-size: @header-extras-font-size;
@@ -761,7 +781,7 @@ body.stretched #header.full-header #primary-menu ul li.mega-menu .mega-menu-cont
 #primary-menu.style-2 {
 	float: none;
 	max-width: none;
-	border-top: 1px solid #F5F5F5;
+	border-top: @primary-menu-border;
 }
 
 #primary-menu.style-2 > div > ul { float: left; }
@@ -1267,6 +1287,7 @@ body:not(.device-sm):not(.device-xs):not(.device-xxs) #header.transparent-header
 }
 
 #primary-menu .container #top-search form input,
+#primary-menu .container-fullwidth #top-search form input,
 .sticky-header #top-search form input { border: none !important; }
 
 
@@ -1330,7 +1351,6 @@ body:not(.device-sm):not(.device-xs):not(.device-xxs) #header.transparent-header
 /* ----------------------------------------------------------------
 	Sticky Header
 -----------------------------------------------------------------*/
-
 #header,
 #header-wrap,
 #logo img,
@@ -1344,7 +1364,16 @@ body:not(.device-sm):not(.device-xs):not(.device-xxs) #header.transparent-header
 	}
 }
 
-#header.sticky-style-2 { height: ( (@header-height + @sticky-header-height) + 1 ); }
+// For When there are no header borders
+#header.sticky-style-2 {
+	& when (@header-has-bottom-border = true) {
+		height: ( (@header-height + @sticky-header-height) + 1 ); 
+	}
+	
+	& when (@header-has-bottom-border = false) {
+		height: (@header-height + @sticky-header-height);
+	}
+}
 
 #header.sticky-style-3 { height: ( (@header-height + @sticky-header-height) + 21 ); }
 
@@ -1374,7 +1403,8 @@ body:not(.device-sm):not(.device-xs):not(.device-xxs) #header.transparent-header
 body:not(.top-search-open) {
 	#header-wrap #logo,
 	#primary-menu > ul,
-	#primary-menu > .container > ul {
+	#primary-menu > .container > ul,
+	#primary-menu > .container-fullwidth > ul	 {
 		opacity: 1;
 		-webkit-transition: height .4s ease, margin .4s ease, opacity .2s .2s ease;
 		-o-transition: height .4s ease, margin .4s ease, opacity .2s .2s ease;
@@ -1386,6 +1416,7 @@ body.top-search-open {
 	#header-wrap #logo,
 	#primary-menu > ul,
 	#primary-menu > .container > ul,
+	#primary-menu > .container-fullwidth > ul,
 	#side-panel-trigger {
 		opacity: 0;
 	}
@@ -2190,6 +2221,7 @@ body.side-panel-right #side-panel {
 					}
 
 					a {
+						color: @side-panel-menu-submenu-font-color !important;
 						font-size: @side-panel-menu-submenu-font-size;
 						font-weight: @side-panel-menu-submenu-font-weight;
 						height: auto !important;
