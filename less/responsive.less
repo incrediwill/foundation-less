@@ -347,6 +347,20 @@
 		}
 	}
 
+	#header.header-style-4 {
+		
+		#logo {
+			padding: @mobile-header-center-padding; 
+			height: auto;
+			img {
+				margin: 0 auto;
+				height: auto;
+				padding-top: @mobile-header-style4-logo-padding-top;
+				padding-bottom: @mobile-header-style4-logo-padding-bottom;				
+			}
+		}
+	}
+	
 	#logo {
 		display: block;
 		height: @mobile-header-height;
@@ -2468,6 +2482,18 @@
 
 @media only screen and (min-width: 320px) and (max-width: 767px) {
 
+	#header.header-style-4 {
+		
+		#logo {
+			img {
+				width: @mobile-header-center-logo-width;
+			}
+			.logo-dealership-name {
+				font-size: @mobile-header-center-font-size;		
+			}
+		}
+	}
+	
 	#header.mobile-center {
 		
 		#logo {
@@ -2563,10 +2589,23 @@ only screen and (                min-resolution: 2dppx) {
 	}	
 
 	@media
+	(max-width: 992px) {
+		#header.header-style-4 {
+			#logo {
+				img {
+					width: @mobile-header-center-logo-width;
+				}
+				.logo-dealership-name {
+					font-size: @tablet-header-style4-font-size;
+				}
+			}
+		}	
+	}
+	
+	@media
 	(max-width: 767px) {
 		
 		#header.mobile-center {
-			
 			#logo {
 				height: @mobile-header-height;
 				margin: 0 auto 0 50px !important;
@@ -2610,10 +2649,18 @@ only screen and (                min-resolution: 2dppx) {
 			}
 		}
 		
+		#header.header-style-4 {
+			
+			#logo {
+				.logo-dealership-name {
+					font-size: @mobile-header-center-font-size;
+				}
+			}
+		}		
+		
 		#header .overlay-logo #logo .retina-mobile-logo { display: none; }	
 		
 		#header.mobile-center {
-			
 			#logo {
 				text-align: center;
 				height: auto;
