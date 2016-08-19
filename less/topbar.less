@@ -23,6 +23,7 @@
 	}
 	
 	.button {
+		border: @topbar-button-border;
 		background: @topbar-button-bg;
 		color: @topbar-button-color;
 		font-size: @topbar-button-font-size;		
@@ -34,6 +35,12 @@
 		
 		i {
 			margin: @topbar-button-icon-margin;
+		}
+		
+		&:hover{
+			border: @topbar-button-border-hover;
+			background: @topbar-button-bg-hover;
+			color: @topbar-button-color-hover;
 		}
 	}
 	
