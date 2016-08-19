@@ -9,17 +9,17 @@
 	Base Colors
 -----------------------------------------------------------------*/
 
-@theme-color:										#000000;
+@theme-color:										#2d96cd;
 @alt-color:											#000000;
-@body-color:										#000000;
-@heading-color:										#000000;
+@body-color:										#444;
+@heading-color:										#222222;
 
-@divider-color:										#DBDBDB;
+@divider-color:										#dddddd;
 @content-bg:										#FFFFFF;
 
-@background1-color:									#e6e7e8;
-@background2-color:									#EEEEEE;
-@background3-color:									#999999;
+@background1-color:									#f3f3f3;
+@background2-color:									#e1e1e1;
+@background3-color:									#bbbbbb;
 @body-bg-color:										#ffffff;
 
 
@@ -37,39 +37,39 @@
 	Notify Me Price Alerts
 -----------------------------------------------------------------*/
 
-@notifyme-dashboard-bg:								#ffffff;
-@notifyme-dashboard-font-color:						#000000;
-@notifyme-dashboard-link-color:						#000000;
-@notifyme-dashboard-link-hover-color:				#1C69D4;
-@notifyme-dashboard-close-color:					#1C69D4;
+@notifyme-dashboard-bg:								@body-bg-color;
+@notifyme-dashboard-font-color:						@body-color;
+@notifyme-dashboard-link-color:						@link-color;
+@notifyme-dashboard-link-hover-color:				@link-color-hover;
+@notifyme-dashboard-close-color:					@theme-color;
 @notifyme-dashboard-priceValue-font-size:			@font-size-h4;
 @notifyme-dashboard-priceLabel-font-size:			15px;
 @notifyme-dashboard-tab-font-size:					@font-size-base;
 
-@notifyme-dashboard-form-submit-margin:				25px 0 0 0;
+@notifyme-dashboard-form-submit-margin:				29px 0 0 0;
 
-@notifyme-dashboard-arrow-color:					#1C69D4;
+@notifyme-dashboard-arrow-color:					@theme-color;
 @notifyme-dashboard-price-alert-color:				#228826; // green
 
-@notifyme-alertBox-border:							#000000;
-@notifyme-alertBox-bg:								#000000;
-@notifyme-alertBox-font:							#000000;
-@notifyme-alertBox-close:							#000000;
-@notifyme-alertBox-border-radius:					0px;
+@notifyme-alertBox-border:							@theme-color;
+@notifyme-alertBox-bg:								@theme-color;
+@notifyme-alertBox-font:							@theme-color;
+@notifyme-alertBox-close:							@theme-color;
+@notifyme-alertBox-border-radius:					5px;
 
-@notifyme-toolbar-bg:								#000000;
+@notifyme-toolbar-bg:								#1B394F;
 @notifyme-toolbar-height:							50px;
-@notifyme-toolbar-amount-size:						26px;
-@notifyme-toolbar-amount-color:						#FFFFFF;
+@notifyme-toolbar-amount-size:						18px;
+@notifyme-toolbar-amount-color:						#ffffff;
 @notifyme-toolbar-amount-hover-color:				#ffffff;
 @notifyme-toolbar-font-color:						#ffffff;
-@notifyme-toolbar-font-size:						22px;
-@notifyme-toolbar-font-weight:						400;
-@notifyme-toolbar-font-top:							3px;
-@notifyme-toolbar-hover:							#1C69D4;
+@notifyme-toolbar-font-size:						14px;
+@notifyme-toolbar-font-weight:						300;
+@notifyme-toolbar-font-top:							2px;
+@notifyme-toolbar-hover-color:						#ffffff;
 @notifyme-toolbar-bg-hover:							@theme-color;
 @notifyme-toolbar-divider:							fade(@notifyme-toolbar-font-color, 15%);
-@notifyme-toolbar-border:							1px solid @divider-color;
+@notifyme-toolbar-border:							none; //1px solid @divider-color;
 
 @notifyme-toolbar-navLeft-padding:					0 20px;
 
@@ -81,7 +81,7 @@
 @notifyme-toolbar-userEmail-top:					-10px;
 @notifyme-toolbar-userEmail-icon-top:				-4px;
 
-@notifyme-toolbar-toggle-bg:						#1C69D4;
+@notifyme-toolbar-toggle-bg:						@theme-color;
 @notifyme-toolbar-toggle-font-size:					18px;
 @notifyme-toolbar-toggle-font-color:				#ffffff;
 
@@ -108,9 +108,9 @@
 	Font Families
 -----------------------------------------------------------------*/
 
-@body-font:                     					helvetica, arial, sans-serif;
-@heading-font:                  					'BMWGroup-Bold', helvetica, arial, sans-serif;
-@secondary-font:                					'BMWGroup-Light', helvetica, arial, sans-serif;
+@body-font:                     					'Ford-Regular', helvetica, arial, sans-serif;
+@heading-font:                  					'Ford-Bold', helvetica, arial, sans-serif;
+@secondary-font:                					'Ford-Bold', helvetica, arial, sans-serif;
 
 
 /* ----------------------------------------------------------------
@@ -174,55 +174,56 @@
 	Header Bars
 -----------------------------------------------------------------*/
 
-@header-address-font-color:							#ffffff;
-@header-address-font-size:							12px;
-@header-address-font-weight:						normal;
-@header-address-link:								#ffffff;
-@header-address-link-hover:							#ffffff;
-@header-address-padding:							0 0 0 140px;
+@header-address-font-color:							@body-color;
+@header-address-font-size:							15px;
+@header-address-font-weight:						@font-weight-normal;
+@header-address-link:								@link-color;
+@header-address-link-hover:							@link-color-hover;
+@header-address-padding:							0 0 0 0;
 
-@header-map-font-size:								12px;
-@header-map-font-weight:							normal;
-@header-map-link:									#ffffff;
-@header-map-link-hover:								#ffffff;
+@header-map-font-size:								@header-address-font-size;
+@header-map-font-weight:							@font-weight-bold;
+@header-map-link:									@theme-color;
+@header-map-link-hover:								@header-address-link-hover;
 
-@header-phone-font-color: 							#FFFFFF;
-@header-phone-font-size:							12px;
+@header-phone-font-color: 							@body-color;
+@header-phone-font-size:							15px;
 @header-phone-line-height:							@topbar-height;
+@header-phone-margin:								0 6px;
 @header-phone-divider-color:						#414141;
 @header-phone-divider-visibility:					none;
-@header-phone-margin:								0 6px;
-@header-phone-label-font-size:						12px;
-@header-phone-label-font-weight:					400;
+@header-phone-label-font-size:						@header-phone-font-size;
+@header-phone-label-font-weight:					@font-weight-bold;
+
+@topbar-bg-color:									#fafafa;
 
 @topbar-gradient:									false;
 @topbar-gradient-origin:							top;
 @topbar-background-color-start:						#000000;
 @topbar-background-color-end:						#353535;
-@topbar-bg-color:									#fff;
 @topbar-height:                 					38px;
 @topbar-line-height:            					@topbar-height;
 
-@topbar-font-color: 								#000000;
+@topbar-font-color: 								@body-color;
 @topbar-font-size: 									12px;
 
-@topbar-button-height:								34px;
-@topbar-button-width:								34px;
-@topbar-button-pos:									2px;
-@topbar-button-font-size:							13px;
-@topbar-button-radius:								34px;
-@topbar-button-color:								#000000;
-@topbar-button-bg:									#e5e8e7;
+@topbar-button-height:								30px;
+@topbar-button-width:								100%;
+@topbar-button-pos:									4px;
+@topbar-button-font-size:							11px;
+@topbar-button-radius:								@border-radius;
+@topbar-button-color:								@button-font-color;
+@topbar-button-bg:									@button-bg-color;
 @topbar-button-icon-margin:							0 0 0 0;
-@topbar-input-background:							transparent;
-@topbar-input-font-color:							#000;
+@topbar-input-background:							#ffffff;
+@topbar-input-font-color:							@body-color;
 @topbar-input-font-size:							14px;
 @topbar-input-padding:								0px 10px;
-@topbar-input-height:								@topbar-height;
-@topbar-input-border:								0;
-@topbar-input-icon-pos:								-1px;
+@topbar-input-height:								30px;
+@topbar-input-border:								1px solid @divider-color;
+@topbar-input-icon-pos:								-4px;
 @topbar-input-icon-size:							20px;
-@topbar-input-margin:								0 0 0 0;
+@topbar-input-margin:								4px 0 0 0;
 
 @topbar-nav-link-color:								#000000;
 @topbar-nav-link-color-hover:						#CF0000;
@@ -239,18 +240,18 @@
 @bottombar-gradient-origin:							right;
 @bottombar-background-color-start:					#ffffff;
 @bottombar-background-color-end:					#e5e8e7;
-@bottombar-background-color:						#ffffff;
-@bottombar-height:    								40px;
+@bottombar-background-color:						#EEEEEF;
+@bottombar-height:    								auto;
 @bottombar-line-height:            					38px;
 
-@bottombar-font-color: 								#000000;
-@bottombar-font-size: 								13px;
+@bottombar-font-color: 								@body-font;
+@bottombar-font-size: 								15px;
 
 @mobile-bar-height:									36px;
 @mobile-bar-line-height:							34px;
-@mobile-bar-bg:										#e5e8e7;
+@mobile-bar-bg:										@theme-color;
 @mobile-bar-font-size:								13px;
-@mobile-bar-font-color:								#434c53;
+@mobile-bar-font-color:								#ffffff;
 
 
 /* ----------------------------------------------------------------
@@ -258,56 +259,77 @@
 -----------------------------------------------------------------*/
 
 @header-animations:									true;
-@header-height:         			     			80px;
-@header-font-color:									#000000;
+@header-height:         			     			100px;
+@header-font-color:									@body-color;
 @header-bg-color:       							#ffffff;
 @header-border-top:									none;
-@header-border-bottom:								1px solid #f5f5f5;
+@header-border-bottom:								none;
+
+@header-has-top-border:								false;
+@header-has-bottom-border:							false;
 
 @heading-logo-margin:								0;
 @heading-logo-position:								left; // left / right
-@heading-logo-img-margin:							0 0 0 0;
-@heading-logo-font-size:							28px;
+@heading-logo-img-margin:							0 20px 0 0;
+@heading-logo-font-size:							22px;
+@heading-logo-font-color:							@body-color;
 @heading-logo-font-weight:							600;
 @heading-logo-text-transform:						uppercase;
+
 
 // Overlay Logo Header
 @heading-logo-height:								45px;
 @heading-logo-margin-lg:							0 0 0 140px;
 @heading-logo-margin-sm:							0 0 0 0;
 
-@mobile-header-logo-position:						right;
-@mobile-header-logo-margin:							0 0 0 0 !important;
+@mobile-header-logo-position:						left;
+@mobile-header-logo-margin:							0 0 0 50px !important;
+
+
+// Header Style 4
+@header-style4-logo-padding-top:					20px;
+@header-style4-logo-padding-bottom:					20px;
+@tablet-header-style4-font-size:					18px;
+@mobile-header-style4-logo-padding-top:				15px;
+@mobile-header-style4-logo-padding-bottom:			10px;
+
 
 // Small Desktop Header
-@small-desktop-header-height:   					80px;
+@small-desktop-header-height:   					100px;
+
 
 // Sticky Header
-@sticky-header-height:          					80px;
+@sticky-header-height:          					50px;
 @sticky-header-bg-color:							#ffffff;
+
 
 // Floating Header Offset
 @header-floating-offset:        					50px;
+
 
 // Side Header
 @side-header-width:             					260px;
 @side-header-bg:                					#ffffff;
 
+
 // Mobile Header
-@mobile-heading-logo-font-size:						14px;
-@mobile-header-height:								70px;
-@mobile-header-left-font-size:						14px;
-@mobile-header-center-font-size:					14px;
+@mobile-heading-logo-font-size:						13px;
+@mobile-header-height:								60px;
+@mobile-header-left-font-size:						13px;
+@mobile-header-center-font-size:					13px;
 @mobile-header-center-padding:						0 0 10px 0;
-@mobile-header-center-logo-width:					32%;
+@mobile-header-center-logo-width:					60%;
+
 
 // Header Extras
 @header-extras-font-size:							14px;
-@header-extras-span-color:							@alt-color;
+@header-extras-font-color:							@body-color;
+@header-extras-span-color:							@theme-color;
 @header-extras-span-weight:							600;
-@header-extras-link-color:							@alt-color;
-@header-extras-link-color-hover:					@theme-color;
+@header-extras-link-color:							@theme-color;
+@header-extras-link-color-hover:					@body-color;
 @header-extras-link-weight:							600;
+
 
 // Overlay Logo
 @overlay-logo-height:								140px;
@@ -316,16 +338,16 @@
 	Primary Menu
 -----------------------------------------------------------------*/
 
-@primary-menu-background:          					#ffffff;
-
-@primary-menu-font:             					@body-font;
-@primary-menu-font-weight:      					normal;
-@primary-menu-font-size:        					12px;
-@primary-menu-font-tt:          					capitalize;
-@primary-menu-active-color:							#000000;
-@primary-menu-font-color:       					#000000;
-@primary-menu-font-color-hover:   					#1C69D4;
-@primary-menu-font-color-current:  					#000000;
+@primary-menu-background:          					#18374F;
+@primary-menu-border:								none;
+@primary-menu-font:             					@heading-font;
+@primary-menu-font-weight:      					@font-weight-bold;
+@primary-menu-font-size:        					13px;
+@primary-menu-font-tt:          					uppercase;
+@primary-menu-active-color:							@theme-color;
+@primary-menu-font-color:       					#ffffff;
+@primary-menu-font-color-hover:   					#eeeeee;
+@primary-menu-font-color-current:  					#ffffff;
 @primary-menu-font-spacing:     					0px;
 
 @primary-menu-padding:								0 12px;
@@ -335,25 +357,25 @@
 
 // Small Desktop Menu
 @primary-menu-small-desktop-padding:				0 7px;
-@primary-menu-small-desktop-font-size:        		12px;
+@primary-menu-small-desktop-font-size:        		@primary-menu-font-size;
 
-@primary-menu-height:								60px;
+@primary-menu-height:								50px;
 @primary-menu-bg:									#ffffff;
-@primary-menu-divider:								block; // block / none
+@primary-menu-divider:								none; // block / none
 @pirmary-menu-divider-color:						#E7E7E7;
 @primary-menu-divider-width:						1px;
 
 // Primary Menu Sub Menu
 @primary-menu-submenu-width:        		  		auto;
-@primary-menu-submenu-font:             			@body-font;
-@primary-menu-submenu-font-color: 					#000;
-@primary-menu-submenu-font-size:        			12px;
+@primary-menu-submenu-font:             			@primary-menu-font;
+@primary-menu-submenu-font-size:        			@primary-menu-font-size;
 @primary-menu-submenu-font-weight:      			@primary-menu-font-weight;
+@primary-menu-submenu-font-color: 					@body-color;
 @primary-menu-submenu-padding:						0 15px;
 @primary-menu-submenu-bg:							#ffffff;
-@primary-menu-submenu-bg-hover:						#ffffff;
-@primary-menu-submenu-font-color-hover:				#1C69D4;
-@primary-menu-submenu-border-radius:				0px;
+@primary-menu-submenu-bg-hover:						#fafafa;
+@primary-menu-submenu-font-color-hover:				@body-color;
+@primary-menu-submenu-border-radius:				5px;
 @primary-menu-submenu-height:						20px;
 @primary-menu-submenu-box-shadow:					0px 5px 5px rgba(0, 0, 0, 0.1);
 
@@ -366,18 +388,18 @@
 /* ----------------------------------------------------------------
 	Side Panel Menu
 -----------------------------------------------------------------*/
-@side-panel-menu-background:						none;
+@side-panel-menu-background:						#18374F;
 
 @side-panel-menu-height:							40px;
-@side-panel-menu-font:             					@body-font;
-@side-panel-menu-font-weight:      					100;
-@side-panel-menu-font-size:        					12px;
-@side-panel-menu-font-tt:          					capitalize;
-@side-panel-menu-font-color:       					#000000;
-@side-panel-menu-font-color-hover:   				#1C69D4;
-@side-panel-menu-font-color-current:  				#1C69D4;
-@side-panel-menu-font-spacing:     					0px;
-@side-panel-menu-border-color:     					#DBDBDB;
+@side-panel-menu-font:             					@primary-menu-font;
+@side-panel-menu-font-weight:      					@primary-menu-font-weight;
+@side-panel-menu-font-size:        					@primary-menu-font-size;
+@side-panel-menu-font-tt:          					@primary-menu-font-tt;
+@side-panel-menu-font-color:       					@primary-menu-font-color;
+@side-panel-menu-font-color-hover:   				@primary-menu-font-color-hover;
+@side-panel-menu-font-color-current:  				@primary-menu-font-color-current;
+@side-panel-menu-font-spacing:     					@primary-menu-font-spacing;
+@side-panel-menu-border-color:     					@divider-color;
 
 @side-panel-menu-padding:							0 7px;
 @side-panel-menu-position:							right;
@@ -385,13 +407,15 @@
 
 // Sub Menu
 @side-panel-menu-submenu-width:         	   		auto;
-@side-panel-menu-submenu-font:          	  		@body-font;
-@side-panel-menu-submenu-font-size:     	  		16px;
+@side-panel-menu-submenu-font:          	  		#fff;
+@side-panel-menu-submenu-font-size:     	  		@primary-menu-font-size;
 @side-panel-menu-submenu-font-weight:   	  		@primary-menu-font-weight;
+@side-panel-menu-submenu-font-color:				#ffffff;
 @side-panel-menu-submenu-padding:					0 15px;
+@side-panel-menu-submenu-transform:					none;
 
 @side-panel-wrap:									50px 50px 50px 20px;
-@side-panel-bg:										#ffffff;
+@side-panel-bg:										#18374F;
 
 
 /* ----------------------------------------------------------------
@@ -420,18 +444,18 @@
 @top-search-color:									#222427;
 @top-search-size:									20px;
 
-@primary-menu-trigger-color:						#ffffff;
-@primary-menu-trigger-size:							20px;
-@primary-menu-trigger-height:						40px;
-@primary-menu-trigger-width:						40px;
+@primary-menu-trigger-color:						@body-color;
+@primary-menu-trigger-size:							18px;
+@primary-menu-trigger-height:						30px;
+@primary-menu-trigger-width:						30px;
 
 @page-submenu-trigger-color:						#CFCFCF;
 
 @side-panel-trigger-close-color:					#CFCFCF;
 
 @primary-menu-trigger-gradient-origin:				top;
-@primary-menu-trigger-background-color-start:		#1F72E4;
-@primary-menu-trigger-background-color-end:			#1C62C5;
+@primary-menu-trigger-background-color-start:		#ffffff;
+@primary-menu-trigger-background-color-end:			#ffffff;
 @primary-menu-trigger-border:						none; //1px solid #000000;
 
 
@@ -440,21 +464,21 @@
 -----------------------------------------------------------------*/
 
 @footer-font-size:									11px;
-@footer-font-color:									#000000;
-@footer-bg:											#EDEDEE;
+@footer-font-color:									@body-color;
+@footer-bg:											#7f848a;
 
 @footer-widgets-padding:							60px 0 0 0;
 
 @copyright-padding:									15px 0 60px 0;
-@copyright-bg:										#EDEDEE;
-@copyright-font-color:								#666766;
-@copyright-link-color:								#666766;
-@copyright-link-hover-color:						#666766;
+@copyright-bg:										#7f848a;
+@copyright-font-color:								#eeeeee;
+@copyright-link-color:								#eeeeee;
+@copyright-link-hover-color:						#eeeeee;
 @copyright-text-align:								center;
 
 @ebiz-terms-padding:								10px 0;
 
-@pag-footer-bg:										#ffffff;
+@pag-footer-bg:										#f3f3f3;
 
 
 /* ----------------------------------------------------------------
@@ -469,55 +493,55 @@
 @page-title-bg-dark:								#333;
 @page-title-divider-color:							#e1e1e1;
 
-@page-title-color:									#000000;
-@page-title-size:									41px;
-@page-title-weight:									400;
+@page-title-color:									@heading-color;
+@page-title-size:									30px;
+@page-title-weight:									600;
 @page-title-letter-spacing:							0px;
-@page-title-subtitle-size:							22px;
+@page-title-subtitle-size:							20px;
 @page-title-subtitle-color:							#777777;
 @page-title-subtitle-weight:						300;
 
 @page-title-mini-size:								18px;
 
-@page-title-breadcrumb-top:							-40px;
+@page-title-breadcrumb-top:							-20px;
 
 /* ----------------------------------------------------------------
 	Form Elements
 -----------------------------------------------------------------*/
 
-@form-element-border-active:						#DDDDDD;
-@form-element-border-color:							#DBDBDB;
+@form-element-border-active:						@theme-color;
+@form-element-border-color:							@divider-color;
 @form-element-border-width:							1px;
-@form-element-border-top-style:						none; // solid or none;
-@form-element-border-left-style:					none;
+@form-element-border-top-style:						solid; // solid or none;
+@form-element-border-left-style:					solid;
 @form-element-border-bottom-style:					solid;
-@form-element-border-right-style:					none;
-@form-element-border-radius:						0px;
-@form-element-height:								34px;
+@form-element-border-right-style:					solid;
+@form-element-border-radius:						5px;
+@form-element-height:								38px;
 @form-element-padding:								4px 10px;
 @form-element-padding-small:						4px 10px;
 @form-element-font-size:							16px;
-@form-element-font-color:							#000000;
+@form-element-font-color:							@body-color;
 @form-label-note:									#AAAAAA;
 
 @form-label-font-size:								16px;
 @form-label-font-color:								@body-color;
 
-@form-icon-color:									#221F1F;
-@form-icon-color-hover:								#221F1F;
+@form-icon-color:									@divider-color;
+@form-icon-color-hover:								@divider-color;
 
 @form-select-arrow-size:							20px;
 @form-select-arrow-top:								3px;
 
 @form-toggle-border-radius:							20px;
-@form-toggle-checked-radius:						50%; 
+@form-toggle-checked-radius:						50%;  
 
 
 /* ----------------------------------------------------------------
 	Scroll To Top
 -----------------------------------------------------------------*/
 
-@go-to-top-hover:									#1C69D4;
+@go-to-top-hover:									@theme-color;
 @go-to-top-border-radius:							0px;
 @go-to-top-pos-right:								6px;
 
@@ -526,22 +550,21 @@
 	Buttons
 -----------------------------------------------------------------*/
 
-@border-radius:										0px;
-@button-border:										1px solid @body-color;
-@button-border-hover:								1px solid @theme-color;
+@border-radius:										5px;
+@button-border:										1px solid @button-bg-color;
+@button-border-hover:								1px solid @button-bg-hover-color;
 
-@button-height:										36px;
+@button-height:										38px;
 @button-transform:									capitalize;
 
 @button-padding:									0 40px;
-@button-bg-color:									#000000;
-@button-bg-hover-color:								#434c53;
-@button-font:										'AudiType', arial, sans-serif;
-@button-font-size:									12px;
+@button-bg-color:									@theme-color;
+@button-bg-hover-color:								#343434;
+@button-font:										helvetica, arial, sans-serif;
+@button-font-size:									15px;
 @button-font-color:									#ffffff;
 @button-font-hover-color:							#ffffff;
-@button-font-weight:								400;
-@button-text-transform:								capitalize;
+@button-font-weight:								300;
 
 @button-gradient:									false; // true/false
 @button-gradient-origin:							bottom;
@@ -551,8 +574,8 @@
 @button-bg-start-hover-color:						#434c53;
 @button-bg-end-hover-color:							#434c53;
 
-@button-alt-border:									1px solid @divider-color;
-@button-alt-border-hover:							1px solid @theme-color;
+@button-alt-border:									1px solid @button-alt-bg-color;
+@button-alt-border-hover:							1px solid @button-alt-bg-hover-color;
 
 @button-alt-gradient:								false; // true/false
 @button-alt-bg-start-color:							#d5d9d8;
@@ -560,19 +583,19 @@
 @button-alt-bg-start-hover-color:					#434c53;
 @button-alt-bg-end-hover-color:						#434c53;
 
-@button-alt-bg-color:								#d5d9d8;
-@button-alt-bg-hover-color:							#000000;
-@button-alt-font-color:								#000000;
+@button-alt-bg-color:								#343434;
+@button-alt-bg-hover-color:							@theme-color;
+@button-alt-font-color:								#ffffff;
 @button-alt-font-hover-color:						#ffffff;
 
 @uggo-gradient-origin:								top;
-@uggo-bg-start-color:								darken(#cc0033, 13%);
-@uggo-bg-center-color:								#cc0033;
-@uggo-bg-end-color:									darken(#cc0033, 13%);
+@uggo-bg-start-color:								darken(@theme-color, 13%);
+@uggo-bg-center-color:								@theme-color;
+@uggo-bg-end-color:									darken(@theme-color, 13%);
 @uggo-bg-start-hover-color:							darken(@alt-color, 24%);
 @uggo-bg-center-hover-color:						darken(@alt-color, 8%);
 @uggo-bg-end-hover-color:							darken(@alt-color, 24%);
-@uggo-border-color:									#cc0033;
+@uggo-border-color:									@theme-color;
 
 @uggo-font-color:									#ffffff;
 @uggo-font-color-hover:								#ffffff;
@@ -611,58 +634,58 @@
 @homepage-slideshow-bg:								#fff;
 @homepage-slideshow-max-width:						100%;
 
-@homepage-slideshow-btn-bg:							#d5d9d8;
+@homepage-slideshow-btn-bg:							#ffffff;
 @homepage-slideshow-btn-border:						0; //1px solid #000000;
-@homepage-slideshow-btn-bg-hover:					#d5d9d8;
-@homepage-slideshow-btn-bg-hover-opacity:			.9;
+@homepage-slideshow-btn-bg-hover:					@theme-color;
+@homepage-slideshow-btn-bg-hover-opacity:			1;
 @homepage-slideshow-btn-border-hover: 				0;
-@homepage-slideshow-btn-arrow-size:					36px;
-@homepage-slideshow-arrow-color:					#000;
-@homepage-slideshow-arrow-color-hover:				#000;
-@homepage-slideshow-btn-width:						40px;
-@homepage-slideshow-btn-height:						70px;
+@homepage-slideshow-btn-arrow-size:					28px;
+@homepage-slideshow-arrow-color:					@theme-color;
+@homepage-slideshow-arrow-color-hover:				#ffffff;
+@homepage-slideshow-btn-width:						60px;
+@homepage-slideshow-btn-height:						60px;
 
 @homepage-slideshow-btn-prev-pos:					0px;
 @homepage-slideshow-btn-prev-radius-tl:				0px;
-@homepage-slideshow-btn-prev-radius-tr:				35px;
+@homepage-slideshow-btn-prev-radius-tr:				5px;
 @homepage-slideshow-btn-prev-radius-bl:				0px;
-@homepage-slideshow-btn-prev-radius-br:				35px;
-@homepage-slideshow-icon-prev-pos:					0 0 0 -5px;
+@homepage-slideshow-btn-prev-radius-br:				5px;
+@homepage-slideshow-icon-prev-pos:					0 0 0 0;
 
 @homepage-slideshow-btn-next-pos:					0px;
-@homepage-slideshow-btn-next-radius-tl:				35px;
+@homepage-slideshow-btn-next-radius-tl:				5px;
 @homepage-slideshow-btn-next-radius-tr:				0px;
-@homepage-slideshow-btn-next-radius-bl:				35px;
+@homepage-slideshow-btn-next-radius-bl:				5px;
 @homepage-slideshow-btn-next-radius-br:				0px;
-@homepage-slideshow-icon-next-pos:					0 0 0 5px;
+@homepage-slideshow-icon-next-pos:					0 0 0 0;
 
 
 
 
 
 
-@slider-btn-bg:										#d5d9d8; // rgba(213,217,216,.9)
-@slider-btn-bg-hover:								rgba(213,217,216,.9);
-@slider-btn-height: 								70px;
-@slider-btn-width: 									40px;
-@slider-btn-next-radius:							50px 0 0 50px;
-@slider-btn-prev-radius:							0 50px 50px 0;
-@slider-arrow-color:								#000;
+@slider-btn-bg:										#ffffff;
+@slider-btn-bg-hover:								@theme-color;
+@slider-btn-height: 								60px;
+@slider-btn-width: 									60px;
+@slider-btn-next-radius:							5px; // 0px 0px 0px 0px
+@slider-btn-prev-radius:							5px; // 0px 0px 0px 0px
+@slider-arrow-color:								#ffffff;
 @slider-arrow-color-hover:							#000;
 
 
-@slider-flex-btn-prev-icon-pos:						-4px;
-@slider-flex-btn-next-icon-pos:						4px;
+@slider-flex-btn-prev-icon-pos:						0px;
+@slider-flex-btn-next-icon-pos:						0px;
 
 @carousel-btn-font-size:							22px;
 @carousel-btn-color:								#000000;
 @carousel-btn-hover-color:							#ffffff;
 @carousel-btn-border: 								none; // 1px solid rgba(0,0,0,0.2);
-@carousel-btn-bg-color:								#d5d9d8; // #d5d9d8 or rgba(213,217,216,1);
+@carousel-btn-bg-color:								#ffffff; // #d5d9d8 or rgba(213,217,216,1);
 @carousel-btn-bg-hover-color:						@theme-color;
 @carousel-btn-height:								36px;
 @carousel-btn-width:								36px;
-@carousel-btn-border-radius:						50%; // 0 0 0 50%;
+@carousel-btn-border-radius:						0; // 0 0 0 50%;
 @carousel-btn-left-pos:								-36px;
 @carousel-btn-right-pos:							-36px;
 
@@ -682,9 +705,9 @@
 @pager-bg-color-start-active:						#ffffff;
 @pager-bg-color-end-active:							#ffffff;
 
-@pager-dot-color:									#b0b6b8;
-@pager-dot-color-hover:								#cc0033;
-@pager-dot-color-active:							#cc0033;
+@pager-dot-color:									#aaaaaa;
+@pager-dot-color-hover:								#666666;
+@pager-dot-color-active:							@theme-color;
 
 
 @pager-dot-border:									1px solid #ffffff;
@@ -703,7 +726,7 @@
 
 @max-width:											1550px;
 @featured-vehicles-bg:								@background1-color;
-@featured-vehicles-scrollbar-bg:					@background2-color;
+@featured-vehicles-scrollbar-bg:					#ffffff;
 @featured-vehicles-scrollbar-drag:					@theme-color;
 
 /* ----------------------------------------------------------------
@@ -761,80 +784,80 @@
 	Tabs
 -----------------------------------------------------------------*/
 
-@tabs-border-radius-top-left:						0px;
-@tabs-border-radius-top-right:						0px;
+@tabs-border-radius-top-left:						5px;
+@tabs-border-radius-top-right:						5px;
 @tabs-border-radius-bottom-right:					0px;
 @tabs-border-radius-bottom-left:					0px;
 
-@tabs-active-color:									#666766;
+@tabs-active-color:									@theme-color;
 
 /* ----------------------------------------------------------------
 	Video Player
 -----------------------------------------------------------------*/
 
 // Settings
-@plyr-border-box:                       true;
-@plyr-touch-action:                     true;
-@plyr-sr-only-important:                true;
+@plyr-border-box:                       			true;
+@plyr-touch-action:                     			true;
+@plyr-sr-only-important:                			true;
 
 // Colors
-@plyr-color-main:                       @theme-color;
+@plyr-color-main:                       			@theme-color;
 
 // Font
-@plyr-font-family:                      Helvetica, Arial, sans-serif;
-@plyr-font-size-small:                  14px;
-@plyr-font-size-base:                   16px;
+@plyr-font-family:                      			Helvetica, Arial, sans-serif;
+@plyr-font-size-small:                  			14px;
+@plyr-font-size-base:                   			16px;
 
 // Captions
-@plyr-captions-bg:                      fade(#000, 70%);
-@plyr-captions-color:                   #fff;
-@plyr-font-size-captions-base:          @plyr-font-size-base;
-@plyr-font-size-captions-medium:        ceil(@plyr-font-size-base * 1.5);
-@plyr-font-size-captions-large:         (@plyr-font-size-base * 2);
+@plyr-captions-bg:                      			fade(#000, 70%);
+@plyr-captions-color:                   			#fff;
+@plyr-font-size-captions-base:          			@plyr-font-size-base;
+@plyr-font-size-captions-medium:        			ceil(@plyr-font-size-base * 1.5);
+@plyr-font-size-captions-large:         			(@plyr-font-size-base * 2);
 
 // Controls
-@plyr-control-icon-size:                18px;
-@plyr-control-spacing:                  10px;
-@plyr-control-padding:                  (@plyr-control-spacing * .7);
-@plyr-video-controls-bg:                #000;
-@plyr-video-control-color:              #fff;
-@plyr-video-control-color-hover:        #fff;
-@plyr-video-control-bg-hover:           @plyr-color-main;
-@plyr-audio-controls-bg:                #fff;
-@plyr-audio-controls-border:            1px solid #dbe3e8;
-@plyr-audio-control-color:              #565D64;
-@plyr-audio-control-color-hover:        #fff;
-@plyr-audio-control-bg-hover:           @plyr-color-main;
+@plyr-control-icon-size:                			18px;
+@plyr-control-spacing:                  			10px;
+@plyr-control-padding:                  			(@plyr-control-spacing * .7);
+@plyr-video-controls-bg:                			#000;
+@plyr-video-control-color:              			#fff;
+@plyr-video-control-color-hover:        			#fff;
+@plyr-video-control-bg-hover:           			@plyr-color-main;
+@plyr-audio-controls-bg:                			#fff;
+@plyr-audio-controls-border:            			1px solid #dbe3e8;
+@plyr-audio-control-color:              			#565D64;
+@plyr-audio-control-color-hover:        			#fff;
+@plyr-audio-control-bg-hover:           			@plyr-color-main;
 
 // Tooltips
-@plyr-tooltip-bg:                       fade(#000, 70%);
-@plyr-tooltip-color:                    #fff;
-@plyr-tooltip-padding:                  (@plyr-control-spacing / 2);
-@plyr-tooltip-arrow-size:               4px;
-@plyr-tooltip-radius:                   3px;
+@plyr-tooltip-bg:                       			fade(#000, 70%);
+@plyr-tooltip-color:                    			#fff;
+@plyr-tooltip-padding:                  			(@plyr-control-spacing / 2);
+@plyr-tooltip-arrow-size:               			4px;
+@plyr-tooltip-radius:                   			3px;
 
 // Progress
-@plyr-progress-loading-size:            25px;
-@plyr-progress-loading-bg:              fade(#000, 15%);
-@plyr-video-progress-bg:                fade(#fff, 25%);
-@plyr-video-progress-buffered-bg:       @plyr-video-progress-bg;
-@plyr-audio-progress-bg:                fade(#C6D6DB, 66%);
-@plyr-audio-progress-buffered-bg:       @plyr-audio-progress-bg;
+@plyr-progress-loading-size:            			25px;
+@plyr-progress-loading-bg:              			fade(#000, 15%);
+@plyr-video-progress-bg:                			fade(#fff, 25%);
+@plyr-video-progress-buffered-bg:       			@plyr-video-progress-bg;
+@plyr-audio-progress-bg:                			fade(#C6D6DB, 66%);
+@plyr-audio-progress-buffered-bg:       			@plyr-audio-progress-bg;
 
 // Range sliders
-@plyr-range-track-height:               8px;
-@plyr-range-thumb-height:               floor(@plyr-range-track-height * 2);
-@plyr-range-thumb-width:                floor(@plyr-range-track-height * 2);
-@plyr-range-thumb-bg:                   #fff;
-@plyr-range-thumb-border:               2px solid transparent;
-@plyr-range-thumb-shadow:               0 1px 1px fade(@plyr-video-controls-bg, 15%), 0 0 0 1px fade(#000, 15%);
-@plyr-range-thumb-active-border-color:  #fff;
-@plyr-range-thumb-active-bg:            @plyr-video-control-bg-hover;
-@plyr-range-thumb-active-scale:         1.25;
-@plyr-video-range-track-bg:             @plyr-video-progress-buffered-bg;
-@plyr-audio-range-track-bg:             @plyr-audio-progress-buffered-bg;
-@plyr-range-selected-bg:                @plyr-color-main;
+@plyr-range-track-height:               			8px;
+@plyr-range-thumb-height:               			floor(@plyr-range-track-height * 2);
+@plyr-range-thumb-width:                			floor(@plyr-range-track-height * 2);
+@plyr-range-thumb-bg:                   			#fff;
+@plyr-range-thumb-border:               			2px solid transparent;
+@plyr-range-thumb-shadow:               			0 1px 1px fade(@plyr-video-controls-bg, 15%), 0 0 0 1px fade(#000, 15%);
+@plyr-range-thumb-active-border-color:  			#fff;
+@plyr-range-thumb-active-bg:            			@plyr-video-control-bg-hover;
+@plyr-range-thumb-active-scale:         			1.25;
+@plyr-video-range-track-bg:             			@plyr-video-progress-buffered-bg;
+@plyr-audio-range-track-bg:             			@plyr-audio-progress-buffered-bg;
+@plyr-range-selected-bg:                			@plyr-color-main;
 
 // Breakpoints
-@plyr-bp-screen-sm:                     479px;
-@plyr-bp-screen-md:                     768px;
+@plyr-bp-screen-sm:                     			479px;
+@plyr-bp-screen-md:                     			768px;
