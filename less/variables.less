@@ -9,16 +9,16 @@
 	Base Colors
 -----------------------------------------------------------------*/
 
-@theme-color:										#2d96cd;
-@alt-color:										#000000;
-@body-color:										#444;
-@heading-color:										#222222;
+@theme-color:										#27749a;
+@alt-color:											#000000;
+@body-color:										#343434;
+@heading-color:										#343434;
 
-@divider-color:										#dddddd;
+@divider-color:										#cccccc;
 @content-bg:										#FFFFFF;
 
-@background1-color:									#f3f3f3;
-@background2-color:									#e1e1e1;
+@background1-color:									#dddddd;
+@background2-color:									#cccccc;
 @background3-color:									#bbbbbb;
 @body-bg-color:										#ffffff;
 
@@ -27,18 +27,18 @@
 	Dark Base Colors
 -----------------------------------------------------------------*/
 
-@dark-bg:										#000000;
+@dark-bg:											#000000;
 @dark-font-color:									#ffffff;
 @dark-link-color:									#EEEEEE;
-@dark-link-hover-color:									#1E8EF6;
+@dark-link-hover-color:								#1E8EF6;
 
 
 /* ----------------------------------------------------------------
 	Notify Me Price Alerts
 -----------------------------------------------------------------*/
 
-@notifyme-dashboard-bg:									@body-bg-color;
-@notifyme-dashboard-font-color:								@body-color;
+@notifyme-dashboard-bg:								@body-bg-color;
+@notifyme-dashboard-font-color:						@body-color;
 @notifyme-dashboard-link-color:						@link-color;
 @notifyme-dashboard-link-hover-color:				@link-color-hover;
 @notifyme-dashboard-close-color:					@theme-color;
@@ -57,13 +57,13 @@
 @notifyme-alertBox-close:							@theme-color;
 @notifyme-alertBox-border-radius:					5px;
 
-@notifyme-toolbar-bg:								#1B394F;
+@notifyme-toolbar-bg:								#343434;
 @notifyme-toolbar-height:							50px;
-@notifyme-toolbar-amount-size:						18px;
+@notifyme-toolbar-amount-size:						22px;
 @notifyme-toolbar-amount-color:						#ffffff;
 @notifyme-toolbar-amount-hover-color:				#ffffff;
 @notifyme-toolbar-font-color:						#ffffff;
-@notifyme-toolbar-font-size:						14px;
+@notifyme-toolbar-font-size:						16px;
 @notifyme-toolbar-font-weight:						300;
 @notifyme-toolbar-font-top:							2px;
 @notifyme-toolbar-hover-color:						#ffffff;
@@ -108,9 +108,9 @@
 	Font Families
 -----------------------------------------------------------------*/
 
-@body-font:                     					'Ford-Regular', helvetica, arial, sans-serif;
-@heading-font:                  					'Ford-Bold', helvetica, arial, sans-serif;
-@secondary-font:                					'Ford-Bold', helvetica, arial, sans-serif;
+@body-font:                     					helvetica, arial, sans-serif;
+@heading-font:                  					'Novecentowide', helvetica, arial, sans-serif;
+@secondary-font:                					'Novecentowide', helvetica, arial, sans-serif;
 
 
 /* ----------------------------------------------------------------
@@ -121,10 +121,10 @@
 @font-size-large:         							ceil((@font-size-base * 1.25)); // ~18px
 @font-size-small:         							ceil((@font-size-base * 0.65)); // ~12px
 
-@font-size-h1:           							floor((@font-size-base * 2.0)); // ~36px
-@font-size-h2:           							floor((@font-size-base * 1.7)); // ~30px
-@font-size-h3:     		       						ceil((@font-size-base * 1.4)); // ~24px
-@font-size-h4:     			    					ceil((@font-size-base * 1.25)); // ~18px
+@font-size-h1:           							floor((@font-size-base * 1.8)); // ~36px
+@font-size-h2:           							floor((@font-size-base * 1.5)); // ~30px
+@font-size-h3:     		       						ceil((@font-size-base * 1.2)); // ~24px
+@font-size-h4:     			    					ceil((@font-size-base * 1.05)); // ~18px
 @font-size-h5:     			    					@font-size-base;
 @font-size-h6:     			    					ceil((@font-size-base * 0.85)); // ~12px
 
@@ -174,7 +174,7 @@
 	Header Bars
 -----------------------------------------------------------------*/
 
-@header-address-font-color:							@body-color;
+@header-address-font-color:							@body-font;
 @header-address-font-size:							15px;
 @header-address-font-weight:						@font-weight-normal;
 @header-address-link:								@link-color;
@@ -183,10 +183,10 @@
 
 @header-map-font-size:								@header-address-font-size;
 @header-map-font-weight:							@font-weight-bold;
-@header-map-link:									@theme-color;
+@header-map-link:									@header-address-link;
 @header-map-link-hover:								@header-address-link-hover;
 
-@header-phone-font-color: 							@body-color;
+@header-phone-font-color: 							@body-font;
 @header-phone-font-size:							15px;
 @header-phone-line-height:							@topbar-height;
 @header-phone-margin:								0 6px;
@@ -195,7 +195,7 @@
 @header-phone-label-font-size:						@header-phone-font-size;
 @header-phone-label-font-weight:					@font-weight-bold;
 
-@topbar-bg-color:									#fafafa;
+@topbar-bg-color:									#EEEEEF;
 
 @topbar-gradient:									false;
 @topbar-gradient-origin:							top;
@@ -210,16 +210,14 @@
 @topbar-button-height:								30px;
 @topbar-button-width:								100%;
 @topbar-button-pos:									4px;
-@topbar-button-font-size:							11px;
+@topbar-button-font-size:							13px;
 @topbar-button-radius:								@border-radius;
 @topbar-button-color:								@button-font-color;
 @topbar-button-bg:									@button-bg-color;
-@topbar-button-border:								@button-border;
-
-@topbar-button-border-hover:						@button-border-hover;
-@topbar-button-bg-hover:							@button-bg-hover-color;
+@topbar-button-border:								@button-border;		
+@topbar-button-border-hover:						@button-border-hover;		
+@topbar-button-bg-hover:							@button-bg-hover-color;		
 @topbar-button-color-hover:							@button-font-hover-color;
-
 @topbar-button-icon-margin:							0 0 0 0;
 
 @topbar-input-background:							#ffffff;
@@ -267,7 +265,7 @@
 
 @header-animations:									true;
 @header-height:         			     			100px;
-@header-font-color:									@body-color;
+@header-font-color:									#333333;
 @header-bg-color:       							#ffffff;
 @header-border-top:									none;
 @header-border-bottom:								none;
@@ -277,10 +275,10 @@
 
 @heading-logo-margin:								0;
 @heading-logo-position:								left; // left / right
-@heading-logo-img-margin:							0 20px 0 0;
-@heading-logo-font-size:							22px;
-@heading-logo-font-color:							@body-color;
+@heading-logo-img-margin:							0 0 0 0;
+@heading-logo-font-size:							28px;
 @heading-logo-font-weight:							600;
+@heading-logo-font-color:							@body-color;
 @heading-logo-text-transform:						uppercase;
 
 
@@ -289,17 +287,20 @@
 @heading-logo-margin-lg:							0 0 0 140px;
 @heading-logo-margin-sm:							0 0 0 0;
 
-@mobile-header-logo-position:						left;
-@mobile-header-logo-margin:							0 0 0 50px !important;
+@mobile-header-logo-position:						right;
+@mobile-header-logo-margin:							0 0 0 0 !important;
 
 
 // Header Style 4
 @header-style4-logo-padding-top:					20px;
 @header-style4-logo-padding-bottom:					20px;
+@header-style4-logo-padding-left:					20px;
+@header-style4-logo-padding-right:					0px;
 @tablet-header-style4-font-size:					18px;
 @mobile-header-style4-logo-padding-top:				15px;
 @mobile-header-style4-logo-padding-bottom:			10px;
-
+@header-style4-logo-padding-left:					20px;
+@header-style4-logo-padding-right:					0px;
 
 // Small Desktop Header
 @small-desktop-header-height:   					100px;
@@ -320,21 +321,20 @@
 
 
 // Mobile Header
-@mobile-heading-logo-font-size:						13px;
-@mobile-header-height:								60px;
-@mobile-header-left-font-size:						13px;
-@mobile-header-center-font-size:					13px;
+@mobile-heading-logo-font-size:						14px;
+@mobile-header-height:								100px;
+@mobile-header-left-font-size:						14px;
+@mobile-header-center-font-size:					14px;
 @mobile-header-center-padding:						0 0 10px 0;
 @mobile-header-center-logo-width:					60%;
 
 
 // Header Extras
 @header-extras-font-size:							14px;
-@header-extras-font-color:							@body-color;
-@header-extras-span-color:							@theme-color;
+@header-extras-span-color:							@alt-color;
 @header-extras-span-weight:							600;
-@header-extras-link-color:							@theme-color;
-@header-extras-link-color-hover:					@body-color;
+@header-extras-link-color:							@alt-color;
+@header-extras-link-color-hover:					@theme-color;
 @header-extras-link-weight:							600;
 
 
@@ -345,11 +345,11 @@
 	Primary Menu
 -----------------------------------------------------------------*/
 
-@primary-menu-background:          					#18374F;
+@primary-menu-background:          					#343434;
 @primary-menu-border:								none;
-@primary-menu-font:             					@heading-font;
-@primary-menu-font-weight:      					@font-weight-bold;
-@primary-menu-font-size:        					13px;
+@primary-menu-font:             					'Novecentowide', helvetica, arial, sans-serif;
+@primary-menu-font-weight:      					@font-weight-normal;
+@primary-menu-font-size:        					14px;
 @primary-menu-font-tt:          					uppercase;
 @primary-menu-active-color:							@theme-color;
 @primary-menu-font-color:       					#ffffff;
@@ -364,7 +364,7 @@
 
 // Small Desktop Menu
 @primary-menu-small-desktop-padding:				0 7px;
-@primary-menu-small-desktop-font-size:        		@primary-menu-font-size;
+@primary-menu-small-desktop-font-size:        		14px;
 
 @primary-menu-height:								50px;
 @primary-menu-bg:									#ffffff;
@@ -375,13 +375,13 @@
 // Primary Menu Sub Menu
 @primary-menu-submenu-width:        		  		auto;
 @primary-menu-submenu-font:             			@primary-menu-font;
-@primary-menu-submenu-font-size:        			@primary-menu-font-size;
+@primary-menu-submenu-font-size:        			14px;
 @primary-menu-submenu-font-weight:      			@primary-menu-font-weight;
-@primary-menu-submenu-font-color: 					@body-color;
+@primary-menu-submenu-font-color: 					@primary-menu-font-color;
 @primary-menu-submenu-padding:						0 15px;
-@primary-menu-submenu-bg:							#ffffff;
-@primary-menu-submenu-bg-hover:						#fafafa;
-@primary-menu-submenu-font-color-hover:				@body-color;
+@primary-menu-submenu-bg:							@primary-menu-background;
+@primary-menu-submenu-bg-hover:						#2b2b2b;
+@primary-menu-submenu-font-color-hover:				@primary-menu-font-color-hover;
 @primary-menu-submenu-border-radius:				5px;
 @primary-menu-submenu-height:						20px;
 @primary-menu-submenu-box-shadow:					0px 5px 5px rgba(0, 0, 0, 0.1);
@@ -395,13 +395,13 @@
 /* ----------------------------------------------------------------
 	Side Panel Menu
 -----------------------------------------------------------------*/
-@side-panel-menu-background:						#18374F;
+@side-panel-menu-background:						#343434;
 
 @side-panel-menu-height:							40px;
 @side-panel-menu-font:             					@primary-menu-font;
-@side-panel-menu-font-weight:      					@primary-menu-font-weight;
-@side-panel-menu-font-size:        					@primary-menu-font-size;
-@side-panel-menu-font-tt:          					@primary-menu-font-tt;
+@side-panel-menu-font-weight:      					100;
+@side-panel-menu-font-size:        					15px;
+@side-panel-menu-font-tt:          					uppercase;
 @side-panel-menu-font-color:       					@primary-menu-font-color;
 @side-panel-menu-font-color-hover:   				@primary-menu-font-color-hover;
 @side-panel-menu-font-color-current:  				@primary-menu-font-color-current;
@@ -414,15 +414,15 @@
 
 // Sub Menu
 @side-panel-menu-submenu-width:         	   		auto;
-@side-panel-menu-submenu-font:          	  		#fff;
-@side-panel-menu-submenu-font-size:     	  		@primary-menu-font-size;
+@side-panel-menu-submenu-font:          	  		@body-font;
+@side-panel-menu-submenu-font-size:     	  		16px;
 @side-panel-menu-submenu-font-weight:   	  		@primary-menu-font-weight;
 @side-panel-menu-submenu-font-color:				#ffffff;
 @side-panel-menu-submenu-padding:					0 15px;
 @side-panel-menu-submenu-transform:					none;
 
 @side-panel-wrap:									50px 50px 50px 20px;
-@side-panel-bg:										#18374F;
+@side-panel-bg:										#343434;
 
 
 /* ----------------------------------------------------------------
@@ -461,8 +461,8 @@
 @side-panel-trigger-close-color:					#CFCFCF;
 
 @primary-menu-trigger-gradient-origin:				top;
-@primary-menu-trigger-background-color-start:		#ffffff;
-@primary-menu-trigger-background-color-end:			#ffffff;
+@primary-menu-trigger-background-color-start:		transparent;
+@primary-menu-trigger-background-color-end:			transparent;
 @primary-menu-trigger-border:						none; //1px solid #000000;
 
 
@@ -472,20 +472,20 @@
 
 @footer-font-size:									11px;
 @footer-font-color:									@body-color;
-@footer-bg:											#7f848a;
+@footer-bg:											#D9D9D9;
 
 @footer-widgets-padding:							60px 0 0 0;
 
 @copyright-padding:									15px 0 60px 0;
-@copyright-bg:										#7f848a;
-@copyright-font-color:								#eeeeee;
-@copyright-link-color:								#eeeeee;
-@copyright-link-hover-color:						#eeeeee;
+@copyright-bg:										#D9D9D9;
+@copyright-font-color:								#666766;
+@copyright-link-color:								#666766;
+@copyright-link-hover-color:						#666766;
 @copyright-text-align:								center;
 
 @ebiz-terms-padding:								10px 0;
 
-@pag-footer-bg:										#f3f3f3;
+@pag-footer-bg:										#EEEEF0;
 
 
 /* ----------------------------------------------------------------
@@ -501,7 +501,7 @@
 @page-title-divider-color:							#e1e1e1;
 
 @page-title-color:									@heading-color;
-@page-title-size:									30px;
+@page-title-size:									28px;
 @page-title-weight:									600;
 @page-title-letter-spacing:							0px;
 @page-title-subtitle-size:							20px;
@@ -548,7 +548,7 @@
 	Scroll To Top
 -----------------------------------------------------------------*/
 
-@go-to-top-hover:									@theme-color;
+@go-to-top-hover:									#1C69D4;
 @go-to-top-border-radius:							0px;
 @go-to-top-pos-right:								6px;
 
@@ -641,28 +641,28 @@
 @homepage-slideshow-bg:								#fff;
 @homepage-slideshow-max-width:						100%;
 
-@homepage-slideshow-btn-bg:							#ffffff;
+@homepage-slideshow-btn-bg:							rgba(0,0,0,.1);
 @homepage-slideshow-btn-border:						0; //1px solid #000000;
-@homepage-slideshow-btn-bg-hover:					@theme-color;
+@homepage-slideshow-btn-bg-hover:					rgba(0,0,0,.2);
 @homepage-slideshow-btn-bg-hover-opacity:			1;
 @homepage-slideshow-btn-border-hover: 				0;
-@homepage-slideshow-btn-arrow-size:					28px;
-@homepage-slideshow-arrow-color:					@theme-color;
+@homepage-slideshow-btn-arrow-size:					36px;
+@homepage-slideshow-arrow-color:					#ffffff;
 @homepage-slideshow-arrow-color-hover:				#ffffff;
-@homepage-slideshow-btn-width:						60px;
-@homepage-slideshow-btn-height:						60px;
+@homepage-slideshow-btn-width:						40px;
+@homepage-slideshow-btn-height:						90px;
 
 @homepage-slideshow-btn-prev-pos:					0px;
 @homepage-slideshow-btn-prev-radius-tl:				0px;
-@homepage-slideshow-btn-prev-radius-tr:				5px;
+@homepage-slideshow-btn-prev-radius-tr:				0px;
 @homepage-slideshow-btn-prev-radius-bl:				0px;
-@homepage-slideshow-btn-prev-radius-br:				5px;
+@homepage-slideshow-btn-prev-radius-br:				0px;
 @homepage-slideshow-icon-prev-pos:					0 0 0 0;
 
 @homepage-slideshow-btn-next-pos:					0px;
-@homepage-slideshow-btn-next-radius-tl:				5px;
+@homepage-slideshow-btn-next-radius-tl:				0px;
 @homepage-slideshow-btn-next-radius-tr:				0px;
-@homepage-slideshow-btn-next-radius-bl:				5px;
+@homepage-slideshow-btn-next-radius-bl:				0px;
 @homepage-slideshow-btn-next-radius-br:				0px;
 @homepage-slideshow-icon-next-pos:					0 0 0 0;
 
@@ -671,12 +671,12 @@
 
 
 
-@slider-btn-bg:										#ffffff;
-@slider-btn-bg-hover:								@theme-color;
-@slider-btn-height: 								60px;
-@slider-btn-width: 									60px;
-@slider-btn-next-radius:							5px; // 0px 0px 0px 0px
-@slider-btn-prev-radius:							5px; // 0px 0px 0px 0px
+@slider-btn-bg:										rgba(0,0,0,.2);
+@slider-btn-bg-hover:								rgba(0,0,0,.5);
+@slider-btn-height: 								90px;
+@slider-btn-width: 									50px;
+@slider-btn-next-radius:							0; // 0px 0px 0px 0px
+@slider-btn-prev-radius:							0; // 0px 0px 0px 0px
 @slider-arrow-color:								#ffffff;
 @slider-arrow-color-hover:							#000;
 
@@ -791,80 +791,80 @@
 	Tabs
 -----------------------------------------------------------------*/
 
-@tabs-border-radius-top-left:						5px;
-@tabs-border-radius-top-right:						5px;
+@tabs-border-radius-top-left:						0px;
+@tabs-border-radius-top-right:						0px;
 @tabs-border-radius-bottom-right:					0px;
 @tabs-border-radius-bottom-left:					0px;
 
-@tabs-active-color:									@theme-color;
+@tabs-active-color:									#666766;
 
 /* ----------------------------------------------------------------
 	Video Player
 -----------------------------------------------------------------*/
 
 // Settings
-@plyr-border-box:                       			true;
-@plyr-touch-action:                     			true;
-@plyr-sr-only-important:                			true;
+@plyr-border-box:                       true;
+@plyr-touch-action:                     true;
+@plyr-sr-only-important:                true;
 
 // Colors
-@plyr-color-main:                       			@theme-color;
+@plyr-color-main:                       @theme-color;
 
 // Font
-@plyr-font-family:                      			Helvetica, Arial, sans-serif;
-@plyr-font-size-small:                  			14px;
-@plyr-font-size-base:                   			16px;
+@plyr-font-family:                      Helvetica, Arial, sans-serif;
+@plyr-font-size-small:                  14px;
+@plyr-font-size-base:                   16px;
 
 // Captions
-@plyr-captions-bg:                      			fade(#000, 70%);
-@plyr-captions-color:                   			#fff;
-@plyr-font-size-captions-base:          			@plyr-font-size-base;
-@plyr-font-size-captions-medium:        			ceil(@plyr-font-size-base * 1.5);
-@plyr-font-size-captions-large:         			(@plyr-font-size-base * 2);
+@plyr-captions-bg:                      fade(#000, 70%);
+@plyr-captions-color:                   #fff;
+@plyr-font-size-captions-base:          @plyr-font-size-base;
+@plyr-font-size-captions-medium:        ceil(@plyr-font-size-base * 1.5);
+@plyr-font-size-captions-large:         (@plyr-font-size-base * 2);
 
 // Controls
-@plyr-control-icon-size:                			18px;
-@plyr-control-spacing:                  			10px;
-@plyr-control-padding:                  			(@plyr-control-spacing * .7);
-@plyr-video-controls-bg:                			#000;
-@plyr-video-control-color:              			#fff;
-@plyr-video-control-color-hover:        			#fff;
-@plyr-video-control-bg-hover:           			@plyr-color-main;
-@plyr-audio-controls-bg:                			#fff;
-@plyr-audio-controls-border:            			1px solid #dbe3e8;
-@plyr-audio-control-color:              			#565D64;
-@plyr-audio-control-color-hover:        			#fff;
-@plyr-audio-control-bg-hover:           			@plyr-color-main;
+@plyr-control-icon-size:                18px;
+@plyr-control-spacing:                  10px;
+@plyr-control-padding:                  (@plyr-control-spacing * .7);
+@plyr-video-controls-bg:                #000;
+@plyr-video-control-color:              #fff;
+@plyr-video-control-color-hover:        #fff;
+@plyr-video-control-bg-hover:           @plyr-color-main;
+@plyr-audio-controls-bg:                #fff;
+@plyr-audio-controls-border:            1px solid #dbe3e8;
+@plyr-audio-control-color:              #565D64;
+@plyr-audio-control-color-hover:        #fff;
+@plyr-audio-control-bg-hover:           @plyr-color-main;
 
 // Tooltips
-@plyr-tooltip-bg:                       			fade(#000, 70%);
-@plyr-tooltip-color:                    			#fff;
-@plyr-tooltip-padding:                  			(@plyr-control-spacing / 2);
-@plyr-tooltip-arrow-size:               			4px;
-@plyr-tooltip-radius:                   			3px;
+@plyr-tooltip-bg:                       fade(#000, 70%);
+@plyr-tooltip-color:                    #fff;
+@plyr-tooltip-padding:                  (@plyr-control-spacing / 2);
+@plyr-tooltip-arrow-size:               4px;
+@plyr-tooltip-radius:                   3px;
 
 // Progress
-@plyr-progress-loading-size:            			25px;
-@plyr-progress-loading-bg:              			fade(#000, 15%);
-@plyr-video-progress-bg:                			fade(#fff, 25%);
-@plyr-video-progress-buffered-bg:       			@plyr-video-progress-bg;
-@plyr-audio-progress-bg:                			fade(#C6D6DB, 66%);
-@plyr-audio-progress-buffered-bg:       			@plyr-audio-progress-bg;
+@plyr-progress-loading-size:            25px;
+@plyr-progress-loading-bg:              fade(#000, 15%);
+@plyr-video-progress-bg:                fade(#fff, 25%);
+@plyr-video-progress-buffered-bg:       @plyr-video-progress-bg;
+@plyr-audio-progress-bg:                fade(#C6D6DB, 66%);
+@plyr-audio-progress-buffered-bg:       @plyr-audio-progress-bg;
 
 // Range sliders
-@plyr-range-track-height:               			8px;
-@plyr-range-thumb-height:               			floor(@plyr-range-track-height * 2);
-@plyr-range-thumb-width:                			floor(@plyr-range-track-height * 2);
-@plyr-range-thumb-bg:                   			#fff;
-@plyr-range-thumb-border:               			2px solid transparent;
-@plyr-range-thumb-shadow:               			0 1px 1px fade(@plyr-video-controls-bg, 15%), 0 0 0 1px fade(#000, 15%);
-@plyr-range-thumb-active-border-color:  			#fff;
-@plyr-range-thumb-active-bg:            			@plyr-video-control-bg-hover;
-@plyr-range-thumb-active-scale:         			1.25;
-@plyr-video-range-track-bg:             			@plyr-video-progress-buffered-bg;
-@plyr-audio-range-track-bg:             			@plyr-audio-progress-buffered-bg;
-@plyr-range-selected-bg:                			@plyr-color-main;
+@plyr-range-track-height:               8px;
+@plyr-range-thumb-height:               floor(@plyr-range-track-height * 2);
+@plyr-range-thumb-width:                floor(@plyr-range-track-height * 2);
+@plyr-range-thumb-bg:                   #fff;
+@plyr-range-thumb-border:               2px solid transparent;
+@plyr-range-thumb-shadow:               0 1px 1px fade(@plyr-video-controls-bg, 15%), 0 0 0 1px fade(#000, 15%);
+@plyr-range-thumb-active-border-color:  #fff;
+@plyr-range-thumb-active-bg:            @plyr-video-control-bg-hover;
+@plyr-range-thumb-active-scale:         1.25;
+@plyr-video-range-track-bg:             @plyr-video-progress-buffered-bg;
+@plyr-audio-range-track-bg:             @plyr-audio-progress-buffered-bg;
+@plyr-range-selected-bg:                @plyr-color-main;
 
 // Breakpoints
-@plyr-bp-screen-sm:                     			479px;
-@plyr-bp-screen-md:                     			768px;
+@plyr-bp-screen-sm:                     479px;
+@plyr-bp-screen-md:                     768px;
