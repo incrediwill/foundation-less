@@ -346,7 +346,7 @@
 			}
 		}
 	}
-
+	
 	#header.header-style-4 {
 		
 		#logo {
@@ -359,8 +359,8 @@
 				padding-bottom: @mobile-header-style4-logo-padding-bottom;				
 			}
 		}
-	}
-	
+	}	
+
 	#logo {
 		display: block;
 		height: @mobile-header-height;
@@ -1431,7 +1431,7 @@
 	.container-fullwidth {
 		margin: 0 auto;
 		padding: 0 15px !important;
-	}
+	}	
 
 	h1 { font-size: 28px; }
 
@@ -2485,15 +2485,17 @@
 	#header.header-style-4 {
 		
 		#logo {
+			padding-left: @header-style4-logo-padding-left;
 			img {
 				width: @mobile-header-center-logo-width;
 			}
 			.logo-dealership-name {
-				font-size: @mobile-header-center-font-size;		
+				font-size: @mobile-header-center-font-size;	
+				line-height: @mobile-header-center-font-size;		
 			}
 		}
 	}
-	
+
 	#header.mobile-center {
 		
 		#logo {
@@ -2590,7 +2592,9 @@ only screen and (                min-resolution: 2dppx) {
 
 	@media
 	(max-width: 992px) {
+
 		#header.header-style-4 {
+			
 			#logo {
 				img {
 					width: @mobile-header-center-logo-width;
@@ -2600,12 +2604,15 @@ only screen and (                min-resolution: 2dppx) {
 				}
 			}
 		}	
+		
+		
 	}
-	
+
 	@media
 	(max-width: 767px) {
 		
 		#header.mobile-center {
+			
 			#logo {
 				height: @mobile-header-height;
 				margin: 0 auto 0 50px !important;
@@ -2647,20 +2654,12 @@ only screen and (                min-resolution: 2dppx) {
 					display: inline-block;
 				}				
 			}
-		}
-		
-		#header.header-style-4 {
-			
-			#logo {
-				.logo-dealership-name {
-					font-size: @mobile-header-center-font-size;
-				}
-			}
-		}		
+		}	
 		
 		#header .overlay-logo #logo .retina-mobile-logo { display: none; }	
 		
 		#header.mobile-center {
+			
 			#logo {
 				text-align: center;
 				height: auto;
@@ -2703,7 +2702,17 @@ only screen and (                min-resolution: 2dppx) {
 	}
 
 	@media 
-	(max-width: 320px) {
+	(min-width: 320px) {
+
+		
+		#header.header-style-4 {
+			
+			#logo {
+				.logo-dealership-name {
+					font-size: @mobile-header-center-font-size;
+				}
+			}
+		}
 		
 		#header.mobile-center {
 			#logo {
