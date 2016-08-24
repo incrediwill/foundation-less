@@ -187,6 +187,7 @@ body.stretched #header.full-header .container {
 	}
 	
 	.logo-dealership-name {
+		color: @heading-logo-font-color;
 		font-size: @heading-logo-font-size;
 		display: inline;
 	}
@@ -310,7 +311,7 @@ body.stretched #header.full-header .container {
 	height: 1px;
 	width: 100%;
 	position: relative;
-	bottom: 24px;
+	bottom: (@header-height / 4);
 	-webkit-transition: .1s ease;
 	-o-transition: .1s ease;
 	transition: .1s ease;	
@@ -1358,6 +1359,10 @@ body:not(.device-sm):not(.device-xs):not(.device-xxs) #header.transparent-header
 	-o-transition: height .4s ease, opacity .3s ease;
 	-webkit-transition: height .2s ease, opacity .3s ease;
 	}
+}
+
+#header.sticky-header #primary-menu:not(style-2).link-style-3 > ul > li.current > a > div:after  {
+	bottom: (@sticky-header-height / 4);
 }
 
 // For When there are no header borders
