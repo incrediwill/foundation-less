@@ -140,6 +140,8 @@
 
 @title-border-length:								50%;
 
+@promo-subtitle-color:								#bbb;
+
 /* ----------------------------------------------------------------
 	Links
 -----------------------------------------------------------------*/
@@ -209,6 +211,7 @@
 
 @topbar-button-height:								30px;
 @topbar-button-width:								100%;
+@topbar-button-line-height:							@topbar-button-height;
 @topbar-button-pos:									4px;
 @topbar-button-font-size:							13px;
 @topbar-button-radius:								@border-radius;
@@ -258,6 +261,7 @@
 @mobile-bar-font-size:								13px;
 @mobile-bar-font-color:								#ffffff;
 
+@mobile-header-toggle-bg:							@content-bg;
 
 /* ----------------------------------------------------------------
 	Header
@@ -330,6 +334,7 @@
 
 // Header Extras
 @header-extras-font-size:							14px;
+@header-extras-span-font-size:						16px;
 @header-extras-span-color:							@alt-color;
 @header-extras-span-weight:							600;
 @header-extras-link-color:							@alt-color;
@@ -366,7 +371,6 @@
 @primary-menu-small-desktop-font-size:        		14px;
 
 @primary-menu-height:								50px;
-@primary-menu-bg:									#ffffff;
 @primary-menu-divider:								none; // block / none
 @pirmary-menu-divider-color:						#E7E7E7;
 @primary-menu-divider-width:						1px;
@@ -377,10 +381,10 @@
 @primary-menu-submenu-font-size:        			14px;
 @primary-menu-submenu-font-weight:      			@primary-menu-font-weight;
 @primary-menu-submenu-font-color: 					@primary-menu-font-color;
+@primary-menu-submenu-font-color-hover:				@primary-menu-font-color-hover;
 @primary-menu-submenu-padding:						0 15px;
 @primary-menu-submenu-bg:							@primary-menu-background;
 @primary-menu-submenu-bg-hover:						#2b2b2b;
-@primary-menu-submenu-font-color-hover:				@primary-menu-font-color-hover;
 @primary-menu-submenu-border-radius:				5px;
 @primary-menu-submenu-height:						20px;
 @primary-menu-submenu-box-shadow:					0px 5px 5px rgba(0, 0, 0, 0.1);
@@ -464,9 +468,8 @@
 @primary-menu-trigger-background-color-start:		transparent;
 @primary-menu-trigger-background-color-end:			transparent;
 @primary-menu-trigger-background-color:				#fff;
-
 @primary-menu-trigger-border:						none; //1px solid #000000;
-
+@primary-menu-trigger-border-radius:				0;
 
 /* ----------------------------------------------------------------
 	Footer
@@ -734,6 +737,7 @@
 
 @quick-browse-bg:									#ffffff;
 @get-directions-bg:									#f2f2f2;
+@map-1-bg:											@content-bg;
 
 @max-width:											1550px;
 @featured-vehicles-bg:								@background1-color;
@@ -758,7 +762,7 @@
 /* ----------------------------------------------------------------
 	Modals
 -----------------------------------------------------------------*/
-
+@modal-bg:											@content-bg;
 @modal-border:										1px solid @divider-color;
 @modal-border-radius:								5px;
 @modal-box-shadow:									none; //0 5px 15px rgba(0,0,0,1);
