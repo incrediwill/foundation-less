@@ -18,7 +18,7 @@
 ul {
 	&.tab-nav {
 		margin: 0;
-		border-bottom: 1px solid #DDD;
+		border-bottom: 1px solid @divider-color;
 		list-style: none;
 		li {
 			float: left;
@@ -29,7 +29,7 @@ ul {
 			text-align: center;
 			&:first-child {
 				margin-left: 15px;
-				border-left: 1px solid #DDD;
+				border-left: 1px solid @divider-color;
 			}
 			a {
 				display: block;
@@ -37,7 +37,7 @@ ul {
 				color: @body-color;	
 				height: 40px;
 				line-height: 40px;
-				background-color: #F2F2F2;
+				background: @tab-bg-color;
 				font-size: 16px;
 				font-weight: normal;
 			}
@@ -47,7 +47,7 @@ ul {
 					color: @tabs-active-color;
 					position: relative;
 					top: 1px;
-					background-color: #FFF;
+					background: @tab-bg-active-color;
 				}
 			}
 		}
@@ -64,10 +64,10 @@ ul {
 		ul.tab-nav li {
 			border-color: transparent;
 			&:first-child { border-left: 0; }
-			a { background-color: #FFF; .border-radius-custom(@topleft: @tabs-border-radius-top-left, @topright: @tabs-border-radius-top-right, @bottomright: @tabs-border-radius-bottom-right, @bottomleft: @tabs-border-radius-bottom-left ); }
+			a { background: @tab-bg-color; .border-radius-custom(@topleft: @tabs-border-radius-top-left, @topright: @tabs-border-radius-top-right, @bottomright: @tabs-border-radius-bottom-right, @bottomleft: @tabs-border-radius-bottom-left ); }
 			&.ui-tabs-active a,
 			&.r-tabs-state-active {
-				border: 1px solid #DDD;
+				border: 1px solid @divider-color;
 				border-bottom: 0;
 				.border-radius-custom(@topleft: @tabs-border-radius-top-left, @topright: @tabs-border-radius-top-right, @bottomright: @tabs-border-radius-bottom-right, @bottomleft: @tabs-border-radius-bottom-left );
 			}
