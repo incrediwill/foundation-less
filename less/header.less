@@ -261,13 +261,15 @@ body.stretched #header.full-header .container {
 		}
 
 		.he-text {
+			color: @header-font-color;
 			float: left;
 			padding-left: 10px;
 			font-size: @header-extras-font-size;
 			line-height: @line-height-base;
 
 			span {
-				font-weight: @header-extras-span-weight;
+				font-size: @header-extras-span-font-size;
+				font-weight: @header-extras-span-font-weight;
 				color: @header-extras-span-color;
 			}
 			
@@ -1144,6 +1146,7 @@ body:not(.device-sm):not(.device-xs):not(.device-xxs) #primary-menu.style-2.cent
 -----------------------------------------------------------------*/
 
 .mobile-header-search .wrapper {
+	background: @mobile-header-toggle-bg;
 	min-height: 20px;
 	padding: 20px 0;
 }
