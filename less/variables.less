@@ -9,17 +9,17 @@
 	Base Colors
 -----------------------------------------------------------------*/
 
-@theme-color:										#27749a;
-@alt-color:											#000000;
-@body-color:										#343434;
-@heading-color:										#343434;
+@theme-color:										#7f988f;
+@alt-color:											#94c11d;
+@body-color:										#333;
+@heading-color:										#333;
 
-@divider-color:										#cccccc;
+@divider-color:										#e5e5e5;
 @content-bg:										#FFFFFF;
 
-@background1-color:									#dddddd;
-@background2-color:									#cccccc;
-@background3-color:									#bbbbbb;
+@background1-color:									#efefef;
+@background2-color:									#e0e0e0;
+@background3-color:									#ddd;
 @body-bg-color:										#ffffff;
 
 
@@ -37,7 +37,7 @@
 	Notify Me Price Alerts
 -----------------------------------------------------------------*/
 
-@notifyme-dashboard-bg:								@body-bg-color;
+@notifyme-dashboard-bg:								#f6f6f6; //@body-bg-color;
 @notifyme-dashboard-font-color:						@body-color;
 @notifyme-dashboard-link-color:						@link-color;
 @notifyme-dashboard-link-hover-color:				@link-color-hover;
@@ -46,7 +46,7 @@
 @notifyme-dashboard-priceLabel-font-size:			15px;
 @notifyme-dashboard-tab-font-size:					@font-size-base;
 
-@notifyme-dashboard-form-submit-margin:				29px 0 0 0;
+@notifyme-dashboard-form-submit-margin:				30px 0 0 0;
 
 @notifyme-dashboard-arrow-color:					@theme-color;
 @notifyme-dashboard-price-alert-color:				#228826; // green
@@ -57,10 +57,10 @@
 @notifyme-alertBox-close:							@theme-color;
 @notifyme-alertBox-border-radius:					5px;
 
-@notifyme-toolbar-bg:								#343434;
+@notifyme-toolbar-bg:								#222;
 @notifyme-toolbar-height:							50px;
 @notifyme-toolbar-amount-size:						22px;
-@notifyme-toolbar-amount-color:						#ffffff;
+@notifyme-toolbar-amount-color:						@alt-color;
 @notifyme-toolbar-amount-hover-color:				#ffffff;
 @notifyme-toolbar-font-color:						#ffffff;
 @notifyme-toolbar-font-size:						16px;
@@ -109,8 +109,8 @@
 -----------------------------------------------------------------*/
 
 @body-font:                     					helvetica, arial, sans-serif;
-@heading-font:                  					'Novecentowide', helvetica, arial, sans-serif;
-@secondary-font:                					'Novecentowide', helvetica, arial, sans-serif;
+@heading-font:                  					helvetica, arial, sans-serif;
+@secondary-font:                					helvetica, arial, sans-serif;
 
 
 /* ----------------------------------------------------------------
@@ -140,7 +140,7 @@
 
 @title-border-length:								50%;
 
-@promo-subtitle-color:								#bbb;
+@promo-subtitle-color:								#666;
 
 /* ----------------------------------------------------------------
 	Links
@@ -197,7 +197,7 @@
 @header-phone-label-font-size:						@header-phone-font-size;
 @header-phone-label-font-weight:					@font-weight-bold;
 
-@topbar-bg-color:									#EEEEEF;
+@topbar-bg-color:									#fff;
 
 @topbar-gradient:									false;
 @topbar-gradient-origin:							top;
@@ -248,7 +248,7 @@
 @bottombar-gradient-origin:							right;
 @bottombar-background-color-start:					#ffffff;
 @bottombar-background-color-end:					#e5e8e7;
-@bottombar-background-color:						#EEEEEF;
+@bottombar-background-color:						@background1-color;
 @bottombar-height:    								auto;
 @bottombar-line-height:            					38px;
 
@@ -279,10 +279,10 @@
 
 @heading-logo-margin:								0;
 @heading-logo-position:								left; // left / right
-@heading-logo-img-margin:							0 0 0 0;
-@heading-logo-font-size:							28px;
+@heading-logo-img-margin:							0 25px 0 0;
+@heading-logo-font-size:							20px;
 @heading-logo-font-weight:							600;
-@heading-logo-font-color:							@body-color;
+@heading-logo-font-color:							@heading-font;
 @heading-logo-text-transform:						uppercase;
 
 
@@ -291,8 +291,8 @@
 @heading-logo-margin-lg:							0 0 0 140px;
 @heading-logo-margin-sm:							0 0 0 0;
 
-@mobile-header-logo-position:						right;
-@mobile-header-logo-margin:							0 0 0 0;
+@mobile-header-logo-position:						left;
+@mobile-header-logo-margin:							0 0 0 30px;
 
 
 // Header Style 4
@@ -325,7 +325,7 @@
 
 // Mobile Header
 @mobile-heading-logo-font-size:						14px;
-@mobile-header-height:								100px;
+@mobile-header-height:								70px;
 @mobile-header-left-font-size:						14px;
 @mobile-header-center-font-size:					14px;
 @mobile-header-center-padding:						0 0 10px 0;
@@ -336,7 +336,7 @@
 @header-extras-font-size:							14px;
 @header-extras-span-font-size:						16px;
 @header-extras-span-color:							@alt-color;
-@header-extras-span-weight:							600;
+@header-extras-span-font-weight:					600;
 @header-extras-link-color:							@alt-color;
 @header-extras-link-color-hover:					@theme-color;
 @header-extras-link-weight:							600;
@@ -349,28 +349,28 @@
 	Primary Menu
 -----------------------------------------------------------------*/
 
-@primary-menu-background:          					#343434;
+@primary-menu-background:          					#f6f6f6;
 @primary-menu-border:								none;
-@primary-menu-font:             					'Novecentowide', helvetica, arial, sans-serif;
-@primary-menu-font-weight:      					@font-weight-normal;
+@primary-menu-font:             					@heading-font;
+@primary-menu-font-weight:      					@font-weight-bold;
 @primary-menu-font-size:        					14px;
 @primary-menu-font-tt:          					uppercase;
 @primary-menu-active-color:							@theme-color;
-@primary-menu-font-color:       					#ffffff;
-@primary-menu-font-color-hover:   					#eeeeee;
-@primary-menu-font-color-current:  					#ffffff;
+@primary-menu-font-color:       					@body-color;
+@primary-menu-font-color-hover:   					#666;
+@primary-menu-font-color-current:  					@theme-color;
 @primary-menu-font-spacing:     					0px;
 
 @primary-menu-padding:								0 12px;
 @primary-menu-position:								right; // left / right / none
-@primary-menu-width:								100%;
+@primary-menu-width:								auto;
 @primary-menu-margin:								0;
 
 // Small Desktop Menu
 @primary-menu-small-desktop-padding:				0 7px;
 @primary-menu-small-desktop-font-size:        		14px;
 
-@primary-menu-height:								50px;
+@primary-menu-height:								@sticky-header-height;
 @primary-menu-divider:								none; // block / none
 @pirmary-menu-divider-color:						#E7E7E7;
 @primary-menu-divider-width:						1px;
@@ -384,7 +384,7 @@
 @primary-menu-submenu-font-color-hover:				@primary-menu-font-color-hover;
 @primary-menu-submenu-padding:						0 15px;
 @primary-menu-submenu-bg:							@primary-menu-background;
-@primary-menu-submenu-bg-hover:						#2b2b2b;
+@primary-menu-submenu-bg-hover:						lighten(@primary-menu-background, 5%);
 @primary-menu-submenu-border-radius:				5px;
 @primary-menu-submenu-height:						20px;
 @primary-menu-submenu-box-shadow:					0px 5px 5px rgba(0, 0, 0, 0.1);
@@ -398,7 +398,7 @@
 /* ----------------------------------------------------------------
 	Side Panel Menu
 -----------------------------------------------------------------*/
-@side-panel-menu-background:						#343434;
+@side-panel-menu-background:						@primary-menu-background;
 
 @side-panel-menu-height:							40px;
 @side-panel-menu-font:             					@primary-menu-font;
@@ -425,7 +425,7 @@
 @side-panel-menu-submenu-transform:					none;
 
 @side-panel-wrap:									50px 50px 50px 20px;
-@side-panel-bg:										#343434;
+@side-panel-bg:										@primary-menu-background;
 
 
 /* ----------------------------------------------------------------
@@ -477,20 +477,20 @@
 
 @footer-font-size:									11px;
 @footer-font-color:									@body-color;
-@footer-bg:											#D9D9D9;
+@footer-bg:											@background1-color;
 
 @footer-widgets-padding:							60px 0 0 0;
 
 @copyright-padding:									15px 0 60px 0;
-@copyright-bg:										#D9D9D9;
-@copyright-font-color:								#666766;
-@copyright-link-color:								#666766;
-@copyright-link-hover-color:						#666766;
+@copyright-bg:										@background1-color;
+@copyright-font-color:								#333;
+@copyright-link-color:								#333;
+@copyright-link-hover-color:						#000;
 @copyright-text-align:								center;
 
 @ebiz-terms-padding:								10px 0;
 
-@pag-footer-bg:										#EEEEF0;
+@pag-footer-bg:										#fafafa;
 
 
 /* ----------------------------------------------------------------
@@ -530,8 +530,8 @@
 @form-element-border-bottom-style:					solid;
 @form-element-border-right-style:					solid;
 @form-element-border-radius:						5px;
-@form-element-background:							#fafafa;
-@form-element-height:								38px;
+@form-element-background:							#fff;
+@form-element-height:								40px;
 @form-element-padding:								4px 10px;
 @form-element-padding-small:						4px 10px;
 @form-element-font-size:							16px;
@@ -544,8 +544,8 @@
 @form-icon-color:									@divider-color;
 @form-icon-color-hover:								@divider-color;
 
-@form-select-arrow-size:							20px;
-@form-select-arrow-top:								3px;
+@form-select-arrow-size:							30px;
+@form-select-arrow-top:								-2px;
 
 @form-toggle-border-radius:							20px;
 @form-toggle-checked-radius:						50%;  
@@ -555,7 +555,7 @@
 	Scroll To Top
 -----------------------------------------------------------------*/
 
-@go-to-top-hover:									#1C69D4;
+@go-to-top-hover:									@alt-color;
 @go-to-top-border-radius:							0px;
 @go-to-top-pos-right:								6px;
 
@@ -564,22 +564,22 @@
 	Buttons
 -----------------------------------------------------------------*/
 
-@border-radius:										5px;
+@border-radius:										3px;
 @button-border:										1px solid @button-bg-color;
 @button-border-hover:								1px solid @button-bg-hover-color;
 
-@button-height:										38px;
+@button-height:										40px;
 @button-line-height:								@button-height;
 @button-transform:									capitalize;
 
 @button-padding:									0 40px;
 @button-bg-color:									@theme-color;
-@button-bg-hover-color:								#343434;
-@button-font:										helvetica, arial, sans-serif;
-@button-font-size:									15px;
+@button-bg-hover-color:								darken(@theme-color, 10%);
+@button-font-family:								@heading-font;
+@button-font-size:									14px;
 @button-font-color:									#ffffff;
 @button-font-hover-color:							#ffffff;
-@button-font-weight:								300;
+@button-font-weight:								600;
 
 @button-gradient:									false; // true/false
 @button-gradient-origin:							bottom;
@@ -589,7 +589,7 @@
 @button-bg-start-hover-color:						#434c53;
 @button-bg-end-hover-color:							#434c53;
 
-@button-alt-border:									1px solid @button-alt-bg-color;
+@button-alt-border:									1px solid @body-color;
 @button-alt-border-hover:							1px solid @button-alt-bg-hover-color;
 
 @button-alt-gradient:								false; // true/false
@@ -598,22 +598,40 @@
 @button-alt-bg-start-hover-color:					#434c53;
 @button-alt-bg-end-hover-color:						#434c53;
 
-@button-alt-bg-color:								#343434;
-@button-alt-bg-hover-color:							@theme-color;
-@button-alt-font-color:								#ffffff;
+@button-alt-bg-color:								#fff;
+@button-alt-bg-hover-color:							@alt-color;
+@button-alt-font-color:								@body-color;
 @button-alt-font-hover-color:						#ffffff;
 
 @uggo-gradient-origin:								top;
 @uggo-bg-start-color:								darken(@theme-color, 13%);
 @uggo-bg-center-color:								@theme-color;
 @uggo-bg-end-color:									darken(@theme-color, 13%);
-@uggo-bg-start-hover-color:							darken(@alt-color, 24%);
-@uggo-bg-center-hover-color:						darken(@alt-color, 8%);
-@uggo-bg-end-hover-color:							darken(@alt-color, 24%);
+@uggo-bg-start-hover-color:							darken(@theme-color, 24%);
+@uggo-bg-center-hover-color:						darken(@theme-color, 8%);
+@uggo-bg-end-hover-color:							darken(@theme-color, 24%);
 @uggo-border-color:									@theme-color;
 
 @uggo-font-color:									#ffffff;
 @uggo-font-color-hover:								#ffffff;
+
+
+
+/* ----------------------------------------------------------------
+	Button Desc.
+-----------------------------------------------------------------*/
+
+@button-desc-font-size:								20px;
+@button-desc-font-family:							@heading-font;
+
+@button-desc-span-font-size:						14px;
+@button-desc-span-font-weight:						300;
+@button-desc-span-letter-spacing:					0px;
+@button-desc-span-font-family:						@heading-font;
+@button-desc-span-font-style:						normal;
+
+
+
 
 /* ----------------------------------------------------------------
 	Portfolio
@@ -649,30 +667,30 @@
 @homepage-slideshow-bg:								#fff;
 @homepage-slideshow-max-width:						100%;
 
-@homepage-slideshow-btn-bg:							rgba(0,0,0,.1);
+@homepage-slideshow-btn-bg:							rgba(255,255,255,.2);
 @homepage-slideshow-btn-border:						0; //1px solid #000000;
-@homepage-slideshow-btn-bg-hover:					rgba(0,0,0,.2);
+@homepage-slideshow-btn-bg-hover:					rgba(255,255,255,.4);
 @homepage-slideshow-btn-bg-hover-opacity:			1;
 @homepage-slideshow-btn-border-hover: 				0;
-@homepage-slideshow-btn-arrow-size:					36px;
-@homepage-slideshow-arrow-color:					#ffffff;
-@homepage-slideshow-arrow-color-hover:				#ffffff;
-@homepage-slideshow-btn-width:						40px;
-@homepage-slideshow-btn-height:						90px;
+@homepage-slideshow-btn-arrow-size:					30px;
+@homepage-slideshow-arrow-color:					#fff;
+@homepage-slideshow-arrow-color-hover:				#fff;
+@homepage-slideshow-btn-width:						100px;
+@homepage-slideshow-btn-height:						100px;
 
-@homepage-slideshow-btn-prev-pos:					0px;
-@homepage-slideshow-btn-prev-radius-tl:				0px;
-@homepage-slideshow-btn-prev-radius-tr:				0px;
-@homepage-slideshow-btn-prev-radius-bl:				0px;
-@homepage-slideshow-btn-prev-radius-br:				0px;
-@homepage-slideshow-icon-prev-pos:					0 0 0 0;
+@homepage-slideshow-btn-prev-pos:					-30px;
+@homepage-slideshow-btn-prev-radius-tl:				50px;
+@homepage-slideshow-btn-prev-radius-tr:				50px;
+@homepage-slideshow-btn-prev-radius-bl:				50px;
+@homepage-slideshow-btn-prev-radius-br:				50px;
+@homepage-slideshow-icon-prev-pos:					0 0 0 10px;
 
-@homepage-slideshow-btn-next-pos:					0px;
-@homepage-slideshow-btn-next-radius-tl:				0px;
-@homepage-slideshow-btn-next-radius-tr:				0px;
-@homepage-slideshow-btn-next-radius-bl:				0px;
-@homepage-slideshow-btn-next-radius-br:				0px;
-@homepage-slideshow-icon-next-pos:					0 0 0 0;
+@homepage-slideshow-btn-next-pos:					-40px;
+@homepage-slideshow-btn-next-radius-tl:				50px;
+@homepage-slideshow-btn-next-radius-tr:				50px;
+@homepage-slideshow-btn-next-radius-bl:				50px;
+@homepage-slideshow-btn-next-radius-br:				50px;
+@homepage-slideshow-icon-next-pos:					0 0 0 -10px;
 
 
 
@@ -693,11 +711,11 @@
 @slider-flex-btn-next-icon-pos:						0px;
 
 @carousel-btn-font-size:							22px;
-@carousel-btn-color:								#000000;
-@carousel-btn-hover-color:							#ffffff;
+@carousel-btn-color:								#fff;
+@carousel-btn-hover-color:							@theme-color;
 @carousel-btn-border: 								none; // 1px solid rgba(0,0,0,0.2);
-@carousel-btn-bg-color:								#ffffff; // #d5d9d8 or rgba(213,217,216,1);
-@carousel-btn-bg-hover-color:						@theme-color;
+@carousel-btn-bg-color:								@theme-color; // #d5d9d8 or rgba(213,217,216,1);
+@carousel-btn-bg-hover-color:						#fff;
 @carousel-btn-height:								36px;
 @carousel-btn-width:								36px;
 @carousel-btn-border-radius:						0; // 0 0 0 50%;
@@ -765,13 +783,13 @@
 -----------------------------------------------------------------*/
 
 @modal-bg:											@content-bg;
-@modal-border:										1px solid @divider-color;
-@modal-border-radius:								5px;
-@modal-box-shadow:									none; //0 5px 15px rgba(0,0,0,1);
+@modal-border:										none;
+@modal-border-radius:								10px;
+@modal-box-shadow:									0 5px 30px rgba(0,0,0,.2);
 
 @modal-header-padding:								15px;
-@modal-header-bg-start:								#ffffff;
-@modal-header-bg-end:								#ffffff;
+@modal-header-bg-start:								transparent;
+@modal-header-bg-end:								transparent;
 @modal-header-border-bottom:						1px solid @divider-color;
 @modal-header-title-color:							@theme-color;
 @modal-header-bg-origin:							top;
@@ -801,14 +819,14 @@
 	Tabs
 -----------------------------------------------------------------*/
 
-@tabs-border-radius-top-left:						0px;
-@tabs-border-radius-top-right:						0px;
+@tabs-border-radius-top-left:						5px;
+@tabs-border-radius-top-right:						5px;
 @tabs-border-radius-bottom-right:					0px;
 @tabs-border-radius-bottom-left:					0px;
 
 @tab-bg-color:										@content-bg;
 @tab-bg-active-color:								@content-bg;
-@tabs-active-color:									#666766;
+@tabs-active-color:									@theme-color;
 
 /* ----------------------------------------------------------------
 	Video Player
