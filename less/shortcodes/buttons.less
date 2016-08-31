@@ -89,20 +89,20 @@ body:not(.device-touch) .button {
 .button.button-desc {
 	text-align: left;
 	padding: 24px 34px;
-	font-size: 22px;
+	font-size: @button-desc-font-size;
 	height: auto;
 	line-height: 1;
-	font-family: @heading-font;
+	font-family: @button-desc-font-family;
 }
 
 .button.button-desc span {
 	display: block;
 	margin-top: 10px;
-	font-size: 14px;
-	font-weight: 400;
-	letter-spacing: 1px;
-	font-family: @secondary-font;
-	font-style: italic;
+	font-size: @button-desc-span-font-size;
+	font-weight: @button-desc-span-font-weight;
+	letter-spacing: @button-desc-span-letter-spacing;
+	font-family: @button-desc-span-font-family;
+	font-style: @button-desc-span-font-style;
 	text-transform: none;
 }
 
