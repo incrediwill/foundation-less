@@ -61,8 +61,8 @@
 	}    
 
 	.search-flyout-close {
-		background: #DEDEDE;
-		color: #222427;
+		background: @button-bg-color;
+		color: @button-font-color;
 		display: block;
 		width: 40px;
 		height: 60px;
@@ -72,8 +72,8 @@
 		top: 10px;
 		
 		&:hover{
-			background: #CF0000;
-			color: #ffffff;
+			background: @button-bg-hover-color;
+			color: @button-font-hover-color;
 		}
 
 		i {
@@ -199,6 +199,7 @@ body.search-flyout-is-open #search-flyout {
 	Featured Vehicles
 -----------------------------------------------------------------*/
 
+#featured-vehicles-1,
 #featured-vehicles-2 {
 	background: @featured-vehicles-bg;
 	.fancy-title {
