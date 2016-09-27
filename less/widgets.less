@@ -5,6 +5,49 @@
 -----------------------------------------------------------------------------------*/
 
 
+/* Photo List
+-----------------------------------------------------------------*/
+
+#photolist-images { display: none; }
+
+#photolist-images .item {
+	text-align: center;
+	position: relative;
+	padding-bottom: 80px;
+}
+
+#photolist-images .item .image {
+	margin-bottom: 15px;
+}
+
+#photolist-images[data-photolist-columns="1"] .item {
+	padding-bottom: 60px;
+}
+#photolist-images[data-photolist-columns="1"] .image {
+	float: left;
+	margin-right: 30px;
+}
+#photolist-images[data-photolist-columns="1"] .content {
+	margin-left: 30px;
+    position: relative;
+    overflow: hidden;
+    text-align: left;	
+}
+
+@media only screen and (max-width: 768px) {
+
+	#photolist-images[data-photolist-columns="1"] .image {
+		float: none;
+		margin-right: 0;
+	}	
+
+	#photolist-images[data-photolist-columns="1"] .content {
+		text-align: center;	
+	}	
+
+}
+
+
 /* Accordion Menu
 -----------------------------------------------------------------*/
 
