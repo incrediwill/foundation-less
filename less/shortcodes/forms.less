@@ -131,6 +131,17 @@ form, .input-wrapper {
 		appearance: none;
 	}
 	
+	.select option {
+		background-color: @form-element-background;
+	}
+	
+	.input input:-webkit-autofill,
+	.select select:-webkit-autofill,
+	.textarea textarea:-webkit-autofill {
+	    -webkit-box-shadow:0 0 0 50px @form-element-background inset; /* Change the color to your own background color */
+		-webkit-text-fill-color: @body-color;		
+	}	
+	
 	.input.small input,
 	.select.small select {
 		height: 29px;
@@ -551,6 +562,7 @@ form, .input-wrapper {
 	.checkbox .error i,
 	.toggle-input .error i {
 		background: #ffe9e9;
+		color: #e50000;
 	}
 
 	.input .error:focus,
