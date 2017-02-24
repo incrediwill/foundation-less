@@ -134,6 +134,34 @@
 
 }
 
+/* Flexbox Columns
+-----------------------------------------------------------------*/
+
+.row-flex, .row-flex > div[class*='col-'] {  
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    flex: 1 1 auto;
+}
+
+.row-flex-wrap {
+	-webkit-flex-flow: row wrap;
+    align-content: flex-start;
+    flex: 0;
+}
+
+.row-flex > div[class*='col-'] {
+	 margin: -.2px; 
+}
+
+@media screen and (max-width: 767px) {
+	.row-flex > div[class*='col-'] div {
+		width:100%;
+	}
+}
+
 /* ----------------------------------------------------------------
 	Cookie Notification
 -----------------------------------------------------------------*/
