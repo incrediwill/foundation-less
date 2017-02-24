@@ -1142,11 +1142,27 @@ body:not(.device-sm):not(.device-xs):not(.device-xxs) #primary-menu.style-2.cent
 
 
 /* ----------------------------------------------------------------
-	Mobile Header Search
+	Mobile Header Section
 -----------------------------------------------------------------*/
 
+.mobile-header-section {
+	display: none;
+	background: @mobile-header-section-bg;
+	color: @mobile-header-section-font-color;
+	padding: 10px 0;
+	
+	.mobile-bar-row {
+		line-height: 2em;
+	}
+	
+	a {
+		color: @mobile-header-section-font-color;	
+	}
+
+}
+
 .mobile-header-search .wrapper {
-	background: @mobile-header-toggle-bg;
+	background-color: @mobile-header-toggle-bg;
 	min-height: 20px;
 	padding: 20px 0;
 }
