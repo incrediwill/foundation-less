@@ -1700,95 +1700,99 @@ body:not(.device-touch) #page-menu nav li a {
 /* Page Menu - Dots Style
 -----------------------------------------------------------------*/
 
-#page-menu.dots-menu,
-#page-menu.dots-menu #page-menu-wrap {
-	position: fixed;
-	z-index: 99;
-	top: 50%;
-	left: auto;
-	right: 20px;
-	width: 24px;
-	height: auto;
-	line-height: 1.5;
-	background-color: transparent;
-	text-shadow: none;
-}
+@media (min-width: 992px) {
 
-#page-menu.dots-menu #page-menu-wrap {
-	position: relative;
-	box-shadow: none;
-}
+	#page-menu.dots-menu,
+	#page-menu.dots-menu #page-menu-wrap {
+		position: fixed;
+		z-index: 99;
+		top: 50%;
+		left: auto;
+		right: 20px;
+		width: 24px;
+		height: auto;
+		line-height: 1.5;
+		background-color: transparent;
+		text-shadow: none;
+	}
 
-#page-menu.dots-menu .menu-title { display: none; }
+	#page-menu.dots-menu #page-menu-wrap {
+		position: relative;
+		box-shadow: none;
+	}
 
-#page-menu.dots-menu nav {
-	float: none;
-	width: 24px;
-}
+	#page-menu.dots-menu .menu-title { display: none; }
 
-#page-menu.dots-menu nav ul { height: auto; }
+	#page-menu.dots-menu nav {
+		float: none;
+		width: 24px;
+	}
 
-#page-menu.dots-menu nav ul li {
-	float: none;
-	width: 14px;
-	height: 14px;
-	margin: 10px 6px;
-}
+	#page-menu.dots-menu nav ul { height: auto; }
 
-#page-menu.dots-menu nav li a {
-	position: relative;
-	width: 10px;
-	height: 10px;
-	line-height: 1.5;
-	padding: 0;
-	margin: 0 2px;
-	background-color: rgba(0,0,0,0.4);
-	.border-radius(50%);
-	color: #777;
-}
+	#page-menu.dots-menu nav ul li {
+		float: none;
+		width: 14px;
+		height: 14px;
+		margin: 10px 6px;
+	}
 
-#page-menu.dots-menu nav li a:hover { background-color: rgba(0,0,0,0.7) }
+	#page-menu.dots-menu nav li a {
+		position: relative;
+		width: 10px;
+		height: 10px;
+		line-height: 1.5;
+		padding: 0;
+		margin: 0 2px;
+		background-color: rgba(0,0,0,0.4);
+		border-radius: 50%;
+		color: #777;
+	}
 
-#page-menu.dots-menu nav li.current a { background-color: @theme-color; }
+	#page-menu.dots-menu nav li a:hover { background-color: rgba(0,0,0,0.7) }
 
-#page-menu.dots-menu nav li .dots-menu-caption {
-	position: absolute;
-	width: auto;
-	top: -11px;
-	right: 25px;
-	background-color: @theme-color;
-	color: #FFF;
-	padding: 5px 14px;
-	white-space: nowrap;
-	pointer-events: none;
-	text-shadow: 1px 1px 1px rgba(0,0,0,0.15);
-	border-radius: 2px;
-	opacity: 0;
-}
+	#page-menu.dots-menu nav li.current a { background-color: @theme-color; }
 
-body:not(.device-touch) #page-menu.dots-menu nav li .dots-menu-caption {
-	-webkit-transition: all .2s ease-in-out;
-	-o-transition: all .2s ease-in-out;
-	transition: all .2s ease-in-out;
-}
+	#page-menu.dots-menu nav li div {
+		position: absolute;
+		width: auto;
+		top: -11px;
+		right: 25px;
+		background-color: @theme-color;
+		color: #FFF;
+		padding: 5px 14px;
+		white-space: nowrap;
+		pointer-events: none;
+		text-shadow: 1px 1px 1px rgba(0,0,0,0.15);
+		border-radius: 2px;
+		opacity: 0;
+	}
 
-#page-menu.dots-menu nav li .dots-menu-caption:after {
-	position: absolute;
-	content: '';
-	top: 50%;
-	margin-top: -6px;
-	left: auto;
-	right: -5px;
-	width: 0;
-	height: 0;
-	border-top: 7px solid transparent;
-	border-bottom: 7px solid transparent;
-	border-left: 6px solid @theme-color;
-}
+	body:not(.device-touch) #page-menu.dots-menu nav li div {
+		-webkit-transition: all .2s ease-in-out;
+		-o-transition: all .2s ease-in-out;
+		transition: all .2s ease-in-out;
+	}
 
-#page-menu.dots-menu nav li a:hover + .dots-menu-caption {
-	opacity: 1;
-	right: 30px;
+	#page-menu.dots-menu nav li div:after {
+		position: absolute;
+		content: '';
+		top: 50%;
+		margin-top: -6px;
+		left: auto;
+		right: -5px;
+		width: 0;
+		height: 0;
+		border-top: 7px solid transparent;
+		border-bottom: 7px solid transparent;
+		border-left: 6px solid @theme-color;
+	}
+
+	#page-menu.dots-menu nav li a:hover div {
+		opacity: 1;
+		right: 30px;
+	}
+
 }
 
 
