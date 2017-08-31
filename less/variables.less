@@ -9,17 +9,17 @@
 	Base Colors
 -----------------------------------------------------------------*/
 
-@theme-color:										#7f988f;
-@alt-color:											#94c11d;
+@theme-color:										#2196F3;
+@alt-color:											#999;
 @body-color:										#333;
 @heading-color:										#333;
 
-@divider-color:										#e5e5e5;
+@divider-color:										#E0E0E0;
 @content-bg:										#FFFFFF;
 
-@background1-color:									#efefef;
-@background2-color:									#e0e0e0;
-@background3-color:									#ddd;
+@background1-color:									#FAFAFA;
+@background2-color:									#F5F5F5;
+@background3-color:									#E0E0E0;
 @body-bg-color:										#ffffff;
 
 
@@ -37,7 +37,7 @@
 	Notify Me Price Alerts
 -----------------------------------------------------------------*/
 
-@notifyme-dashboard-bg:								#f6f6f6; //@body-bg-color;
+@notifyme-dashboard-bg:								@body-bg-color; //@body-bg-color;
 @notifyme-dashboard-font-color:						@body-color;
 @notifyme-dashboard-link-color:						@link-color;
 @notifyme-dashboard-link-hover-color:				@link-color-hover;
@@ -60,11 +60,11 @@
 @notifyme-toolbar-bg:								#222;
 @notifyme-toolbar-height:							50px;
 @notifyme-toolbar-amount-size:						22px;
-@notifyme-toolbar-amount-color:						@alt-color;
+@notifyme-toolbar-amount-color:						@theme-color;
 @notifyme-toolbar-amount-hover-color:				#ffffff;
 @notifyme-toolbar-font-color:						#ffffff;
 @notifyme-toolbar-font-size:						16px;
-@notifyme-toolbar-font-weight:						300;
+@notifyme-toolbar-font-weight:						@font-weight-normal;
 @notifyme-toolbar-font-top:							2px;
 @notifyme-toolbar-hover-color:						#ffffff;
 @notifyme-toolbar-bg-hover:							@theme-color;
@@ -108,9 +108,9 @@
 	Font Families
 -----------------------------------------------------------------*/
 
-@body-font:                     					helvetica, arial, sans-serif;
-@heading-font:                  					helvetica, arial, sans-serif;
-@secondary-font:                					helvetica, arial, sans-serif;
+@body-font:                     					'Roboto', helvetica, arial, sans-serif;
+@heading-font:                  					'Roboto', helvetica, arial, sans-serif;
+@secondary-font:                					'Roboto', helvetica, arial, sans-serif;
 
 
 /* ----------------------------------------------------------------
@@ -128,8 +128,8 @@
 @font-size-h5:     			    					@font-size-base;
 @font-size-h6:     			    					ceil((@font-size-base * 0.85)); // ~12px
 
-@font-weight-bold:									600;
-@font-weight-normal:								300;
+@font-weight-bold:									700;
+@font-weight-normal:								400;
 
 @heading-weight:									600;
 @heading-font-spacing:								0;
@@ -199,7 +199,7 @@
 @header-phone-label-font-size:						@header-phone-font-size;
 @header-phone-label-font-weight:					@font-weight-bold;
 
-@topbar-bg-color:									#fff;
+@topbar-bg-color:									@background1-color;
 
 @topbar-gradient:									false;
 @topbar-gradient-origin:							top;
@@ -341,10 +341,10 @@
 // Header Extras
 @header-extras-font-size:							14px;
 @header-extras-span-font-size:						16px;
-@header-extras-span-color:							@alt-color;
+@header-extras-span-color:							@theme-color;
 @header-extras-span-font-weight:					600;
-@header-extras-link-color:							@alt-color;
-@header-extras-link-color-hover:					@theme-color;
+@header-extras-link-color:							@link-color;
+@header-extras-link-color-hover:					@link-color-hover;
 @header-extras-link-weight:							600;
 
 
@@ -355,16 +355,16 @@
 	Primary Menu
 -----------------------------------------------------------------*/
 
-@primary-menu-background:          					#f6f6f6;
+@primary-menu-background:          					@theme-color;
 @primary-menu-border:								none;
-@primary-menu-font:             					@heading-font;
+@primary-menu-font:             					@body-font;
 @primary-menu-font-weight:      					@font-weight-bold;
-@primary-menu-font-size:        					14px;
-@primary-menu-font-tt:          					uppercase;
-@primary-menu-active-color:							@theme-color;
-@primary-menu-font-color:       					@body-color;
-@primary-menu-font-color-hover:   					#666;
-@primary-menu-font-color-current:  					@theme-color;
+@primary-menu-font-size:        					16px;
+@primary-menu-font-tt:          					none;
+@primary-menu-active-color:							#fff;
+@primary-menu-font-color:       					#fff;
+@primary-menu-font-color-hover:   					#eee;
+@primary-menu-font-color-current:  					#fff;
 @primary-menu-font-spacing:     					0px;
 
 @primary-menu-padding:								0 12px;
@@ -386,11 +386,11 @@
 @primary-menu-submenu-font:             			@primary-menu-font;
 @primary-menu-submenu-font-size:        			14px;
 @primary-menu-submenu-font-weight:      			@primary-menu-font-weight;
-@primary-menu-submenu-font-color: 					@primary-menu-font-color;
-@primary-menu-submenu-font-color-hover:				@primary-menu-font-color-hover;
+@primary-menu-submenu-font-color: 					@body-color;
+@primary-menu-submenu-font-color-hover:				#fff;
 @primary-menu-submenu-padding:						0 15px;
-@primary-menu-submenu-bg:							@primary-menu-background;
-@primary-menu-submenu-bg-hover:						lighten(@primary-menu-background, 5%);
+@primary-menu-submenu-bg:							#fff;
+@primary-menu-submenu-bg-hover:						@theme-color; // lighten(@primary-menu-background, 5%);
 @primary-menu-submenu-border-radius:				5px;
 @primary-menu-submenu-height:						20px;
 @primary-menu-submenu-box-shadow:					0px 5px 5px rgba(0, 0, 0, 0.1);
@@ -489,9 +489,9 @@
 
 @copyright-padding:									15px 0 60px 0;
 @copyright-bg:										@background1-color;
-@copyright-font-color:								#333;
-@copyright-link-color:								#333;
-@copyright-link-hover-color:						#000;
+@copyright-font-color:								@body-color;
+@copyright-link-color:								@body-color;
+@copyright-link-hover-color:						@theme-color;
 @copyright-text-align:								center;
 
 @ebiz-terms-padding:								10px 0;
@@ -509,16 +509,16 @@
 
 @page-title-bg:										@background1-color;
 @page-title-bg-dark:								#333;
-@page-title-divider-color:							#e1e1e1;
+@page-title-divider-color:							@divider-color;
 
 @page-title-color:									@heading-color;
 @page-title-font-size:								28px;
 @page-title-font-family:							@secondary-font;
-@page-title-font-weight:							600;
+@page-title-font-weight:							@font-weight-bold;
 @page-title-letter-spacing:							0px;
 @page-title-subtitle-size:							20px;
 @page-title-subtitle-color:							#777777;
-@page-title-subtitle-weight:						300;
+@page-title-subtitle-weight:						@font-weight-normal;
 
 @page-title-mini-size:								18px;
 
@@ -595,7 +595,7 @@
 @button-bg-start-hover-color:						#434c53;
 @button-bg-end-hover-color:							#434c53;
 
-@button-alt-border:									1px solid @body-color;
+@button-alt-border:									1px solid @button-alt-bg-color;
 @button-alt-border-hover:							1px solid @button-alt-bg-hover-color;
 
 @button-alt-gradient:								false; // true/false
@@ -604,10 +604,10 @@
 @button-alt-bg-start-hover-color:					#434c53;
 @button-alt-bg-end-hover-color:						#434c53;
 
-@button-alt-bg-color:								#fff;
-@button-alt-bg-hover-color:							@alt-color;
-@button-alt-font-color:								@body-color;
-@button-alt-font-hover-color:						#ffffff;
+@button-alt-bg-color:								@alt-color;
+@button-alt-bg-hover-color:							@body-color;
+@button-alt-font-color:								#fff;
+@button-alt-font-hover-color:						#fff;
 
 @uggo-gradient-origin:								top;
 @uggo-bg-start-color:								darken(@theme-color, 13%);
@@ -670,33 +670,33 @@
 @homepage-slideshow-gradient-origin:				top;
 @homepage-slideshow-bg-color-start:					#000000;
 @homepage-slideshow-bg-color-end:					#000000;
-@homepage-slideshow-bg:								#fff;
+@homepage-slideshow-bg:								transparent;
 @homepage-slideshow-max-width:						100%;
 
-@homepage-slideshow-btn-bg:							rgba(255,255,255,.2);
-@homepage-slideshow-btn-border:						0; //1px solid #000000;
-@homepage-slideshow-btn-bg-hover:					rgba(255,255,255,.4);
+@homepage-slideshow-btn-bg:							@theme-color;
+@homepage-slideshow-btn-border:						none; //1px solid #000000;
+@homepage-slideshow-btn-bg-hover:					darken(@theme-color, 10%);
 @homepage-slideshow-btn-bg-hover-opacity:			1;
-@homepage-slideshow-btn-border-hover: 				0;
+@homepage-slideshow-btn-border-hover: 				none;
 @homepage-slideshow-btn-arrow-size:					30px;
-@homepage-slideshow-arrow-color:					#fff;
-@homepage-slideshow-arrow-color-hover:				#fff;
-@homepage-slideshow-btn-width:						100px;
-@homepage-slideshow-btn-height:						100px;
+@homepage-slideshow-arrow-color:					#ffffff;
+@homepage-slideshow-arrow-color-hover:				#ffffff;
+@homepage-slideshow-btn-width:						60px;
+@homepage-slideshow-btn-height:						60px;
 
-@homepage-slideshow-btn-prev-pos:					-30px;
-@homepage-slideshow-btn-prev-radius-tl:				50px;
-@homepage-slideshow-btn-prev-radius-tr:				50px;
-@homepage-slideshow-btn-prev-radius-bl:				50px;
-@homepage-slideshow-btn-prev-radius-br:				50px;
-@homepage-slideshow-icon-prev-pos:					0 0 0 10px;
+@homepage-slideshow-btn-prev-pos:					0px;
+@homepage-slideshow-btn-prev-radius-tl:				0px;
+@homepage-slideshow-btn-prev-radius-tr:				3px;
+@homepage-slideshow-btn-prev-radius-bl:				0px;
+@homepage-slideshow-btn-prev-radius-br:				3px;
+@homepage-slideshow-icon-prev-pos:					0 0 0 0;
 
-@homepage-slideshow-btn-next-pos:					-40px;
-@homepage-slideshow-btn-next-radius-tl:				50px;
-@homepage-slideshow-btn-next-radius-tr:				50px;
-@homepage-slideshow-btn-next-radius-bl:				50px;
-@homepage-slideshow-btn-next-radius-br:				50px;
-@homepage-slideshow-icon-next-pos:					0 0 0 -10px;
+@homepage-slideshow-btn-next-pos:					0px;
+@homepage-slideshow-btn-next-radius-tl:				3px;
+@homepage-slideshow-btn-next-radius-tr:				0px;
+@homepage-slideshow-btn-next-radius-bl:				3px;
+@homepage-slideshow-btn-next-radius-br:				0px;
+@homepage-slideshow-icon-next-pos:					0 0 0 0;
 
 
 
@@ -717,11 +717,11 @@
 @slider-flex-btn-next-icon-pos:						0px;
 
 @carousel-btn-font-size:							22px;
-@carousel-btn-color:								#fff;
-@carousel-btn-hover-color:							@theme-color;
+@carousel-btn-color:								#ffffff;
+@carousel-btn-hover-color:							#ffffff;
 @carousel-btn-border: 								none; // 1px solid rgba(0,0,0,0.2);
 @carousel-btn-bg-color:								@theme-color; // #d5d9d8 or rgba(213,217,216,1);
-@carousel-btn-bg-hover-color:						#fff;
+@carousel-btn-bg-hover-color:						@theme-color;
 @carousel-btn-height:								36px;
 @carousel-btn-width:								36px;
 @carousel-btn-border-radius:						0; // 0 0 0 50%;
