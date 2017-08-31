@@ -35,6 +35,9 @@
 			list-style: none;
 			margin: 0;
 			padding: 0;
+			a {
+				text-decoration: underline !important;
+			}
 		}
 	}
 	
@@ -245,13 +248,12 @@
 	
 	.current-search-item {
 		border-bottom: 1px solid @divider-color;
-		line-height: 1.2em;
 		padding-bottom: 10px;
 		margin-bottom: 10px;
 		
 		.item-title {
 			font-size: 17px;
-			font-weight: 700;
+			font-weight: @font-weight-bold;
 		}
 	}
 
@@ -281,7 +283,7 @@
 			color: @body-color;
 			display: block;
 			font-size: @font-size-base;
-			font-weight: 400;
+			font-weight: @font-weight-normal;
 			padding: 6px 0 0 0;
 			text-align: right;
 		}
@@ -318,7 +320,7 @@
 					color: @body-color;
 					display: inline;
 					font-size: @font-size-base;
-					font-weight: 300;
+					font-weight: @font-weight-normal;
 					padding: 6px 0 0 0;
 					text-align: right;
 				}									 
@@ -346,7 +348,7 @@
 #disclaimer {
 	border-bottom: 1px solid @divider-color;
 	padding: 20px 0;
-	
+	margin-bottom: 30px;
 	.item-title {
 		font-size: 14px;
 		font-weight: 700;
@@ -433,7 +435,7 @@
 		padding: 8px 15px;
 		background-color: #ffffff;
 		border-radius: 0;
-		border-top: 1px solid #dddddd;
+		border-top: 1px solid @divider-color;
 		border-left: 0;
 		border-right: 0;
 	}
@@ -519,20 +521,10 @@
 		line-height: 24px;
 	}
 	.toggleta {
-		font-weight: bold;
-	}
-	.togglet i.toggle-open,
-	.toggleta i.toggle-closed {
-		display: none;
-	}
-
-	.toggleta i.toggle-open {
-		display: block;
+		font-weight: @font-weight-bold;
 	}
 
 	.togglec {
-		display: block;
-		position: relative;
 		padding: 0px 0 20px 12px;
 
 		.filter-element {
