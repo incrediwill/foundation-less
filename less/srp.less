@@ -4,12 +4,6 @@
 
 -----------------------------------------------------------------------------------*/
 
-
-#srp {
-	padding-bottom: 20px;
-}
-
-
 /* ----------------------------------------------------------------
 	Vehicle Block
 -----------------------------------------------------------------*/
@@ -17,7 +11,7 @@
 .srp-vehicle-block {
 	border-bottom: 1px solid @divider-color;
 	padding-top: 16px;
-	padding-bottom: 20px;
+	padding-bottom: 10px;
 	margin-left: 30px;
 	
 	&:last-child {
@@ -100,6 +94,8 @@
 			line-height: 18px;
 			padding: 8px 14px;
 			height: auto;
+			margin-left: 0;
+			margin-right: 0;
 			&.uggo-button {
 				padding: 0;
 				.uggo-button-inner {
@@ -147,9 +143,9 @@
 	
 	.button-row-wrapper {
 		border-top: 1px solid @divider-color;
-		border-bottom: 1px solid @divider-color;
-		margin: 20px 15px 0px 15px;
-		padding: 10px 0;
+// 		border-bottom: 1px solid @divider-color;
+		margin: 20px 0 0 0;
+		padding: 10px 0 0 0;
 		
 		.button-row-details,
 		.button-row-compare,
@@ -534,7 +530,7 @@
 				text-decoration: underline !important;
 				
 				&:hover {
-					color: @link-color-hover;
+					color: @theme-color;
 				}
 			}
 
@@ -758,7 +754,7 @@
 	.srp-current-search-wrapper {
 		
 		.current-search-item {
-			border-bottom: 1px solid #ddd;
+			border-bottom: 1px solid @divider-color;
 			line-height: 1.8em;
 			padding-bottom: 10px;
 			margin-bottom: 10px;
@@ -840,14 +836,13 @@
 
 	.srp-vehicle-block {
 		margin-left: 0;
-		padding-bottom: 20px;		
 
 		.srp-vehicle-title-wrapper {
 			margin-bottom: 10px;			
 		}
 
 		.srp-vehicle-title-details {
-			border-bottom: 1px solid #eeeeee;
+			border-bottom: 1px solid @divider-color;
 			padding-bottom: 5px;
 			margin-bottom: 10px;
 			text-align: left;
@@ -912,7 +907,6 @@
 	.srp-vehicle-block {
 		margin-bottom: 10px;
 		margin-left: 0;
-		padding-bottom: 20px;
 
 		.srp-vehicle-title-wrapper {
 			margin-top: 20px;
@@ -920,7 +914,7 @@
 		}
 
 		.srp-vehicle-title-details {
-			border-bottom: 1px solid #eeeeee;
+			border-bottom: 1px solid @divider-color;
 			padding-bottom: 5px;
 			margin-bottom: 10px;
 			text-align: center;
