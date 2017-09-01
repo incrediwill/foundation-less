@@ -141,28 +141,39 @@
 .swiper-button-next {
 	position: absolute;
 	top: 50%;
-	width: 27px;
-	height: 60px;
+	width: @homepage-slideshow-btn-width;
+	height: @homepage-slideshow-btn-height;
 	font-family: "font-icons";
-	font-size: 60px;
-	color: @vdp-arrow-color;	
+	font-size: @homepage-slideshow-btn-arrow-size;
+	color: #fff;
+	background-color: rgba(0, 0, 0, 0.7);	
 	line-height: 60px;	
 	margin-top: -30px;
 	z-index: 10;
 	cursor: pointer;
-}
-
-.swiper-button-prev i,
-.swiper-button-next i {
+	text-align: center;
+	&:not(.swiper-button-disabled):hover {
+		background-color: rgba(0, 0, 0, .9);			
+	}
+	&.swiper-button-disabled {
+		opacity: .2;
+	}
 }
 
 .swiper-button-prev {
-	left: 20px;
-	text-align: left;
+	left: 0;
+	border-top-left-radius: @homepage-slideshow-btn-prev-radius-tl;
+	border-top-right-radius: @homepage-slideshow-btn-prev-radius-tr;
+	border-bottom-left-radius: @homepage-slideshow-btn-prev-radius-bl;		
+	border-bottom-right-radius: @homepage-slideshow-btn-prev-radius-br;
+	
 }
 .swiper-button-next {
-	right: 20px;
-	text-align: right;
+	right: 0;
+	border-top-left-radius: @homepage-slideshow-btn-next-radius-tl;
+	border-top-right-radius: @homepage-slideshow-btn-next-radius-tr;
+	border-bottom-left-radius: @homepage-slideshow-btn-next-radius-bl;		
+	border-bottom-right-radius: @homepage-slideshow-btn-next-radius-br;	
 }
 
 /* Pagination Styles */
@@ -333,17 +344,6 @@ button.swiper-pagination-bullet {
 		
 		#vdp-vehicle-slideshow {
 			padding-top: 20px;
-		}
-		#vdp-cpo-history {
-			
-			div {
-				float: right;
-				margin: 0 10px 20px 10px;
-				&:last-child {
-					margin-right: 0;
-				}
-			}
-			
 		}		
 		
 	}
@@ -358,6 +358,8 @@ button.swiper-pagination-bullet {
 		}
 	}
 }
+
+
 
 
 /* -----------------------------------
@@ -513,12 +515,15 @@ button.swiper-pagination-bullet {
 }
 
 #vdp-cpo-history {
-	
-	div {
-		float: left;
-		margin: 20px 10px 0 10px;
+	text-align: right;
+	padding: 15px 0;
+	div {				
+		display: inline-block;
+		margin: 0 10px;
+		&:last-child {
+			margin-right: 0;
+		}
 	}
-	
 }
 
 #kbb-retail {
@@ -909,7 +914,7 @@ button.swiper-pagination-bullet {
 	Mobile to Tablet
 -----------------------------------------------------------------*/
 
-@media only screen and (min-width: 320px) and (max-width: 992px) {
+@media (max-width: 992px) {
 
 	#condition,
 	#vdp-features-specs {
@@ -924,17 +929,6 @@ button.swiper-pagination-bullet {
 			    column-gap: 30px;			
 			}
 		}
-	}
-	
-	#vdp-cpo-history {
-		text-align: center;				
-
-		div {
-			display: inline-block;
-			float: none;
-			margin: 20px 10px 0 10px;
-		}
-		
 	}	
 
 	#vdp-similar-vehicles {
@@ -1017,6 +1011,10 @@ button.swiper-pagination-bullet {
 		min-height: intrinsic;
 		height: auto;		
 	}
+	
+	#vdp-cpo-history {
+		text-align: center;		
+	}	
 
 	#vdp-title {
 		
@@ -1119,18 +1117,24 @@ button.swiper-pagination-bullet {
 			text-align: center;
 		}	
 		
-	}
-	
-	#vdp.pag-vdp #vdp-cpo-history {
-		text-align: center;				
-
-		div {
-			display: inline-block;
-			float: none;
-			margin: 20px 10px 0 10px;
-		}
-	
 	}	
+	
+	#vdp-slideshow-tabs,
+	#vehicle-overview-tabs {
+		.acc_content {
+			padding: 0 0 10px 0;
+		}
+	}
+	#vdp-slideshow-tabs {	
+		.icon-ok-circle,
+		.icon-remove-circle {
+			display: none;
+		}
+	}	
+	
+	#vehicle-overview-text .wrapper {
+		padding: 0 15px;
+	}
 	
 }
 
@@ -1138,7 +1142,7 @@ button.swiper-pagination-bullet {
 	Super Duper Tiny Mobile
 -----------------------------------------------------------------*/
 
-@media only screen and (min-width: 319px) and (max-width: 399px) {
+@media (max-width: 399px) {
 
 	#vdp-preferred-purchase {
 		.col-xs-6 {
