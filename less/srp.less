@@ -424,12 +424,11 @@
 
 	.modal-content {
 		box-shadow: 0;
-		//.box-shadow(0px 0px 34px rgba(0, 0, 0, 0.2));
 	}
 
 	.list-group-item {
 		padding: 8px 15px;
-		background-color: #ffffff;
+		background-color: @body-bg-color;
 		border-radius: 0;
 		border-top: 1px solid @divider-color;
 		border-left: 0;
@@ -441,17 +440,18 @@
 	}
 
 	.list-group-item:last-child {
+		border-bottom: 0;		
 	}	
 
 	a.list-group-item {
-		color: #555555;
+		color: @body-color;
 	}
 
 	a.list-group-item:hover,
 	a.list-group-item:focus {
 		text-decoration: none;
-		color: #555555;
-		background-color: #f5f5f5;
+		color: @link-color-hover;
+		background-color: @background1-color;
 	}
 
 	.list-group-item.active,
