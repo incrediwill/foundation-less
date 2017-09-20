@@ -137,14 +137,14 @@
 /* Flexbox Columns
 -----------------------------------------------------------------*/
 
-.row-flex, .row-flex > div[class*='col-'] {  
+.row-flex, .row-flex > div[class*='col-'], .row-flex > .flex-item {  
     display: -webkit-box;
     display: -moz-box;
     display: -ms-flexbox;
     display: -webkit-flex;
     display: flex;
+    flex: 1 1 auto;
     flex-wrap: wrap;
-    flex: 1 0 auto;
 }
 
 .row-flex-wrap {
@@ -153,13 +153,9 @@
     flex: 0;
 }
 
-.row-flex > div[class*='col-'] {
-	 margin: -.2px; 
-}
-
 @media screen and (max-width: 767px) {
-	.row-flex > div[class*='col-'] div {
-		width:100%;
+	.row-flex > div[class*='col-']:not(div[class*='col-xs']) div {
+		width: 100%;
 	}
 }
 
